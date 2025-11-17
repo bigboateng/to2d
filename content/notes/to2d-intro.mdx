@@ -1,0 +1,89 @@
+---
+title: "Introduction to to2d"
+date: "2025-11-16"
+description: "An exploration of two-dimensional optimization methods and control system fundamentals."
+---
+
+# Introduction to to2d
+
+This research site explores control systems, optimization, and computational methods. The focus is on mathematical rigor and practical implementation.
+
+## Mathematical Foundations
+
+Consider a simple optimization problem in two dimensions. Given an objective function $f: \mathbb{R}^2 \to \mathbb{R}$, we seek to find:
+
+$$
+\mathbf{x}^* = \arg\min_{\mathbf{x} \in \mathbb{R}^2} f(\mathbf{x})
+$$
+
+where $\mathbf{x} = (x_1, x_2)^T$ represents our decision variables.
+
+## Gradient Descent
+
+The gradient descent algorithm provides a first-order method for finding local minima. The update rule is:
+
+$$
+\mathbf{x}_{k+1} = \mathbf{x}_k - \alpha_k \nabla f(\mathbf{x}_k)
+$$
+
+where $\alpha_k > 0$ is the step size at iteration $k$, and $\nabla f$ denotes the gradient of $f$.
+
+## Control Systems
+
+In linear control theory, we often work with state-space representations:
+
+$$
+\begin{aligned}
+\dot{\mathbf{x}}(t) &= A\mathbf{x}(t) + B\mathbf{u}(t) \\
+\mathbf{y}(t) &= C\mathbf{x}(t) + D\mathbf{u}(t)
+\end{aligned}
+$$
+
+where:
+- $\mathbf{x}(t) \in \mathbb{R}^n$ is the state vector
+- $\mathbf{u}(t) \in \mathbb{R}^m$ is the control input
+- $\mathbf{y}(t) \in \mathbb{R}^p$ is the output
+- $A, B, C, D$ are system matrices of appropriate dimensions
+
+## Lyapunov Stability
+
+A fundamental concept in control theory is Lyapunov stability. For an autonomous system $\dot{\mathbf{x}} = f(\mathbf{x})$ with equilibrium point $\mathbf{x}_e$, we say the equilibrium is stable if there exists a continuously differentiable function $V: \mathbb{R}^n \to \mathbb{R}$ such that:
+
+1. $V(\mathbf{x}_e) = 0$ and $V(\mathbf{x}) > 0$ for all $\mathbf{x} \neq \mathbf{x}_e$
+2. $\dot{V}(\mathbf{x}) = \nabla V(\mathbf{x})^T f(\mathbf{x}) \leq 0$
+
+## Convex Optimization
+
+A function $f: \mathbb{R}^n \to \mathbb{R}$ is convex if for all $\mathbf{x}, \mathbf{y} \in \mathbb{R}^n$ and $\lambda \in [0,1]$:
+
+$$
+f(\lambda \mathbf{x} + (1-\lambda)\mathbf{y}) \leq \lambda f(\mathbf{x}) + (1-\lambda)f(\mathbf{y})
+$$
+
+Convex optimization problems have the remarkable property that any local minimum is also a global minimum.
+
+## Matrix Exponential
+
+The solution to the linear differential equation $\dot{\mathbf{x}} = A\mathbf{x}$ with initial condition $\mathbf{x}(0) = \mathbf{x}_0$ is:
+
+$$
+\mathbf{x}(t) = e^{At}\mathbf{x}_0
+$$
+
+where the matrix exponential is defined by:
+
+$$
+e^{At} = \sum_{k=0}^{\infty} \frac{(At)^k}{k!} = I + At + \frac{(At)^2}{2!} + \frac{(At)^3}{3!} + \cdots
+$$
+
+## Future Directions
+
+This site will explore:
+- Optimal control and the Pontryagin Maximum Principle
+- Model predictive control (MPC)
+- Robust control and $\mathcal{H}_\infty$ synthesis
+- Numerical methods for large-scale optimization
+- Applications to robotics and autonomous systems
+
+The emphasis will remain on mathematical precision, computational efficiency, and practical implementation.
+
