@@ -237,7 +237,7 @@ export function StateSpaceMissingInputBackground({
         cancelAnimationFrame(animationRef.current)
       }
     }
-  }, [dimensions, density, speed, opacityFactor, isLight])
+  }, [dimensions, density, speed, opacityFactor])
 
   if (dimensions.width === 0) {
     return null

@@ -1,6 +1,5 @@
 'use client'
 
-import { useEffect, useState } from 'react'
 import { AeroManifoldBackground } from './AeroManifoldBackground'
 import { StateSpaceMissingInputBackground } from './StateSpaceMissingInputBackground'
 import { ControlSystemsBackground } from './ControlSystemsBackground'
@@ -16,25 +15,6 @@ export function UnifiedBackground({
   speed = 1,
   opacityFactor = 0.04,
 }: UnifiedBackgroundProps) {
-  const [theme, setTheme] = useState<'dark' | 'light'>('dark')
-
-  useEffect(() => {
-    const checkTheme = () => {
-      const isDark = !document.documentElement.classList.contains('light')
-      setTheme(isDark ? 'dark' : 'light')
-    }
-
-    checkTheme()
-
-    const observer = new MutationObserver(checkTheme)
-    observer.observe(document.documentElement, {
-      attributes: true,
-      attributeFilter: ['class'],
-    })
-
-    return () => observer.disconnect()
-  }, [])
-
   return (
     <>
       <AeroManifoldBackground 
