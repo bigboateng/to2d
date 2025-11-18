@@ -50,11 +50,6 @@ export default function PreAIResearchPage() {
         </div>
       </section>
 
-      <section className="text-white/40 text-sm border-t border-white/10 pt-6">
-        <p>
-          This helps people understand: You were already doing the hard parts.
-        </p>
-      </section>
     </div>
   )
 }

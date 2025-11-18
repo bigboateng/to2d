@@ -81,11 +81,6 @@ export default function ToolsPage() {
         </div>
       </section>
 
-      <section className="text-white/40 text-sm border-t border-white/10 pt-6">
-        <p>
-          This section turns your site into a research ethos, not a resume.
-        </p>
-      </section>
     </div>
   )
 }
