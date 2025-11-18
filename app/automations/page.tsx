@@ -9,7 +9,7 @@ export default function AutomationsPage() {
           2018 → YC → now
         </p>
         <p className="text-white/70 leading-relaxed mb-6">
-          Building browser automation infrastructure before the industry existed.
+          From the earliest attempts to production systems at scale.
         </p>
       </section>
 
