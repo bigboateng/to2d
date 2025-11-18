@@ -6,20 +6,23 @@ export default function AIEraPage() {
           AI Era
         </h1>
         <p className="text-white/50 text-sm mb-8">
-          How your foundations gave you an unfair advantage
+          LLMs as operators, not intelligence
         </p>
         <p className="text-white/70 leading-relaxed mb-6">
-          This section shows how all your earlier work made AI breakthroughs inevitable.
+          Control theory and state-space thinking applied to language models.
         </p>
       </section>
 
       <section className="space-y-6">
-        <div className="border border-white/10 p-6">
-          <h2 className="text-xl font-thin mb-3">LLMs as transfer functions</h2>
-          <p className="text-white/60 text-sm leading-relaxed">
+        <a href="/ai-era/llms-as-transfer-functions" className="border border-white/10 p-6 hover:border-white/30 transition-colors group block">
+          <h2 className="text-xl font-thin mb-3 group-hover:text-white/90">LLMs as Transfer Functions</h2>
+          <p className="text-white/60 text-sm leading-relaxed mb-2">
             Not intelligence. Operators between domains.
           </p>
-        </div>
+          <p className="text-white/40 text-xs">
+            transfer functions · domain mapping · control loops · operator perspective
+          </p>
+        </a>
 
         <div className="border border-white/10 p-6">
           <h2 className="text-xl font-thin mb-3">Latent space navigation</h2>
@@ -68,11 +71,6 @@ export default function AIEraPage() {
         </div>
       </section>
 
-      <section className="text-white/40 text-sm border-t border-white/10 pt-6">
-        <p>
-          This section frames all your insights as inevitable progression — not random genius.
-        </p>
-      </section>
     </div>
   )
 }

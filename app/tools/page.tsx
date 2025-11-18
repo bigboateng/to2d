@@ -9,7 +9,7 @@ export default function ToolsPage() {
           The hidden arsenal
         </p>
         <p className="text-white/70 leading-relaxed mb-6">
-          Signal the depth, but never reveal the recipe.
+          Mental models and methods that collapse impossible problems.
         </p>
       </section>
 

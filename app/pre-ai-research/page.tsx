@@ -6,10 +6,10 @@ export default function PreAIResearchPage() {
           Research Before AI
         </h1>
         <p className="text-white/50 text-sm mb-8">
-          Your trajectory BEFORE LLMs exploded
+          2015–2022
         </p>
         <p className="text-white/70 leading-relaxed mb-6">
-          This shows you were already solving the fundamental problems.
+          Early work on domain transfer, state-space systems, and zero-context architectures.
         </p>
       </section>
 

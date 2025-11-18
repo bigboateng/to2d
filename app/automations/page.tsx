@@ -9,7 +9,7 @@ export default function AutomationsPage() {
           2018 → YC → now
         </p>
         <p className="text-white/70 leading-relaxed mb-6">
-          This is your pre-AI phase — the world you saw before everyone else.
+          Building browser automation infrastructure before the industry existed.
         </p>
       </section>
 
@@ -85,11 +85,6 @@ export default function AutomationsPage() {
         </a>
       </section>
 
-      <section className="text-white/40 text-sm border-t border-white/10 pt-6">
-        <p>
-          This section grounds your expertise in actual years of real-world work, not hype.
-        </p>
-      </section>
     </div>
   )
 }

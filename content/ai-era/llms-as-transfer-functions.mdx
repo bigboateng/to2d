@@ -1,0 +1,113 @@
+---
+title: "LLMs as Transfer Functions"
+date: "2024-01-01"
+description: "LLMs are not intelligent entities. They are high‑dimensional operators that transform one domain representation into another."
+---
+
+# LLMs as Transfer Functions
+
+LLMs are not intelligent entities. They are high‑dimensional operators that transform one domain representation into another. This framing removes the mystique and replaces it with structure — the kind you can reason about, control, and engineer around.
+
+This section unifies the ideas we've been developing: latent spaces, domain mapping, representation changes, state‑space thinking, and control‑theoretic intuition.
+
+---
+
+## Why "Transfer Function" is the Right Mental Model
+
+A transfer function describes how an input representation becomes an output representation under a system's internal dynamics. That is exactly what an LLM does:
+
+- **Input domain**: tokens, structure, implicit state, task-specific cues.
+- **Operator**: the model weights, attention patterns, and latent geometry.
+- **Output domain**: a new sequence that reflects a transformed representation.
+
+LLMs don't "understand" or "reason." They apply a deterministic operator over a probabilistic latent space.
+
+---
+
+## Domain → Latent → Domain
+
+The internal flow mirrors control theory:
+
+1. **Encoding (Domain → State)**  
+Raw text becomes a vector state. This is the model's internal representation of the problem — the equivalent of moving into Laplace or frequency space.
+
+2. **Propagation (State → State)**  
+Attention layers act as a cascade of operators, composing multiple transformations.
+
+3. **Decoding (State → Domain)**  
+The final latent state is projected back into the token domain.
+
+Each step is a transfer between representations. No step requires intelligence.
+
+---
+
+## The Core Insight
+
+If you change the representation, you change the solvability.
+
+This allows you to solve:
+- tasks you haven't explicitly prompted,
+- workflows spanning multiple domains,
+- problems that look impossible in token space.
+
+This is why prompts that restructure the domain outperform prompts that try to guess instructions.
+
+---
+
+## Operator Perspective vs Intelligence Perspective
+
+**Intelligence Perspective:**
+- LLMs "figure out" answers.
+- LLMs "reason" or "understand."
+- Wrong outputs imply "lack of intelligence."
+
+**Operator Perspective:**
+- Inputs were in the wrong representation.
+- The operator mapped to the wrong domain.
+- The latent geometry amplified irrelevant dimensions.
+
+This difference is decisive in building robust systems.
+
+---
+
+## Domain Mismatch
+
+Most LLM failures come from domain mismatch:
+
+- The input domain does not reflect the problem.
+- The operator transforms something that doesn't encode the correct structure.
+- The output is a valid transform — but of the wrong domain.
+
+This is why reformatting the problem (like moving to Laplace domain) works.
+
+---
+
+## Domain Intelligence
+
+When you craft inputs that align with the latent operator, you bypass domain mismatch entirely. Domain Intelligence systems solve this by:
+
+- Identifying the required representation.
+- Rewriting the problem into a solvable transform.
+- Passing it through the LLM only after domain alignment.
+- Interpreting output through the correct downstream domain.
+
+This produces high reliability without requiring "reasoning." It's engineering.
+
+---
+
+## LLMs as Part of a Control Loop
+
+In large systems, the LLM is just one operator in a feedback loop:
+
+- **System state**: context, environment data, traces.
+- **LLM operator**: transforms state into an action or new state.
+- **Environment response**: browser, API, user.
+- **Feedback**: error signals, correction.
+
+This mirrors:
+- PID loops
+- Model-based control
+- Recursive estimation
+
+The moment you think of LLM outputs as control signals, the system becomes predictable.
+
