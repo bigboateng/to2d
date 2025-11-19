@@ -43,10 +43,10 @@ export default function Home() {
           </p>
         </a>
 
-        <a href="/notes" className="border border-white/10 p-6 hover:border-white/30 transition-colors group">
-          <h2 className="text-lg font-thin mb-2 group-hover:text-white/70">Notes</h2>
+        <a href="/coolstuff" className="border border-white/10 p-6 hover:border-white/30 transition-colors group">
+          <h2 className="text-lg font-thin mb-2 group-hover:text-white/70">Open Source</h2>
           <p className="text-white/40 text-sm">
-            Articles. LaTeX. Ongoing work.
+            BrowserState. BrowserAgent. State-space tooling.
           </p>
         </a>
       </section>

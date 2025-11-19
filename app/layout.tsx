@@ -16,6 +16,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <UnifiedBackground density={1} speed={1} opacityFactor={0.04} />
+        
         <div className="min-h-screen relative" style={{ zIndex: 1 }}>
           <header className="border-b border-white/10 px-6 py-6">
             <div className="max-w-5xl mx-auto">
@@ -43,15 +44,15 @@ export default function RootLayout({
                 <a href="/transfer" className="text-white/60 hover:text-white transition-colors">
                   transfer
                 </a>
-                <a href="/tools" className="text-white/60 hover:text-white transition-colors">
+                {/* <a href="/tools" className="text-white/60 hover:text-white transition-colors">
                   tools
-                </a>
+                </a> */}
                 <a href="/coolstuff" className="text-white/60 hover:text-white transition-colors">
-                  cool stuff
+                  open source
                 </a>
-                <a href="/contact" className="text-white/60 hover:text-white transition-colors">
+                {/* <a href="/contact" className="text-white/60 hover:text-white transition-colors">
                   contact
-                </a>
+                </a> */}
               </nav>
             </div>
           </header>

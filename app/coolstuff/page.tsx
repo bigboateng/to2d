@@ -1,95 +1,126 @@
-export default function CoolStuffPage() {
-  const items = [
-    {
-      label: "Laplace Transform",
-      href: "https://en.wikipedia.org/wiki/Laplace_transform",
-    },
-    {
-      label: "Laplace Transform – Khan Academy",
-      href: "https://www.khanacademy.org/math/differential-equations/laplace-transform",
-    },
-    {
-      label: "Brian Douglas",
-      href: "https://www.youtube.com/@BrianBDouglas",
-    },
-    {
-      label: "System Identification",
-      href: "https://en.wikipedia.org/wiki/System_identification",
-    },
-    {
-      label: "Fuzzy Logic",
-      href: "https://en.wikipedia.org/wiki/Fuzzy_logic",
-    },
-    {
-      label: "Zero Width",
-      href: null,
-    },
-    {
-      label: "State Space",
-      href: "https://en.wikipedia.org/wiki/State-space_representation",
-    },
-    {
-      label: "Asteroid Retrieval via Manifolds",
-      href: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=hwTiAAsAAAAJ&citation_for_view=hwTiAAsAAAAJ:u-x6o8ySG0sC",
-    },
-    {
-      label: "Enigma Bar Scene",
-      href: null,
-    },
-    {
-      label: "Transfer Functions",
-      href: "https://en.wikipedia.org/wiki/Transfer_function",
-    },
-    {
-      label: "PID as Intuition",
-      href: null,
-    },
-    {
-      label: "Lyapunov Stability",
-      href: "https://en.wikipedia.org/wiki/Lyapunov_stability",
-    },
-    {
-      label: "Nonlinear Control",
-      href: "https://en.wikipedia.org/wiki/Nonlinear_control",
-    },
-    {
-      label: "Model Predictive Control",
-      href: "https://en.wikipedia.org/wiki/Model_predictive_control",
-    },
-  ]
-
+export default function OpenSourcePage() {
   return (
-    <div className="max-w-4xl mx-auto py-16">
-      <div className="mb-16">
-        <h1 className="text-3xl font-thin mb-2">Cool Stuff</h1>
-        <p className="text-white/30 text-xs font-light">
-          things that feed my control brain
+    <div className="space-y-12 max-w-3xl">
+      <section>
+        <h1 className="text-3xl font-thin tracking-tight mb-4">
+          Open Source
+        </h1>
+        <p className="text-white/50 text-sm mb-8">
+          Foundational tools for state-space automation
         </p>
-      </div>
+        <p className="text-white/70 leading-relaxed mb-6">
+          A collection of foundational tools built to be reliable, verifiable, and compatible across environments.
+        </p>
+      </section>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {items.map((item, index) => (
-          <div key={index}>
-            {item.href ? (
-              <a
-                href={item.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block py-4 text-white/60 hover:text-white transition-colors font-light group"
-              >
-                <span className="text-sm">{item.label}</span>
-                <span className="ml-2 text-white/20 group-hover:text-white/40 transition-colors text-xs">
-                  →
-                </span>
-              </a>
-            ) : (
-              <div className="block py-4 text-white/30 font-light">
-                <span className="text-sm">{item.label}</span>
-              </div>
-            )}
+      <section className="space-y-8">
+        <div className="border border-white/10 p-6 hover:border-white/20 transition-colors">
+          <div className="flex items-start justify-between mb-4">
+            <div>
+              <h2 className="text-xl font-thin mb-2">BrowserState</h2>
+              <p className="text-white/60 text-sm leading-relaxed mb-4">
+                A portable, cross-runtime system for capturing, storing, and reusing browser session state.
+                Designed for reliability in automations: canonical state extraction, zero-context snapshots, and env-agnostic portability.
+              </p>
+            </div>
           </div>
-        ))}
-      </div>
+          
+          <div className="flex items-center gap-4 mb-4 text-xs">
+            <a 
+              href="https://browserstate.io/" 
+              className="text-white/40 hover:text-white/70 transition-colors underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              browserstate.io
+            </a>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+            <a 
+              href="https://www.npmjs.com/package/browserstate" 
+              className="border border-white/10 p-4 hover:border-white/30 transition-colors group block"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="flex items-center justify-between mb-2">
+                <span className="text-white/80 text-sm font-medium">TypeScript</span>
+                <span className="text-white/40 text-xs">npm</span>
+              </div>
+              <p className="text-white/50 text-xs">
+                @browserstate
+              </p>
+            </a>
+            
+            <a 
+              href="https://pypi.org/project/browserstate/" 
+              className="border border-white/10 p-4 hover:border-white/30 transition-colors group block"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="flex items-center justify-between mb-2">
+                <span className="text-white/80 text-sm font-medium">Python</span>
+                <span className="text-white/40 text-xs">PyPI</span>
+              </div>
+              <p className="text-white/50 text-xs">
+                browserstate
+              </p>
+            </a>
+          </div>
+        </div>
+
+        <div className="border border-white/10 p-6 hover:border-white/20 transition-colors">
+          <h2 className="text-xl font-thin mb-2">BrowserState Nova Adapter</h2>
+          <p className="text-white/60 text-sm leading-relaxed mb-4">
+            A lightweight adapter that brings BrowserState to Amazon's Nova automation runtime.
+            It standardizes session reuse and state injection inside Nova workflows, enabling deterministic automations without custom glue code.
+          </p>
+          
+          <div className="flex items-center gap-4 text-xs">
+            <a 
+              href="https://github.com/browserstate-org/browserstate-nova-adapter" 
+              className="text-white/40 hover:text-white/70 transition-colors underline inline-flex items-center gap-2"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span>GitHub</span>
+              <span className="text-white/30">→</span>
+            </a>
+            <span className="text-white/30 text-xs">Adapter layer</span>
+          </div>
+        </div>
+
+        <div className="border border-white/10 p-6 hover:border-white/20 transition-colors">
+          <h2 className="text-xl font-thin mb-2">BrowserAgent</h2>
+          <p className="text-white/60 text-sm leading-relaxed mb-4">
+            A zero-context automation engine that avoids the instability of prompt-heavy agents.
+            Instead of reasoning over long, noisy histories, BrowserAgent acts on canonical state slices, enabling predictable, verifiable, and environment-agnostic execution.
+            Built for high-reliability automations that other browser agents struggle with, especially in multi-step workflows.
+            Integrated with BrowserState; trusted by teams with 2,000+ npm downloads per week.
+          </p>
+          
+          <div className="flex items-center gap-4 text-xs">
+            <a 
+              href="https://www.npmjs.com/package/@centralinc/browseragent" 
+              className="text-white/40 hover:text-white/70 transition-colors underline inline-flex items-center gap-2"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span>npm</span>
+              <span className="text-white/30">→</span>
+            </a>
+            <a 
+              href="https://github.com/centralinc/browseragent" 
+              className="text-white/40 hover:text-white/70 transition-colors underline inline-flex items-center gap-2"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span>GitHub</span>
+              <span className="text-white/30">→</span>
+            </a>
+          </div>
+        </div>
+      </section>
     </div>
   )
 }

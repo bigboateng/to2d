@@ -14,40 +14,45 @@ export default function PreAIResearchPage() {
       </section>
 
       <section className="space-y-6">
-        <div className="border border-white/10 p-6">
-          <h2 className="text-xl font-thin mb-3">Early ideas on domain inversion</h2>
-          <p className="text-white/60 text-sm leading-relaxed">
-            Transfer between representation domains.
+        <a href="/pre-ai-research/transforming-the-problem" className="border border-white/10 p-6 hover:border-white/30 transition-colors group block">
+          <h2 className="text-xl font-thin mb-3 group-hover:text-white/90">Transforming the Problem</h2>
+          <p className="text-white/60 text-sm leading-relaxed mb-2">
+            How domain changes reveal solutions.
           </p>
-        </div>
+          <p className="text-white/40 text-xs">
+            domain transforms · coordinate frames · representation as control · early experiments
+          </p>
+        </a>
 
-        <div className="border border-white/10 p-6">
-          <h2 className="text-xl font-thin mb-3">Session-as-state-space</h2>
-          <p className="text-white/60 text-sm leading-relaxed">
-            Treating browser sessions as navigable phase space.
+        <a href="/pre-ai-research/state-as-memory" className="border border-white/10 p-6 hover:border-white/30 transition-colors group block">
+          <h2 className="text-xl font-thin mb-3 group-hover:text-white/90">State as Memory</h2>
+          <p className="text-white/60 text-sm leading-relaxed mb-2">
+            Treating sessions and environments as controllable state spaces.
           </p>
-        </div>
+          <p className="text-white/40 text-xs">
+            state vs history · browser sessions · minimal representation · operator boundaries
+          </p>
+        </a>
 
-        <div className="border border-white/10 p-6">
-          <h2 className="text-xl font-thin mb-3">0-context as a constraint system</h2>
-          <p className="text-white/60 text-sm leading-relaxed">
-            The original framework for minimal-information operations.
+        <a href="/pre-ai-research/constraints-over-context" className="border border-white/10 p-6 hover:border-white/30 transition-colors group block">
+          <h2 className="text-xl font-thin mb-3 group-hover:text-white/90">Constraints Over Context</h2>
+          <p className="text-white/60 text-sm leading-relaxed mb-2">
+            Eliminating history and noise to make systems predictable.
           </p>
-        </div>
+          <p className="text-white/40 text-xs">
+            stability through reduction · boundary constraints · constraint as intelligence
+          </p>
+        </a>
 
-        <div className="border border-white/10 p-6">
-          <h2 className="text-xl font-thin mb-3">Early prototypes</h2>
-          <p className="text-white/60 text-sm leading-relaxed">
-            Intent → behavior mapping without LLMs.
+        <a href="/pre-ai-research/intent-without-language" className="border border-white/10 p-6 hover:border-white/30 transition-colors group block">
+          <h2 className="text-xl font-thin mb-3 group-hover:text-white/90">Intent Without Language</h2>
+          <p className="text-white/60 text-sm leading-relaxed mb-2">
+            Building early intent→behavior systems before language models existed.
           </p>
-        </div>
-
-        <div className="border border-white/10 p-6">
-          <h2 className="text-xl font-thin mb-3">The gap</h2>
-          <p className="text-white/60 text-sm leading-relaxed">
-            "Automation engineering" vs "automation reality"
+          <p className="text-white/40 text-xs">
+            structured intent · state transitions · proto-operators · To2D precursor
           </p>
-        </div>
+        </a>
       </section>
 
     </div>
