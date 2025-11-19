@@ -43,7 +43,7 @@ export default function Home() {
           </p>
         </a>
 
-        <a href="/coolstuff" className="border border-white/10 p-6 hover:border-white/30 transition-colors group">
+        <a href="/open-source" className="border border-white/10 p-6 hover:border-white/30 transition-colors group">
           <h2 className="text-lg font-thin mb-2 group-hover:text-white/70">Open Source</h2>
           <p className="text-white/40 text-sm">
             BrowserState. BrowserAgent. State-space tooling.
