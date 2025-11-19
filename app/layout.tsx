@@ -47,7 +47,7 @@ export default function RootLayout({
                 {/* <a href="/tools" className="text-white/60 hover:text-white transition-colors">
                   tools
                 </a> */}
-                <a href="/coolstuff" className="text-white/60 hover:text-white transition-colors">
+                <a href="/open-source" className="text-white/60 hover:text-white transition-colors">
                   open source
                 </a>
                 {/* <a href="/contact" className="text-white/60 hover:text-white transition-colors">
