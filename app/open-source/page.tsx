@@ -99,7 +99,7 @@ export default function OpenSourcePage() {
             Integrated with BrowserState; trusted by teams with 2,000+ npm downloads per week.
           </p>
           
-          <div className="flex items-center gap-4 text-xs">
+          <div className="flex items-center gap-4 text-xs mb-6">
             <a 
               href="https://www.npmjs.com/package/@centralinc/browseragent" 
               className="text-white/40 hover:text-white/70 transition-colors underline inline-flex items-center gap-2"
@@ -118,6 +118,35 @@ export default function OpenSourcePage() {
               <span>GitHub</span>
               <span className="text-white/30">→</span>
             </a>
+          </div>
+
+          <div className="border-t border-white/10 pt-4">
+            <div className="flex items-center justify-between mb-4">
+              <h3 className="text-sm font-medium text-white/80">Updates Log</h3>
+              <span className="text-white/40 text-xs">2 Updates</span>
+            </div>
+            
+            <div className="space-y-3">
+              <a href="/open-source/updates/tool-execution-context" className="block border border-white/10 p-4 hover:border-white/30 transition-colors group">
+                <div className="flex items-start justify-between mb-1">
+                  <h4 className="text-sm text-white/80 group-hover:text-white/90">Tool Execution Context</h4>
+                  <span className="text-white/40 text-xs">Nov 2025</span>
+                </div>
+                <p className="text-white/50 text-xs">
+                  Runtime context for tools without polluting prompts
+                </p>
+              </a>
+              
+              <a href="/open-source/updates/sequential-keyboard-actions" className="block border border-white/10 p-4 hover:border-white/30 transition-colors group">
+                <div className="flex items-start justify-between mb-1">
+                  <h4 className="text-sm text-white/80 group-hover:text-white/90">Sequential Keyboard Actions</h4>
+                  <span className="text-white/40 text-xs">Nov 2025</span>
+                </div>
+                <p className="text-white/50 text-xs">
+                  Supporting sequential keypresses and repetition syntax
+                </p>
+              </a>
+            </div>
           </div>
         </div>
       </section>
