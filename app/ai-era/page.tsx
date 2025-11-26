@@ -153,6 +153,16 @@ export default function AIEraPage() {
             representation law · domain resolution · the foundation underneath everything
           </p>
         </a>
+
+        <a href="/ai-era/legacy-invariants" className="border border-white/10 p-6 hover:border-white/30 transition-colors group block">
+          <h2 className="text-xl font-thin mb-3 group-hover:text-white/90">Legacy Invariants: One Quiet Reason AI-Driven Automation Breaks Unexpectedly</h2>
+          <p className="text-white/60 text-sm leading-relaxed mb-2">
+            Hidden UI assumptions from early 2010s web frameworks.
+          </p>
+          <p className="text-white/40 text-xs">
+            timing constraints · human-like interactions · legacy systems · invisible assumptions
+          </p>
+        </a>
       </section>
 
     </div>
