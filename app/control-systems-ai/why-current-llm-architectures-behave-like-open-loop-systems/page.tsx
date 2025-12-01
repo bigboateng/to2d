@@ -410,8 +410,8 @@ export default function WhyCurrentLLMArchitecturesBehaveLikeOpenLoopSystemsPage(
       </article>
 
       <section className="text-white/40 text-sm border-t border-white/10 pt-6">
-        <a href="/ai-era" className="hover:text-white/60 transition-colors">
-          ← Back to AI Era
+        <a href="/control-systems-ai" className="hover:text-white/60 transition-colors">
+          ← Back to Control Systems × AI
         </a>
       </section>
     </div>

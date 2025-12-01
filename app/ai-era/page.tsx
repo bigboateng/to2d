@@ -163,16 +163,6 @@ export default function AIEraPage() {
             timing constraints · human-like interactions · legacy systems · invisible assumptions
           </p>
         </a>
-
-        <a href="/ai-era/why-current-llm-architectures-behave-like-open-loop-systems" className="border border-white/10 p-6 hover:border-white/30 transition-colors group block">
-          <h2 className="text-xl font-thin mb-3 group-hover:text-white/90">Why Current LLM Architectures Behave Like Open-Loop Systems</h2>
-          <p className="text-white/60 text-sm leading-relaxed mb-2">
-            And why stability requires a control-theoretic layer.
-          </p>
-          <p className="text-white/40 text-xs">
-            open-loop vs closed-loop · feedback control · runtime stability · autonomous correction
-          </p>
-        </a>
       </section>
 
     </div>

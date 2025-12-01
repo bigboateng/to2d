@@ -36,6 +36,13 @@ export default function Home() {
           </p>
         </a>
 
+        <a href="/control-systems-ai" className="border border-white/10 p-6 hover:border-white/30 transition-colors group">
+          <h2 className="text-lg font-thin mb-2 group-hover:text-white/70">Control Systems × AI</h2>
+          <p className="text-white/40 text-sm">
+            Applying aerospace and control theory to AI architectures.
+          </p>
+        </a>
+
         <a href="/tools" className="border border-white/10 p-6 hover:border-white/30 transition-colors group">
           <h2 className="text-lg font-thin mb-2 group-hover:text-white/70">Tools for the Impossible</h2>
           <p className="text-white/40 text-sm">
