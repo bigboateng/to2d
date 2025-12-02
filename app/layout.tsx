@@ -3,6 +3,7 @@ import './globals.css'
 import { UnifiedBackground } from '@/components/UnifiedBackground'
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.to2d.xyz'),
   title: 'to2d',
   description: 'A space for ideas, notes, and ongoing work',
 }

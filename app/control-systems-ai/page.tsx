@@ -1,3 +1,29 @@
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Control Systems × AI | to2d',
+  description: 'Applying aerospace and control theory to AI architectures. Where classical control theory meets modern AI systems.',
+  openGraph: {
+    title: 'Control Systems × AI',
+    description: 'Applying aerospace and control theory to AI architectures. Where classical control theory meets modern AI systems.',
+    images: [
+      {
+        url: '/images/ai/llm_open_loop_architecture.png',
+        width: 1920,
+        height: 1080,
+        alt: 'Control Systems and AI Architecture',
+      },
+    ],
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Control Systems × AI',
+    description: 'Applying aerospace and control theory to AI architectures.',
+    images: ['/images/ai/llm_open_loop_architecture.png'],
+  },
+}
+
 export default function ControlSystemsAIPage() {
   return (
     <div className="space-y-12 max-w-3xl">
