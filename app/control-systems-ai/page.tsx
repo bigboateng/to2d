@@ -50,7 +50,7 @@ export default function ControlSystemsAIPage() {
           </p>
         </a>
 
-        <a href="/control-systems-ai/design-time-optimization-vs-real-time-stability" className="border border-white/10 p-6 hover:border-white/30 transition-colors group block">
+        <a href="/control-systems-ai/why-llms-fail-in-the-real-world" className="border border-white/10 p-6 hover:border-white/30 transition-colors group block">
           <h2 className="text-xl font-thin mb-3 group-hover:text-white/90">Why LLMs Fail in the Real World: Design-Time Optimization vs Real-Time Stability</h2>
           <p className="text-white/60 text-sm leading-relaxed mb-2">
             Why modern LLM systems overfit the setup phase and collapse during execution.
