@@ -2,10 +2,10 @@ import Image from 'next/image'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Design-Time Optimization vs. Real-Time Stability | to2d',
+  title: 'Why LLMs Fail in the Real World: Design-Time Optimization vs Real-Time Stability | to2d',
   description: 'Why modern LLM systems overfit the setup phase and collapse during execution. Applying control engineering principles to AI architectures.',
   openGraph: {
-    title: 'Design-Time Optimization vs. Real-Time Stability',
+    title: 'Why LLMs Fail in the Real World: Design-Time Optimization vs Real-Time Stability',
     description: 'Why modern LLM systems overfit the setup phase and collapse during execution. Applying control engineering principles to AI architectures.',
     images: [
       {
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Design-Time Optimization vs. Real-Time Stability',
+    title: 'Why LLMs Fail in the Real World: Design-Time Optimization vs Real-Time Stability',
     description: 'Why modern LLM systems overfit the setup phase and collapse during execution.',
     images: ['/images/ai/design_time_optimization.png'],
   },
@@ -31,7 +31,7 @@ export default function DesignTimeOptimizationVsRealTimeStabilityPage() {
     <div className="space-y-12 max-w-3xl">
       <section>
         <h1 className="text-3xl font-thin tracking-tight mb-4">
-          Design-Time Optimization vs. Real-Time Stability
+          Why LLMs Fail in the Real World: Design-Time Optimization vs Real-Time Stability
         </h1>
         <p className="text-white/50 text-sm mb-8">
           December 1, 2025
