@@ -163,6 +163,16 @@ export default function AIEraPage() {
             timing constraints · human-like interactions · legacy systems · invisible assumptions
           </p>
         </a>
+
+        <a href="/ai-era/multi-context-browser-control" className="border border-white/10 p-6 hover:border-white/30 transition-colors group block">
+          <h2 className="text-xl font-thin mb-3 group-hover:text-white/90">Multi-Context Browser Control for Agentic Systems</h2>
+          <p className="text-white/60 text-sm leading-relaxed mb-2">
+            A foundational primitive for distributed browser intelligence.
+          </p>
+          <p className="text-white/40 text-xs">
+            browser contexts · session sharing · parallel pages · sub-agent delegation · createPage()
+          </p>
+        </a>
       </section>
 
     </div>
