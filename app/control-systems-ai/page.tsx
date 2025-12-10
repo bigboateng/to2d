@@ -59,6 +59,16 @@ export default function ControlSystemsAIPage() {
             preparation vs survival · fine-tuning limits · control-theoretic reframe
           </p>
         </a>
+
+        <a href="/control-systems-ai/hierarchical-browser-control" className="border border-white/10 p-6 hover:border-white/30 transition-colors group block">
+          <h2 className="text-xl font-thin mb-3 group-hover:text-white/90">Hierarchical Control for Browser Automation</h2>
+          <p className="text-white/60 text-sm leading-relaxed mb-2">
+            Applying supervisory control and distributed systems theory to agentic architectures.
+          </p>
+          <p className="text-white/40 text-xs">
+            state-space decomposition · supervisory control · sensor fusion · DMPC · failure isolation
+          </p>
+        </a>
       </section>
     </div>
   )
