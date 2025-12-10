@@ -123,10 +123,20 @@ export default function OpenSourcePage() {
           <div className="border-t border-white/10 pt-4">
             <div className="flex items-center justify-between mb-4">
               <h3 className="text-sm font-medium text-white/80">Updates Log</h3>
-              <span className="text-white/40 text-xs">2 Updates</span>
+              <span className="text-white/40 text-xs">3 Updates</span>
             </div>
             
             <div className="space-y-3">
+              <a href="/open-source/updates/multi-context-browser-control" className="block border border-white/10 p-4 hover:border-white/30 transition-colors group">
+                <div className="flex items-start justify-between mb-1">
+                  <h4 className="text-sm text-white/80 group-hover:text-white/90">Multi-Context Browser Control</h4>
+                  <span className="text-white/40 text-xs">Dec 2025</span>
+                </div>
+                <p className="text-white/50 text-xs">
+                  Spawn isolated pages within shared session context
+                </p>
+              </a>
+              
               <a href="/open-source/updates/tool-execution-context" className="block border border-white/10 p-4 hover:border-white/30 transition-colors group">
                 <div className="flex items-start justify-between mb-1">
                   <h4 className="text-sm text-white/80 group-hover:text-white/90">Tool Execution Context</h4>
