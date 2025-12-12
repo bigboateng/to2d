@@ -56,6 +56,7 @@ interface Rocket {
   thrusterRight: number
   thrusterMain: number
   trajectory: { x: number; y: number }[]
+  side: 'left' | 'right'
 }
 
 export function ControlSystemsBackground({
@@ -70,7 +71,7 @@ export function ControlSystemsBackground({
   const arrowsRef = useRef<Arrow[]>([])
   const particlesRef = useRef<Particle[]>([])
   const pulsesRef = useRef<Pulse[]>([])
-  const rocketRef = useRef<Rocket | null>(null)
+  const rocketsRef = useRef<Rocket[]>([])
 
   useEffect(() => {
     const canvas = canvasRef.current
@@ -91,20 +92,37 @@ export function ControlSystemsBackground({
     const showBlocks = variant === 'block-diagram' || variant === 'full'
     const showParticles = variant === 'state-space' || variant === 'full'
 
-    if (!rocketRef.current) {
-      rocketRef.current = {
-        x: canvas.width * 0.8,
-        y: -50,
-        targetY: canvas.height * 0.7,
-        velocityY: 2 * speed,
-        rotation: 0,
-        phase: 'descending',
-        phaseTimer: 0,
-        thrusterLeft: 0,
-        thrusterRight: 0,
-        thrusterMain: 0,
-        trajectory: [],
-      }
+    if (rocketsRef.current.length === 0) {
+      rocketsRef.current = [
+        {
+          x: canvas.width * 0.08,
+          y: -50,
+          targetY: canvas.height * 0.65,
+          velocityY: 2 * speed,
+          rotation: 0,
+          phase: 'descending',
+          phaseTimer: 0,
+          thrusterLeft: 0,
+          thrusterRight: 0,
+          thrusterMain: 0,
+          trajectory: [],
+          side: 'left',
+        },
+        {
+          x: canvas.width * 0.92,
+          y: -150,
+          targetY: canvas.height * 0.55,
+          velocityY: 1.5 * speed,
+          rotation: 0,
+          phase: 'descending',
+          phaseTimer: 0,
+          thrusterLeft: 0,
+          thrusterRight: 0,
+          thrusterMain: 0,
+          trajectory: [],
+          side: 'right',
+        },
+      ]
     }
 
     if (showBlocks && blocksRef.current.length === 0) {
@@ -351,8 +369,7 @@ export function ControlSystemsBackground({
         ctx.fill()
       })
 
-      const rocket = rocketRef.current
-      if (rocket) {
+      rocketsRef.current.forEach((rocket, rocketIndex) => {
         rocket.phaseTimer++
 
         if (rocket.trajectory.length > 150) {
@@ -389,7 +406,7 @@ export function ControlSystemsBackground({
             }
             break
 
-          case 'hovering':
+          case 'hovering': {
             const hoverTarget = rocket.targetY - 100
             const hoverDiff = hoverTarget - rocket.y
             rocket.velocityY += hoverDiff * 0.01
@@ -405,8 +422,9 @@ export function ControlSystemsBackground({
               rocket.phaseTimer = 0
             }
             break
+          }
 
-          case 'landing':
+          case 'landing': {
             const landTarget = rocket.targetY
             const landDiff = landTarget - rocket.y
             rocket.velocityY = landDiff * 0.02
@@ -422,6 +440,7 @@ export function ControlSystemsBackground({
               rocket.rotation = 0
             }
             break
+          }
 
           case 'landed':
             rocket.thrusterMain *= 0.9
@@ -440,11 +459,14 @@ export function ControlSystemsBackground({
             rocket.thrusterMain = 1
 
             if (rocket.y < -100) {
-              rocket.y = -50
-              rocket.x = 0.2 + Math.random() * 0.6
-              rocket.x *= canvas.width
-              rocket.targetY = canvas.height * (0.6 + Math.random() * 0.2)
-              rocket.velocityY = 2 * speed
+              rocket.y = -50 - Math.random() * 100
+              if (rocket.side === 'left') {
+                rocket.x = canvas.width * (0.05 + Math.random() * 0.1)
+              } else {
+                rocket.x = canvas.width * (0.85 + Math.random() * 0.1)
+              }
+              rocket.targetY = canvas.height * (0.5 + Math.random() * 0.3)
+              rocket.velocityY = (1.5 + Math.random()) * speed
               rocket.phase = 'descending'
               rocket.phaseTimer = 0
               rocket.trajectory = []
@@ -528,12 +550,14 @@ export function ControlSystemsBackground({
 
         ctx.restore()
 
-        ctx.fillStyle = `rgba(255, 255, 255, ${opacity * 2})`
-        ctx.font = '10px monospace'
-        ctx.textAlign = 'left'
-        ctx.fillText(`ALT: ${Math.max(0, Math.round(rocket.targetY - rocket.y))}m`, 20, canvas.height - 60)
-        ctx.fillText(`VEL: ${Math.abs(rocket.velocityY).toFixed(2)}m/s`, 20, canvas.height - 45)
-        ctx.fillText(`PHASE: ${rocket.phase.toUpperCase()}`, 20, canvas.height - 30)
+        if (rocketIndex === 0) {
+          ctx.fillStyle = `rgba(255, 255, 255, ${opacity * 2})`
+          ctx.font = '10px monospace'
+          ctx.textAlign = 'left'
+          ctx.fillText(`ALT: ${Math.max(0, Math.round(rocket.targetY - rocket.y))}m`, 20, canvas.height - 60)
+          ctx.fillText(`VEL: ${Math.abs(rocket.velocityY).toFixed(2)}m/s`, 20, canvas.height - 45)
+          ctx.fillText(`PHASE: ${rocket.phase.toUpperCase()}`, 20, canvas.height - 30)
+        }
 
         const landingPadX = rocket.x
         const landingPadY = rocket.targetY
@@ -552,7 +576,7 @@ export function ControlSystemsBackground({
           ctx.lineTo(landingPadX + i * 10 + 5, landingPadY + 5)
           ctx.stroke()
         }
-      }
+      })
 
       animationRef.current = requestAnimationFrame(animate)
     }

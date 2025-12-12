@@ -945,6 +945,27 @@ export default function MultiContextBrowserControlPage() {
             As browser automation agents take on increasingly complex workflows, multi-context control becomes not an optimization but a necessity.
           </p>
 
+          <div className="border border-white/20 rounded-lg p-6 my-10 bg-gradient-to-r from-white/5 to-transparent">
+            <div className="flex items-start gap-4">
+              <div className="text-2xl">🚀</div>
+              <div>
+                <h3 className="text-white/90 font-medium mb-2">Use This in Your Projects</h3>
+                <p className="text-white/60 text-sm mb-4">
+                  These multi-context capabilities are available in our open-source BrowserAgent package. Build custom tools with <code className="text-white/80 bg-white/10 px-1 rounded">createPage()</code>, access <code className="text-white/80 bg-white/10 px-1 rounded">browserContext</code>, and create hierarchical agent architectures today.
+                </p>
+                <a 
+                  href="https://www.npmjs.com/package/@centralinc/browseragent" 
+                  className="inline-flex items-center gap-2 text-white/80 hover:text-white transition-colors text-sm font-medium border border-white/20 px-4 py-2 rounded hover:border-white/40"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span>@centralinc/browseragent on npm</span>
+                  <span>→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
           <h2 className="text-xl font-thin text-white/90 mt-10 mb-4">References</h2>
 
           <ul className="text-white/60 space-y-2 ml-6 list-disc text-sm">
