@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
+import Image from 'next/image'
 
 function MultiContextAnimation() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
@@ -328,6 +329,22 @@ export default function MultiContextBrowserControlPage() {
           Dec 9, 2025
         </p>
       </section>
+
+      <figure className="my-6">
+        <div className="border border-white/20 rounded overflow-hidden bg-white/5 p-4">
+          <Image
+            src="/images/ai/multi-context-browser-control.png"
+            alt="Multi-Context Browser Control Architecture"
+            width={1200}
+            height={630}
+            className="w-full h-auto"
+            priority
+          />
+        </div>
+        <figcaption className="text-white/40 text-xs mt-3 text-center">
+          Browser context with shared session state enabling parallel page operations
+        </figcaption>
+      </figure>
 
       <article className="prose prose-invert max-w-none">
         <div className="text-white/70 text-sm leading-relaxed space-y-6">
