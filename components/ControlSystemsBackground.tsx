@@ -95,20 +95,6 @@ export function ControlSystemsBackground({
     if (rocketsRef.current.length === 0) {
       rocketsRef.current = [
         {
-          x: canvas.width * 0.08,
-          y: -50,
-          targetY: canvas.height * 0.65,
-          velocityY: 2 * speed,
-          rotation: 0,
-          phase: 'descending',
-          phaseTimer: 0,
-          thrusterLeft: 0,
-          thrusterRight: 0,
-          thrusterMain: 0,
-          trajectory: [],
-          side: 'left',
-        },
-        {
           x: canvas.width * 0.92,
           y: -150,
           targetY: canvas.height * 0.55,
@@ -377,15 +363,15 @@ export function ControlSystemsBackground({
         }
         rocket.trajectory.push({ x: rocket.x, y: rocket.y })
 
-        ctx.strokeStyle = `rgba(255, 255, 255, ${opacity * 0.4})`
-        ctx.lineWidth = 1
+        ctx.strokeStyle = `rgba(255, 255, 255, ${opacity * 0.15})`
+        ctx.lineWidth = 0.5
         ctx.setLineDash([5, 5])
         ctx.beginPath()
         if (rocket.trajectory.length > 1) {
           ctx.moveTo(rocket.trajectory[0].x, rocket.trajectory[0].y)
           for (let i = 1; i < rocket.trajectory.length; i++) {
             const alpha = i / rocket.trajectory.length
-            ctx.globalAlpha = alpha * 0.5
+            ctx.globalAlpha = alpha * 0.2
             ctx.lineTo(rocket.trajectory[i].x, rocket.trajectory[i].y)
           }
         }
@@ -478,11 +464,13 @@ export function ControlSystemsBackground({
         ctx.translate(rocket.x, rocket.y)
         ctx.rotate(rocket.rotation)
 
+        const rocketOpacity = 0.25
+
         if (rocket.thrusterMain > 0.1) {
           const thrusterHeight = 15 + rocket.thrusterMain * 25
           const thrusterGradient = ctx.createLinearGradient(0, 15, 0, 15 + thrusterHeight)
-          thrusterGradient.addColorStop(0, `rgba(255, 255, 255, ${rocket.thrusterMain * 0.9})`)
-          thrusterGradient.addColorStop(0.5, `rgba(255, 200, 100, ${rocket.thrusterMain * 0.5})`)
+          thrusterGradient.addColorStop(0, `rgba(255, 255, 255, ${rocket.thrusterMain * 0.3 * rocketOpacity})`)
+          thrusterGradient.addColorStop(0.5, `rgba(255, 200, 100, ${rocket.thrusterMain * 0.2 * rocketOpacity})`)
           thrusterGradient.addColorStop(1, 'rgba(255, 100, 0, 0)')
           
           ctx.fillStyle = thrusterGradient
@@ -496,7 +484,7 @@ export function ControlSystemsBackground({
 
         if (rocket.thrusterLeft > 0.1) {
           const leftThruster = 8 + rocket.thrusterLeft * 12
-          ctx.fillStyle = `rgba(255, 255, 255, ${rocket.thrusterLeft * 0.6})`
+          ctx.fillStyle = `rgba(255, 255, 255, ${rocket.thrusterLeft * 0.2 * rocketOpacity})`
           ctx.beginPath()
           ctx.moveTo(-6, -8)
           ctx.lineTo(-6 - leftThruster, -8)
@@ -507,7 +495,7 @@ export function ControlSystemsBackground({
 
         if (rocket.thrusterRight > 0.1) {
           const rightThruster = 8 + rocket.thrusterRight * 12
-          ctx.fillStyle = `rgba(255, 255, 255, ${rocket.thrusterRight * 0.6})`
+          ctx.fillStyle = `rgba(255, 255, 255, ${rocket.thrusterRight * 0.2 * rocketOpacity})`
           ctx.beginPath()
           ctx.moveTo(6, -8)
           ctx.lineTo(6 + rightThruster, -8)
@@ -516,9 +504,9 @@ export function ControlSystemsBackground({
           ctx.fill()
         }
 
-        ctx.strokeStyle = `rgba(255, 255, 255, ${opacity * 3})`
-        ctx.fillStyle = `rgba(255, 255, 255, ${opacity * 1.5})`
-        ctx.lineWidth = 1.5
+        ctx.strokeStyle = `rgba(255, 255, 255, ${opacity * rocketOpacity})`
+        ctx.fillStyle = `rgba(255, 255, 255, ${opacity * 0.5 * rocketOpacity})`
+        ctx.lineWidth = 1
 
         ctx.beginPath()
         ctx.moveTo(0, -15)
@@ -551,8 +539,8 @@ export function ControlSystemsBackground({
         ctx.restore()
 
         if (rocketIndex === 0) {
-          ctx.fillStyle = `rgba(255, 255, 255, ${opacity * 2})`
-          ctx.font = '10px monospace'
+          ctx.fillStyle = `rgba(255, 255, 255, ${opacity * 0.5})`
+          ctx.font = '9px monospace'
           ctx.textAlign = 'left'
           ctx.fillText(`ALT: ${Math.max(0, Math.round(rocket.targetY - rocket.y))}m`, 20, canvas.height - 60)
           ctx.fillText(`VEL: ${Math.abs(rocket.velocityY).toFixed(2)}m/s`, 20, canvas.height - 45)
@@ -561,19 +549,19 @@ export function ControlSystemsBackground({
 
         const landingPadX = rocket.x
         const landingPadY = rocket.targetY
-        ctx.strokeStyle = `rgba(255, 255, 255, ${opacity * 2})`
-        ctx.lineWidth = 2
+        ctx.strokeStyle = `rgba(255, 255, 255, ${opacity * 0.5})`
+        ctx.lineWidth = 1
         ctx.beginPath()
-        ctx.moveTo(landingPadX - 30, landingPadY)
-        ctx.lineTo(landingPadX + 30, landingPadY)
+        ctx.moveTo(landingPadX - 25, landingPadY)
+        ctx.lineTo(landingPadX + 25, landingPadY)
         ctx.stroke()
 
-        ctx.strokeStyle = `rgba(255, 255, 255, ${opacity * 1})`
-        ctx.lineWidth = 1
-        for (let i = -3; i <= 3; i++) {
+        ctx.strokeStyle = `rgba(255, 255, 255, ${opacity * 0.3})`
+        ctx.lineWidth = 0.5
+        for (let i = -2; i <= 2; i++) {
           ctx.beginPath()
           ctx.moveTo(landingPadX + i * 10, landingPadY)
-          ctx.lineTo(landingPadX + i * 10 + 5, landingPadY + 5)
+          ctx.lineTo(landingPadX + i * 10 + 4, landingPadY + 4)
           ctx.stroke()
         }
       })
