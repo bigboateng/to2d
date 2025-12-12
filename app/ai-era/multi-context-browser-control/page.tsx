@@ -317,36 +317,38 @@ function DistributedAgentAnimation() {
 
 export default function MultiContextBrowserControlPage() {
   return (
-    <div className="space-y-12 max-w-3xl">
-      <section>
-        <h1 className="text-3xl font-thin tracking-tight mb-4">
-          Multi-Context Browser Control for Agentic Systems
-        </h1>
-        <p className="text-white/50 text-sm mb-2">
-          A foundational primitive for distributed browser intelligence
-        </p>
-        <p className="text-white/40 text-xs mb-8">
-          Dec 9, 2025
-        </p>
-      </section>
+    <div className="space-y-12">
+      <div className="max-w-3xl">
+        <section>
+          <h1 className="text-3xl font-thin tracking-tight mb-4">
+            Multi-Context Browser Control for Agentic Systems
+          </h1>
+          <p className="text-white/50 text-sm mb-2">
+            A foundational primitive for distributed browser intelligence
+          </p>
+          <p className="text-white/40 text-xs mb-8">
+            Dec 9, 2025
+          </p>
+        </section>
+      </div>
 
-      <figure className="my-6">
-        <div className="border border-white/20 rounded overflow-hidden bg-white/5 p-4">
+      <figure className="w-full max-w-5xl">
+        <div className="border border-white/20 rounded-lg overflow-hidden bg-black/60 p-2">
           <Image
             src="/images/ai/multi-context-browser-control.png"
             alt="Multi-Context Browser Control Architecture"
-            width={1200}
-            height={630}
-            className="w-full h-auto"
+            width={1920}
+            height={1080}
+            className="w-full h-auto rounded"
             priority
           />
         </div>
-        <figcaption className="text-white/40 text-xs mt-3 text-center">
+        <figcaption className="text-white/40 text-xs mt-4 text-center">
           Browser context with shared session state enabling parallel page operations
         </figcaption>
       </figure>
 
-      <article className="prose prose-invert max-w-none">
+      <article className="prose prose-invert max-w-3xl">
         <div className="text-white/70 text-sm leading-relaxed space-y-6">
           
           <section className="border-l-2 border-white/20 pl-4 py-2 bg-white/5">
@@ -989,7 +991,7 @@ export default function MultiContextBrowserControlPage() {
         </div>
       </article>
 
-      <section className="text-white/40 text-sm border-t border-white/10 pt-6">
+      <section className="text-white/40 text-sm border-t border-white/10 pt-6 max-w-3xl">
         <a href="/ai-era" className="hover:text-white/60 transition-colors">
           ← Back to AI Era
         </a>
