@@ -9,7 +9,7 @@ export default function ModelCoupledVsDecoupledPage() {
           Why architecture, not models, determines long-term product advantage
         </p>
         <p className="text-white/40 text-xs mb-8">
-          Dec 9, 2025
+          Dec 13, 2025
         </p>
       </section>
 
