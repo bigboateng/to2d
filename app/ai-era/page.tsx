@@ -173,6 +173,16 @@ export default function AIEraPage() {
             browser contexts · session sharing · parallel pages · sub-agent delegation · createPage()
           </p>
         </a>
+
+        <a href="/ai-era/model-coupled-vs-decoupled" className="border border-white/10 p-6 hover:border-white/30 transition-colors group block">
+          <h2 className="text-xl font-thin mb-3 group-hover:text-white/90">Model-Coupled vs Model-Decoupled AI Systems</h2>
+          <p className="text-white/60 text-sm leading-relaxed mb-2">
+            Why architecture, not models, determines long-term product advantage.
+          </p>
+          <p className="text-white/40 text-xs">
+            architecture · constraints · invariants · stability · competitive moats · control over intelligence
+          </p>
+        </a>
       </section>
 
     </div>
