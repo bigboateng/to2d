@@ -406,7 +406,7 @@ export default function DeterminismVsStabilityPage() {
     <div className="space-y-8">
       <div className="max-w-3xl">
         <header className="mb-12">
-          <p className="text-white/40 text-sm mb-2">Dec 13, 2025</p>
+          <p className="text-white/40 text-sm mb-2">Dec 14, 2025</p>
           <h1 className="text-3xl font-thin tracking-tight mb-4">
             Determinism vs Stability
           </h1>
