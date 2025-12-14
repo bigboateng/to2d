@@ -14,6 +14,19 @@ export default function AIEraPage() {
       </section>
 
       <section className="space-y-6">
+        <a href="/ai-era/determinism-vs-stability" className="border border-white/10 p-6 hover:border-white/30 transition-colors group block">
+          <div className="flex items-start justify-between mb-3">
+            <h2 className="text-xl font-thin group-hover:text-white/90">Determinism vs Stability</h2>
+            <span className="text-white/40 text-xs shrink-0 ml-4">Dec 13, 2025</span>
+          </div>
+          <p className="text-white/60 text-sm leading-relaxed mb-2">
+            Designing systems in non-deterministic environments.
+          </p>
+          <p className="text-white/40 text-xs">
+            stability · convergence · dynamic systems · feedback loops · architectural resilience
+          </p>
+        </a>
+
         <a href="/ai-era/model-coupled-vs-decoupled" className="border border-white/10 p-6 hover:border-white/30 transition-colors group block">
           <div className="flex items-start justify-between mb-3">
             <h2 className="text-xl font-thin group-hover:text-white/90">Model-Coupled vs Model-Decoupled AI Systems</h2>
