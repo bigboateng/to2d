@@ -37,9 +37,9 @@ export default function RootLayout({
                 <a href="/automations" className="text-white/60 hover:text-white transition-colors">
                   automations
                 </a>
-                <a href="/pre-ai-research" className="text-white/60 hover:text-white transition-colors">
+                {/* <a href="/pre-ai-research" className="text-white/60 hover:text-white transition-colors">
                   pre-ai research
-                </a>
+                </a> */}
                 <a href="/ai-era" className="text-white/60 hover:text-white transition-colors">
                   ai era
                 </a>
