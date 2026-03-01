@@ -1,6 +1,5 @@
 import { getArticleBySlug, getArticleSlugs } from '@/lib/mdx'
 import { MDXRenderer } from '@/components/MDXRenderer'
-import { serialize } from 'next-mdx-remote/serialize'
 import remarkMath from 'remark-math'
 import rehypeKatex from 'rehype-katex'
 
@@ -27,13 +26,6 @@ export async function generateMetadata({ params }: PageProps) {
 
 export default async function ArticlePage({ params }: PageProps) {
   const article = getArticleBySlug(params.slug)
-  
-  const mdxSource = await serialize(article.content, {
-    mdxOptions: {
-      remarkPlugins: [remarkMath],
-      rehypePlugins: [rehypeKatex],
-    },
-  })
 
   return (
     <article className="space-y-8">
@@ -54,7 +46,15 @@ export default async function ArticlePage({ params }: PageProps) {
       </header>
 
       <div className="border border-white/10 p-8">
-        <MDXRenderer source={mdxSource} />
+        <MDXRenderer
+          source={article.content}
+          options={{
+            mdxOptions: {
+              remarkPlugins: [remarkMath],
+              rehypePlugins: [rehypeKatex],
+            },
+          }}
+        />
       </div>
 
       <nav className="border border-white/10 p-6">
@@ -68,6 +68,3 @@ export default async function ArticlePage({ params }: PageProps) {
     </article>
   )
 }
-
-
-
