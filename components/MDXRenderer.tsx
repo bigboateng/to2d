@@ -1,11 +1,5 @@
-'use client'
-
-import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
+import { MDXRemote, MDXRemoteProps } from 'next-mdx-remote/rsc'
 import { ReactNode } from 'react'
-
-interface MDXRendererProps {
-  source: MDXRemoteSerializeResult
-}
 
 const components = {
   h1: ({ children }: { children?: ReactNode }) => (
@@ -80,13 +74,15 @@ const components = {
   ),
 }
 
-export function MDXRenderer({ source }: MDXRendererProps) {
+interface MDXRendererProps {
+  source: string
+  options?: Omit<MDXRemoteProps, 'source' | 'components'>
+}
+
+export function MDXRenderer({ source, options }: MDXRendererProps) {
   return (
     <div className="prose prose-invert max-w-none">
-      <MDXRemote {...source} components={components} />
+      <MDXRemote source={source} components={components} {...options} />
     </div>
   )
 }
-
-
-
