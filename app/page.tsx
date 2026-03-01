@@ -11,42 +11,21 @@ export default function Home() {
         <a href="/control-systems" className="border border-white/10 p-6 hover:border-white/30 transition-colors group">
           <h2 className="text-lg font-thin mb-2 group-hover:text-white/70">Control Systems</h2>
           <p className="text-white/40 text-sm">
-            The foundation layer. How engineering wires your thinking.
-          </p>
-        </a>
-
-        <a href="/automations" className="border border-white/10 p-6 hover:border-white/30 transition-colors group">
-          <h2 className="text-lg font-thin mb-2 group-hover:text-white/70">Automations</h2>
-          <p className="text-white/40 text-sm">
-            2018 → YC → now. The arc before AI.
-          </p>
-        </a>
-
-        <a href="/pre-ai-research" className="border border-white/10 p-6 hover:border-white/30 transition-colors group">
-          <h2 className="text-lg font-thin mb-2 group-hover:text-white/70">Pre-AI Research</h2>
-          <p className="text-white/40 text-sm">
-            Domain inversion. Intent transfer. Early prototypes.
-          </p>
-        </a>
-
-        <a href="/ai-era" className="border border-white/10 p-6 hover:border-white/30 transition-colors group">
-          <h2 className="text-lg font-thin mb-2 group-hover:text-white/70">AI Era</h2>
-          <p className="text-white/40 text-sm">
-            LLMs as operators. The primitive you needed.
+            The foundation layer. Feedback, state-space dynamics, transfer functions.
           </p>
         </a>
 
         <a href="/control-systems-ai" className="border border-white/10 p-6 hover:border-white/30 transition-colors group">
           <h2 className="text-lg font-thin mb-2 group-hover:text-white/70">Control Systems × AI</h2>
           <p className="text-white/40 text-sm">
-            Applying aerospace and control theory to AI architectures.
+            Control theory applied to AI architectures. Operators, not oracles.
           </p>
         </a>
 
-        <a href="/tools" className="border border-white/10 p-6 hover:border-white/30 transition-colors group">
-          <h2 className="text-lg font-thin mb-2 group-hover:text-white/70">Tools for the Impossible</h2>
+        <a href="/language-models" className="border border-white/10 p-6 hover:border-white/30 transition-colors group">
+          <h2 className="text-lg font-thin mb-2 group-hover:text-white/70">Language Models</h2>
           <p className="text-white/40 text-sm">
-            The hidden arsenal. Signal, not recipe.
+            Where LLMs break, why context fails, and what latent space actually looks like.
           </p>
         </a>
 

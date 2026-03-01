@@ -34,27 +34,15 @@ export default function RootLayout({
                 <a href="/control-systems" className="text-white/60 hover:text-white transition-colors">
                   control systems
                 </a>
-                {/* <a href="/automations" className="text-white/60 hover:text-white transition-colors">
-                  automations
-                </a> */}
-                {/* <a href="/pre-ai-research" className="text-white/60 hover:text-white transition-colors">
-                  pre-ai research
-                </a> */}
-                <a href="/ai-era" className="text-white/60 hover:text-white transition-colors">
-                  ai era
-                </a>
                 <a href="/control-systems-ai" className="text-white/60 hover:text-white transition-colors">
                   control systems × ai
                 </a>
-                {/* <a href="/tools" className="text-white/60 hover:text-white transition-colors">
-                  tools
-                </a> */}
+                <a href="/language-models" className="text-white/60 hover:text-white transition-colors">
+                  language models
+                </a>
                 <a href="/open-source" className="text-white/60 hover:text-white transition-colors">
                   open source
                 </a>
-                {/* <a href="/contact" className="text-white/60 hover:text-white transition-colors">
-                  contact
-                </a> */}
               </nav>
             </div>
           </header>

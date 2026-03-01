@@ -13,11 +13,11 @@ export default function ConstraintsOverContextPage() {
       <article className="prose prose-invert max-w-none">
         <div className="text-white/70 text-sm leading-relaxed space-y-6">
           <p>
-            Long before language models existed, one lesson kept appearing across every domain I worked in:
+            Long before language models existed, one lesson kept appearing across every domain:
             systems become predictable not by adding more context, but by <em>constraining</em> what the system is
             allowed to see and do.<br />
             This idea — that predictability comes from reduction, not addition — became one of the most
-            important architectural principles in my entire body of work.
+            important architectural principles in this entire body of work.
           </p>
           
           <h2 className="text-xl font-thin text-white/90 mt-8 mb-4">Why adding more context makes systems worse</h2>

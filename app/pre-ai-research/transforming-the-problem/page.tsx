@@ -15,8 +15,8 @@ export default function TransformingTheProblemPage() {
           <p>
             Most hard problems don't become solvable by adding more information or more
             computation. They become solvable when the <em>domain</em> of the problem is changed.
-            This was an early theme in my work long before modern AI systems existed:
-            the realization that every problem has multiple possible domains, and that
+            This was an early theme long before modern AI systems existed:
+            every problem has multiple possible domains, and
             the structure of the domain determines whether the problem is tractable,
             stable, or even meaningful.
           </p>
@@ -191,7 +191,7 @@ export default function TransformingTheProblemPage() {
           </ul>
           
           <p>
-            I didn't have the language for it then, but the underlying principle was the
+            The language for it didn't exist yet, but the underlying principle was the
             same as in physics and control systems:<br />
             <strong>rewrite the domain until the problem is solvable.</strong>
           </p>
