@@ -1,3 +1,5 @@
+import AIReliabilityDiagram from '@/components/AIReliabilityDiagram'
+
 export default function AIReliabilityPage() {
   const foundations = [
     { href: '#observability', label: 'Observability' },
@@ -18,6 +20,10 @@ export default function AIReliabilityPage() {
         <p className="text-white/50 text-sm mb-8">
           Verification, correction loops, and failure semantics for production AI systems
         </p>
+      </section>
+
+      <section>
+        <AIReliabilityDiagram />
       </section>
 
       <article className="prose prose-invert max-w-none">
