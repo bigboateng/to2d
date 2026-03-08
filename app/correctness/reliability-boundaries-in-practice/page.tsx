@@ -1,3 +1,31 @@
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Reliability Boundaries in Practice',
+  description: 'A concrete coverage-selection example showing how reliability boundaries turn failures into structured domain signals.',
+  openGraph: {
+    title: 'Reliability Boundaries in Practice',
+    description:
+      'A concrete coverage-selection example showing how reliability boundaries turn failures into structured domain signals.',
+    type: 'article',
+    images: [
+      {
+        url: '/images/og/correctness-cover.png?v=2',
+        width: 1200,
+        height: 630,
+        alt: 'Reliability Boundaries in Practice - TO2D',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Reliability Boundaries in Practice',
+    description:
+      'A concrete coverage-selection example showing how reliability boundaries turn failures into structured domain signals.',
+    images: ['/images/og/correctness-cover.png?v=2'],
+  },
+}
+
 export default function ReliabilityBoundariesInPracticePage() {
   return (
     <div className="-mx-6 md:-mx-10 mt-[-2.5rem] md:mt-[-3.5rem]">

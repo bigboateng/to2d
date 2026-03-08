@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     type: 'article',
     images: [
       {
-        url: '/images/og/correctness-cover.svg',
+        url: '/images/og/correctness-cover.png?v=2',
         width: 1200,
         height: 630,
         alt: 'Correctness - TO2D',
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     title: 'Correctness',
     description:
       'Reliability boundaries in browser automation: defining interfaces, diagnosing failures, and improving systems.',
-    images: ['/images/og/correctness-cover.svg'],
+    images: ['/images/og/correctness-cover.png?v=2'],
   },
 }
 

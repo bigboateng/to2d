@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     type: 'article',
     images: [
       {
-        url: '/images/og/using-reliability-boundaries-cover.svg',
+        url: '/images/og/using-reliability-boundaries-cover.png?v=2',
         width: 1200,
         height: 630,
         alt: 'Using Reliability Boundaries - TO2D',
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     title: 'Using Reliability Boundaries',
     description:
       'How reliability boundaries localize failures, operationalize errors, and turn automation events into structured domain knowledge.',
-    images: ['/images/og/using-reliability-boundaries-cover.svg'],
+    images: ['/images/og/using-reliability-boundaries-cover.png?v=2'],
   },
 }
 

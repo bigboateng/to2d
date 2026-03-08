@@ -1,3 +1,31 @@
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Where Reliability Boundaries Appear',
+  description: 'Where reliability boundaries appear in automation systems and how parameterized interfaces make failures diagnosable.',
+  openGraph: {
+    title: 'Where Reliability Boundaries Appear',
+    description:
+      'Where reliability boundaries appear in automation systems and how parameterized interfaces make failures diagnosable.',
+    type: 'article',
+    images: [
+      {
+        url: '/images/og/correctness-cover.png?v=2',
+        width: 1200,
+        height: 630,
+        alt: 'Where Reliability Boundaries Appear - TO2D',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Where Reliability Boundaries Appear',
+    description:
+      'Where reliability boundaries appear in automation systems and how parameterized interfaces make failures diagnosable.',
+    images: ['/images/og/correctness-cover.png?v=2'],
+  },
+}
+
 export default function WhereReliabilityBoundariesAppearPage() {
   return (
     <div className="-mx-6 md:-mx-10 mt-[-2.5rem] md:mt-[-3.5rem]">
