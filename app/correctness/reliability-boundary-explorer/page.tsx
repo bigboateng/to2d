@@ -263,6 +263,12 @@ domain interface: changed`}
               &larr; Back: Reliability Boundaries in Practice
             </a>
             <a
+              href="/correctness/determinism"
+              className="inline-block border border-[#5b4126]/30 px-4 py-2 text-[15px] text-[#2a231c] hover:bg-[#f8f0df] transition-colors"
+            >
+              Next: Deterministic Boundaries -&gt;
+            </a>
+            <a
               href="/correctness"
               className="inline-block border border-[#5b4126]/30 px-4 py-2 text-[15px] text-[#2a231c] hover:bg-[#f8f0df] transition-colors"
             >

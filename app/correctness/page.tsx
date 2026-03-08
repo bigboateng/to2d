@@ -146,6 +146,11 @@ export default function CorrectnessPage() {
                   4. Reliability Boundary Explorer
                 </a>
               </li>
+              <li>
+                <a href="/correctness/determinism" className="underline decoration-[#5b4126]/35 underline-offset-4 hover:decoration-[#5b4126]">
+                  5. Deterministic Boundaries
+                </a>
+              </li>
             </ol>
             <div className="pt-2">
               <a

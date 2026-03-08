@@ -28,7 +28,10 @@ const navSections = [
   },
   {
     heading: 'Correctness',
-    links: [{ href: '/correctness', label: 'Reliability Boundary' }],
+    links: [
+      { href: '/correctness', label: 'Reliability Boundary' },
+      { href: '/correctness/determinism', label: 'Deterministic Boundaries' },
+    ],
   },
   {
     heading: 'Primitives',
