@@ -9,12 +9,21 @@ export const metadata: Metadata = {
     description:
       'How reliability boundaries localize failures, operationalize errors, and turn automation events into structured domain knowledge.',
     type: 'article',
+    images: [
+      {
+        url: '/images/og/using-reliability-boundaries-cover.svg',
+        width: 1200,
+        height: 630,
+        alt: 'Using Reliability Boundaries - TO2D',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Using Reliability Boundaries',
     description:
       'How reliability boundaries localize failures, operationalize errors, and turn automation events into structured domain knowledge.',
+    images: ['/images/og/using-reliability-boundaries-cover.svg'],
   },
 }
 

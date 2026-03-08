@@ -8,12 +8,21 @@ export const metadata: Metadata = {
     description:
       'Reliability boundaries in browser automation: defining interfaces, diagnosing failures, and improving systems.',
     type: 'article',
+    images: [
+      {
+        url: '/images/og/correctness-cover.svg',
+        width: 1200,
+        height: 630,
+        alt: 'Correctness - TO2D',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Correctness',
     description:
       'Reliability boundaries in browser automation: defining interfaces, diagnosing failures, and improving systems.',
+    images: ['/images/og/correctness-cover.svg'],
   },
 }
 
