@@ -18,16 +18,15 @@ export default function ArchitecturePage() {
       description: 'Structural constraints that hold regardless of model, prompt, or context window.',
     },
     {
-      href: '/architecture/ai-reliability',
-      title: 'AI Reliability',
-      description: 'Verification, correction loops, and failure semantics for production AI systems.',
+      href: '/architecture/zero-context-architecture',
+      title: 'Zero-Context Architecture',
+      description: 'Domain isolation, minimal representations, and reproducible agent behavior.',
     },
   ]
 
   return (
     <div className="space-y-20 max-w-3xl">
 
-      {/* Title + Thesis */}
       <section>
         <p className="text-[10px] font-mono tracking-[0.2em] text-white/30 uppercase mb-6">
           2026–
@@ -43,12 +42,10 @@ export default function ArchitecturePage() {
         </p>
       </section>
 
-      {/* Diagram */}
       <section>
         <AIReliabilityDiagram />
       </section>
 
-      {/* Three Layers */}
       <section className="space-y-12">
 
         <div>
@@ -94,7 +91,6 @@ export default function ArchitecturePage() {
 
       </section>
 
-      {/* Core Insight */}
       <section>
         <h2 className="text-xl font-thin mb-6">Stochastic Core, Deterministic Shell</h2>
         <div className="border-l border-white/10 pl-6 space-y-2">
@@ -108,7 +104,6 @@ export default function ArchitecturePage() {
         </p>
       </section>
 
-      {/* Chapters */}
       <section className="border-t border-white/10 pt-12 space-y-6">
         <h2 className="text-sm font-mono text-white/40 uppercase tracking-wider mb-6">Chapters</h2>
         {chapters.map((node) => (

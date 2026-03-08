@@ -25,6 +25,22 @@ body {
   color: #ffffff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::selection {
+  background: rgba(160, 210, 255, 0.35);
+  color: #ffffff;
+}
+
+::-moz-selection {
+  background: rgba(160, 210, 255, 0.35);
+  color: #ffffff;
 }
 
 .katex {
@@ -35,5 +51,75 @@ body {
   margin: 2rem 0;
   overflow-x: auto;
   overflow-y: hidden;
+}
+
+.correctness-shell {
+  background:
+    radial-gradient(circle at 20% 10%, rgba(255, 255, 255, 0.35), transparent 35%),
+    radial-gradient(circle at 80% 90%, rgba(171, 129, 70, 0.12), transparent 35%),
+    linear-gradient(180deg, #f7f0df 0%, #efe4cf 100%);
+  color: #251f19;
+}
+
+.correctness-shell ::selection {
+  background: rgba(171, 129, 70, 0.35);
+  color: #1f1912;
+}
+
+.correctness-shell ::-moz-selection {
+  background: rgba(171, 129, 70, 0.35);
+  color: #1f1912;
+}
+
+.correctness-paper {
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      rgba(51, 43, 36, 0.06) 0px,
+      rgba(51, 43, 36, 0.06) 1px,
+      transparent 1px,
+      transparent 34px
+    );
+  background-color: rgba(255, 252, 245, 0.8);
+  border: 1px solid rgba(101, 75, 43, 0.22);
+  box-shadow: 0 30px 80px rgba(38, 28, 14, 0.24), inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+}
+
+.correctness-type {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.correctness-inkline {
+  font-family: "Bradley Hand", "Segoe Print", "Comic Sans MS", "Marker Felt", cursive;
+  letter-spacing: 0.02em;
+  color: #3b2a19;
+  transform: rotate(-0.5deg);
+}
+
+.correctness-note {
+  background: rgba(255, 249, 237, 0.92);
+  border: 1px dashed rgba(91, 65, 38, 0.4);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.4);
+}
+
+.correctness-page-enter {
+  animation: correctnessPageEnter 260ms ease-out;
+}
+
+@keyframes correctnessPageEnter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@supports (view-transition-name: correctnessPaper) {
+  .correctness-paper {
+    view-transition-name: correctnessPaper;
+  }
 }
 
