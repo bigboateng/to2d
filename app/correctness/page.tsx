@@ -1,3 +1,22 @@
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Correctness',
+  description: 'Reliability boundaries in browser automation: defining interfaces, diagnosing failures, and improving systems.',
+  openGraph: {
+    title: 'Correctness',
+    description:
+      'Reliability boundaries in browser automation: defining interfaces, diagnosing failures, and improving systems.',
+    type: 'article',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Correctness',
+    description:
+      'Reliability boundaries in browser automation: defining interfaces, diagnosing failures, and improving systems.',
+  },
+}
+
 export default function CorrectnessPage() {
   return (
     <div className="-mx-6 md:-mx-10 mt-[-2.5rem] md:mt-[-3.5rem]">

@@ -1,6 +1,6 @@
 import { ImageResponse } from 'next/og'
 
-export const alt = 'Using Reliability Boundaries - TO2D'
+export const alt = 'Correctness - TO2D'
 export const size = {
   width: 1200,
   height: 630,
@@ -72,17 +72,17 @@ export default function Image() {
                 color: 'rgba(91,65,38,0.8)',
               }}
             >
-              Correctness / Page 4
+              Correctness
             </div>
             <div
               style={{
-                fontSize: 78,
+                fontSize: 76,
                 lineHeight: 1.04,
                 fontWeight: 700,
                 maxWidth: 900,
               }}
             >
-              Using Reliability Boundaries
+              Reliability Boundaries in Browser Automation
             </div>
             <div
               style={{
@@ -92,7 +92,7 @@ export default function Image() {
                 color: '#2f261d',
               }}
             >
-              Reliability boundaries localize failures and turn automation errors into structured domain knowledge.
+              Defining reliability boundaries that localize failures and turn system errors into useful operational signals.
             </div>
           </div>
 
