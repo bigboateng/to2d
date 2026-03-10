@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     type: 'article',
     images: [
       {
-        url: '/images/og/deterministic-boundaries-cover.svg',
+        url: '/images/og/deterministic-boundaries-cover.png',
         width: 1200,
         height: 630,
         alt: 'Deterministic Boundaries for Probabilistic Systems - TO2D',
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'The task is richer than the guarantees.',
     description: 'But we force models to satisfy both through the same channel.',
-    images: ['/images/og/deterministic-boundaries-cover.svg'],
+    images: ['/images/og/deterministic-boundaries-cover.png'],
   },
 }
 
@@ -84,7 +84,7 @@ export default function DeterminismPage() {
               <rect key={`lr${pct}`} x="324" y={100 + 44 * pct - 3} width="6" height="6" rx="0.8" fill="#E8E8E6" />
             ))}
             <text x="270" y="127" textAnchor="middle" fill="#2A2A2A" fontSize="13" fontFamily="ui-monospace, monospace">
-              LLM M
+              LLM
             </text>
 
             {/* Arrow: LLM → candidate output */}
