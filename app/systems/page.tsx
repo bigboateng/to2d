@@ -23,25 +23,25 @@ export default function SystemsPage() {
   ]
 
   return (
-    <div className="space-y-14 max-w-4xl">
+    <div className="space-y-20 max-w-4xl">
       <section className="space-y-4">
-        <p className="text-[10px] font-mono tracking-[0.2em] text-white/35 uppercase">Systems</p>
-        <h1 className="text-3xl font-light tracking-tight">Applied Architecture Patterns</h1>
-        <p className="text-white/60 text-sm leading-relaxed">
+        <p className="text-[10px] font-mono tracking-[0.2em] text-[#8C8C8C] uppercase">Systems</p>
+        <h1 className="text-3xl font-light tracking-tight text-[#1A1A1A]">Applied Architecture Patterns</h1>
+        <p className="text-[#5A5A5A] text-sm leading-relaxed">
           Systems is where architecture becomes software: practical boundaries, runtime behavior, failure handling, and implementation tracks.
         </p>
       </section>
 
       <section className="space-y-3">
-        <h2 className="text-lg font-light">Why This Exists</h2>
-        <p className="text-white/55 text-sm leading-relaxed">
+        <h2 className="text-lg font-light text-[#1A1A1A]">Why This Exists</h2>
+        <p className="text-[#5A5A5A] text-sm leading-relaxed">
           In large systems, designs that assume clean inputs and known constraints fail quickly. Real-world environments are noisy, mixed-domain, and adversarial. Reliability comes from breaking the system into small solvable steps with explicit boundaries.
         </p>
       </section>
 
       <section className="space-y-3">
-        <h2 className="text-lg font-light">Engineering Rule</h2>
-        <pre className="bg-white/5 border border-white/10 p-4 overflow-x-auto text-sm text-white/70 font-mono">
+        <h2 className="text-lg font-light text-[#1A1A1A]">Engineering Rule</h2>
+        <pre className="bg-[#FFFFFF] border border-[#DADADA] p-4 overflow-x-auto text-sm text-[#2A2A2A] font-mono">
 {`Each step should:
 - see only required information
 - produce a verifiable result
@@ -50,8 +50,8 @@ export default function SystemsPage() {
       </section>
 
       <section className="space-y-3">
-        <h2 className="text-lg font-light">Architecture Pattern</h2>
-        <pre className="bg-white/5 border border-white/10 p-4 overflow-x-auto text-sm text-white/70 font-mono">
+        <h2 className="text-lg font-light text-[#1A1A1A]">Architecture Pattern</h2>
+        <pre className="bg-[#FFFFFF] border border-[#DADADA] p-4 overflow-x-auto text-sm text-[#2A2A2A] font-mono">
 {`global system state
 -> state projection
 -> minimal representation
@@ -62,8 +62,8 @@ export default function SystemsPage() {
       </section>
 
       <section className="space-y-3">
-        <h2 className="text-lg font-light">System Implications</h2>
-        <ul className="space-y-2 text-sm text-white/55">
+        <h2 className="text-lg font-light text-[#1A1A1A]">System Implications</h2>
+        <ul className="space-y-2 text-sm text-[#5A5A5A]">
           <li>Reliability is enforced at software boundaries, not by prompt quality alone.</li>
           <li>Global-state reasoning is unstable in production; localized reasoning scales better.</li>
           <li>Implemented tracks are separated from exploration tracks to avoid over-claiming.</li>
@@ -71,22 +71,22 @@ export default function SystemsPage() {
       </section>
 
       <section className="space-y-3">
-        <h2 className="text-lg font-light">Positioning</h2>
-        <p className="text-white/55 text-sm leading-relaxed">
+        <h2 className="text-lg font-light text-[#1A1A1A]">Positioning</h2>
+        <p className="text-[#5A5A5A] text-sm leading-relaxed">
           Zero-Context Architecture is presented here as a practical architecture pattern discovered while building automation systems, not as a grand theory. It is a software design principle for integrating probabilistic reasoning into deterministic systems.
         </p>
       </section>
 
       <section className="space-y-3">
-        <h2 className="text-lg font-light">One-Sentence Definition</h2>
-        <p className="text-white/70 text-sm leading-relaxed border border-white/10 p-4">
+        <h2 className="text-lg font-light text-[#1A1A1A]">One-Sentence Definition</h2>
+        <p className="text-[#2A2A2A] text-sm leading-relaxed border border-[#DADADA] p-4">
           Zero-Context Architecture structures AI systems so each reasoning step operates on the minimal information required for the task, allowing probabilistic models to be integrated into deterministic software systems without accumulating instability.
         </p>
       </section>
 
       <section className="space-y-3">
-        <h2 className="text-lg font-light">Where This Applies</h2>
-        <ul className="space-y-2 text-sm text-white/55">
+        <h2 className="text-lg font-light text-[#1A1A1A]">Where This Applies</h2>
+        <ul className="space-y-2 text-sm text-[#5A5A5A]">
           <li>Browser automation</li>
           <li>Structured output pipelines</li>
           <li>Document extraction</li>
@@ -96,18 +96,18 @@ export default function SystemsPage() {
       </section>
 
       <section className="space-y-3">
-        <h2 className="text-lg font-light">Relationship to Existing Ideas</h2>
-        <p className="text-white/55 text-sm leading-relaxed">
+        <h2 className="text-lg font-light text-[#1A1A1A]">Relationship to Existing Ideas</h2>
+        <p className="text-[#5A5A5A] text-sm leading-relaxed">
           ZCA is related to bounded contexts in software architecture, information bottlenecks in information theory, and state-space projection in control systems. Here it is applied to software systems that use probabilistic operators such as large language models.
         </p>
       </section>
 
-      <section className="border-t border-white/10 pt-10">
+      <section className="border-t border-[#E8E8E6] pt-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           {systems.map((item) => (
-            <a key={item.href} href={item.href} className="border border-white/10 p-5 hover:border-white/30 transition-colors group block">
-              <h3 className="text-base font-light mb-2 group-hover:text-white/85">{item.title}</h3>
-              <p className="text-sm text-white/45">{item.description}</p>
+            <a key={item.href} href={item.href} className="border border-[#E8E8E6] p-5 hover:border-[#DADADA] transition-colors group block">
+              <h3 className="text-base font-light mb-2 text-[#1A1A1A] group-hover:text-[#111111]">{item.title}</h3>
+              <p className="text-sm text-[#8C8C8C]">{item.description}</p>
             </a>
           ))}
         </div>

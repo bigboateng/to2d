@@ -98,6 +98,16 @@ const nextConfig = {
         destination: '/research',
         permanent: true,
       },
+      {
+        source: '/correctness/determinism',
+        destination: '/correctness/deterministic-boundaries',
+        permanent: true,
+      },
+      {
+        source: '/correctness/determinism/:path*',
+        destination: '/correctness/deterministic-boundaries',
+        permanent: true,
+      },
     ]
   },
 }

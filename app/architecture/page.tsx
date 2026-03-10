@@ -25,16 +25,16 @@ export default function ArchitecturePage() {
   ]
 
   return (
-    <div className="space-y-20 max-w-3xl">
+    <div className="space-y-28 max-w-3xl">
 
       <section>
-        <p className="text-[10px] font-mono tracking-[0.2em] text-white/30 uppercase mb-6">
+        <p className="text-[10px] font-mono tracking-[0.2em] text-[#8C8C8C] uppercase mb-8">
           2026–
         </p>
-        <h1 className="text-3xl font-thin tracking-tight mb-6">
+        <h1 className="text-3xl font-thin tracking-tight text-[#1A1A1A] mb-8">
           The Deterministic Shell Architecture
         </h1>
-        <p className="text-white/70 text-sm leading-relaxed">
+        <p className="text-[#5A5A5A] text-sm leading-relaxed">
           Modern AI systems are stochastic at their core.
           Production systems cannot be.
           This stack isolates randomness, captures execution signals, and enforces admissible state transitions
@@ -46,75 +46,75 @@ export default function ArchitecturePage() {
         <AIReliabilityDiagram />
       </section>
 
-      <section className="space-y-12">
+      <section className="space-y-16">
 
         <div>
-          <h2 className="text-xl font-thin mb-3">BrowserAgent — Operator Layer</h2>
-          <p className="text-white/70 text-sm leading-relaxed mb-4">
+          <h2 className="text-xl font-thin text-[#1A1A1A] mb-4">BrowserAgent — Operator Layer</h2>
+          <p className="text-[#5A5A5A] text-sm leading-relaxed mb-5">
             Executes actions in an unstable environment.
             All world-facing signals originate here.
           </p>
-          <ul className="text-white/50 text-sm space-y-1 ml-4">
-            <li className="flex items-start gap-2"><span className="text-white/20">→</span>UI interaction</li>
-            <li className="flex items-start gap-2"><span className="text-white/20">→</span>Network navigation</li>
-            <li className="flex items-start gap-2"><span className="text-white/20">→</span>Auth flow</li>
-            <li className="flex items-start gap-2"><span className="text-white/20">→</span>Tool calls</li>
+          <ul className="text-[#5A5A5A] text-sm space-y-1.5 ml-4">
+            <li className="flex items-start gap-2"><span className="text-[#DADADA]">→</span>UI interaction</li>
+            <li className="flex items-start gap-2"><span className="text-[#DADADA]">→</span>Network navigation</li>
+            <li className="flex items-start gap-2"><span className="text-[#DADADA]">→</span>Auth flow</li>
+            <li className="flex items-start gap-2"><span className="text-[#DADADA]">→</span>Tool calls</li>
           </ul>
         </div>
 
         <div>
-          <h2 className="text-xl font-thin mb-3">BrowserState — Signal Capture Layer</h2>
-          <p className="text-white/70 text-sm leading-relaxed mb-4">
+          <h2 className="text-xl font-thin text-[#1A1A1A] mb-4">BrowserState — Signal Capture Layer</h2>
+          <p className="text-[#5A5A5A] text-sm leading-relaxed mb-5">
             Captures execution state as replayable signals.
             Makes failures observable instead of anecdotal.
           </p>
-          <ul className="text-white/50 text-sm space-y-1 ml-4">
-            <li className="flex items-start gap-2"><span className="text-white/20">→</span>Cookies / storage</li>
-            <li className="flex items-start gap-2"><span className="text-white/20">→</span>Navigation graph</li>
-            <li className="flex items-start gap-2"><span className="text-white/20">→</span>Error evidence</li>
-            <li className="flex items-start gap-2"><span className="text-white/20">→</span>Reproducible state snapshots</li>
+          <ul className="text-[#5A5A5A] text-sm space-y-1.5 ml-4">
+            <li className="flex items-start gap-2"><span className="text-[#DADADA]">→</span>Cookies / storage</li>
+            <li className="flex items-start gap-2"><span className="text-[#DADADA]">→</span>Navigation graph</li>
+            <li className="flex items-start gap-2"><span className="text-[#DADADA]">→</span>Error evidence</li>
+            <li className="flex items-start gap-2"><span className="text-[#DADADA]">→</span>Reproducible state snapshots</li>
           </ul>
         </div>
 
         <div>
-          <h2 className="text-xl font-thin mb-3">llm-contract — Invariant Boundary</h2>
-          <p className="text-white/70 text-sm leading-relaxed mb-4">
+          <h2 className="text-xl font-thin text-[#1A1A1A] mb-4">llm-contract — Invariant Boundary</h2>
+          <p className="text-[#5A5A5A] text-sm leading-relaxed mb-5">
             Enforces admissible output states around stochastic model behavior.
           </p>
-          <ul className="text-white/50 text-sm space-y-1 ml-4">
-            <li className="flex items-start gap-2"><span className="text-white/20">→</span>Schema validation</li>
-            <li className="flex items-start gap-2"><span className="text-white/20">→</span>Invariant enforcement</li>
-            <li className="flex items-start gap-2"><span className="text-white/20">→</span>Categorized failure modes</li>
-            <li className="flex items-start gap-2"><span className="text-white/20">→</span>Targeted repair loop</li>
+          <ul className="text-[#5A5A5A] text-sm space-y-1.5 ml-4">
+            <li className="flex items-start gap-2"><span className="text-[#DADADA]">→</span>Schema validation</li>
+            <li className="flex items-start gap-2"><span className="text-[#DADADA]">→</span>Invariant enforcement</li>
+            <li className="flex items-start gap-2"><span className="text-[#DADADA]">→</span>Categorized failure modes</li>
+            <li className="flex items-start gap-2"><span className="text-[#DADADA]">→</span>Targeted repair loop</li>
           </ul>
         </div>
 
       </section>
 
       <section>
-        <h2 className="text-xl font-thin mb-6">Stochastic Core, Deterministic Shell</h2>
-        <div className="border-l border-white/10 pl-6 space-y-2">
-          <p className="text-white/60 text-sm">The model remains probabilistic.</p>
-          <p className="text-white/60 text-sm">The boundary is deterministic.</p>
-          <p className="text-white/60 text-sm">Execution remains adversarial.</p>
-          <p className="text-white/60 text-sm">State becomes measurable.</p>
+        <h2 className="text-xl font-thin text-[#1A1A1A] mb-8">Stochastic Core, Deterministic Shell</h2>
+        <div className="border-l-2 border-[#E8E8E6] pl-6 space-y-3">
+          <p className="text-[#5A5A5A] text-sm">The model remains probabilistic.</p>
+          <p className="text-[#5A5A5A] text-sm">The boundary is deterministic.</p>
+          <p className="text-[#5A5A5A] text-sm">Execution remains adversarial.</p>
+          <p className="text-[#5A5A5A] text-sm">State becomes measurable.</p>
         </div>
-        <p className="text-white/80 text-sm font-medium mt-6">
+        <p className="text-[#1A1A1A] text-sm font-medium mt-8">
           This is the architecture.
         </p>
       </section>
 
-      <section className="border-t border-white/10 pt-12 space-y-6">
-        <h2 className="text-sm font-mono text-white/40 uppercase tracking-wider mb-6">Chapters</h2>
+      <section className="border-t border-[#E8E8E6] pt-16 space-y-8">
+        <h2 className="text-sm font-mono text-[#8C8C8C] uppercase tracking-wider mb-8">Chapters</h2>
         {chapters.map((node) => (
           <a
             key={node.href}
             href={node.href}
-            className="border border-white/10 p-6 hover:border-white/30 transition-colors group block"
+            className="border border-[#E8E8E6] p-7 hover:border-[#DADADA] transition-colors group block"
           >
-            <h3 className="text-lg font-thin mb-2 group-hover:text-white/90">{node.title}</h3>
-            <p className="text-white/40 text-sm mb-3">{node.description}</p>
-            <span className="text-white/30 text-xs font-mono group-hover:text-white/50 transition-colors">
+            <h3 className="text-lg font-thin text-[#1A1A1A] mb-3 group-hover:text-[#111111]">{node.title}</h3>
+            <p className="text-[#5A5A5A] text-sm mb-4">{node.description}</p>
+            <span className="text-[#8C8C8C] text-xs font-mono group-hover:text-[#5A5A5A] transition-colors">
               Read full chapter →
             </span>
           </a>

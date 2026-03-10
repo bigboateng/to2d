@@ -22,7 +22,7 @@ export function PasswordGate({ children }: PasswordGateProps) {
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault()
-    
+
     if (password === process.env.NEXT_PUBLIC_AUTOMATIONS_PASSWORD || password === 'transferof2domains') {
       localStorage.setItem('automations_unlocked', '1')
       setIsUnlocked(true)
@@ -43,11 +43,11 @@ export function PasswordGate({ children }: PasswordGateProps) {
 
   return (
     <div className="min-h-[60vh] flex items-center justify-center">
-      <div className="border border-white/10 p-8 max-w-md w-full">
-        <h2 className="text-xl font-thin tracking-tight mb-6 text-center">
+      <div className="border border-[#DADADA] p-8 max-w-md w-full">
+        <h2 className="text-xl font-thin tracking-tight mb-6 text-center text-[#1A1A1A]">
           Protected Section
         </h2>
-        
+
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <input
@@ -58,31 +58,28 @@ export function PasswordGate({ children }: PasswordGateProps) {
                 setError(false)
               }}
               placeholder="Enter password"
-              className="w-full bg-white/5 border border-white/10 px-4 py-3 text-sm text-white placeholder-white/40 focus:border-white/30 focus:outline-none transition-colors"
+              className="w-full bg-[#FFFFFF] border border-[#DADADA] px-4 py-3 text-sm text-[#1A1A1A] placeholder-[#8C8C8C] focus:border-[#B5B5B5] focus:outline-none transition-colors"
               autoFocus
             />
             {error && (
-              <p className="text-red-400/70 text-xs mt-2">
+              <p className="text-red-500/70 text-xs mt-2">
                 Incorrect password
               </p>
             )}
           </div>
-          
+
           <button
             type="submit"
-            className="w-full bg-white/5 border border-white/10 px-4 py-3 text-sm text-white/80 hover:bg-white/10 hover:border-white/20 transition-colors"
+            className="w-full bg-[#F2F2F0] border border-[#DADADA] px-4 py-3 text-sm text-[#1A1A1A] hover:bg-[#E8E8E6] transition-colors"
           >
             Unlock
           </button>
         </form>
-        
-        <p className="text-white/40 text-xs text-center mt-6">
+
+        <p className="text-[#8C8C8C] text-xs text-center mt-6">
           This section contains private research and work history.
         </p>
       </div>
     </div>
   )
 }
-
-
-

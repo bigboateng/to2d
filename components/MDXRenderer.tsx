@@ -3,22 +3,22 @@ import { ReactNode } from 'react'
 
 const components = {
   h1: ({ children }: { children?: ReactNode }) => (
-    <h1 className="text-3xl font-thin tracking-tight mb-6 mt-12 first:mt-0">
+    <h1 className="text-3xl font-thin tracking-tight mb-6 mt-12 first:mt-0 text-[#1A1A1A]">
       {children}
     </h1>
   ),
   h2: ({ children }: { children?: ReactNode }) => (
-    <h2 className="text-2xl font-thin tracking-tight mb-4 mt-10">
+    <h2 className="text-2xl font-thin tracking-tight mb-4 mt-10 text-[#1A1A1A]">
       {children}
     </h2>
   ),
   h3: ({ children }: { children?: ReactNode }) => (
-    <h3 className="text-xl font-thin tracking-tight mb-3 mt-8">
+    <h3 className="text-xl font-thin tracking-tight mb-3 mt-8 text-[#1A1A1A]">
       {children}
     </h3>
   ),
   p: ({ children }: { children?: ReactNode }) => (
-    <p className="text-white/80 leading-relaxed mb-6">
+    <p className="text-[#5A5A5A] leading-relaxed mb-6">
       {children}
     </p>
   ),
@@ -26,7 +26,7 @@ const components = {
     const isInline = !className
     if (isInline) {
       return (
-        <code className="font-mono text-sm bg-white/5 px-1.5 py-0.5 rounded">
+        <code className="font-mono text-sm bg-[#F2F2F0] px-1.5 py-0.5 rounded text-[#2A2A2A]">
           {children}
         </code>
       )
@@ -38,7 +38,7 @@ const components = {
     )
   },
   pre: ({ children }: { children?: ReactNode }) => (
-    <pre className="bg-white/5 border border-white/10 p-4 rounded overflow-x-auto mb-6 font-mono text-sm">
+    <pre className="bg-[#FFFFFF] border border-[#DADADA] p-4 rounded overflow-x-auto mb-6 font-mono text-sm text-[#2A2A2A]">
       {children}
     </pre>
   ),
@@ -48,24 +48,24 @@ const components = {
     </ul>
   ),
   ol: ({ children }: { children?: ReactNode }) => (
-    <ol className="list-decimal space-y-2 mb-6 pl-6 text-white/80">
+    <ol className="list-decimal space-y-2 mb-6 pl-6 text-[#5A5A5A]">
       {children}
     </ol>
   ),
   li: ({ children }: { children?: ReactNode }) => (
-    <li className="text-white/80 before:content-['→'] before:mr-3 before:text-white/40">
+    <li className="text-[#5A5A5A] before:content-['→'] before:mr-3 before:text-[#DADADA]">
       {children}
     </li>
   ),
   blockquote: ({ children }: { children?: ReactNode }) => (
-    <blockquote className="border-l-2 border-white/20 pl-6 my-6 text-white/60 italic">
+    <blockquote className="border-l-2 border-[#E8E8E6] pl-6 my-6 text-[#8C8C8C] italic">
       {children}
     </blockquote>
   ),
   a: ({ children, href }: { children?: ReactNode; href?: string }) => (
-    <a 
-      href={href} 
-      className="text-white underline decoration-white/30 hover:decoration-white transition-colors"
+    <a
+      href={href}
+      className="text-[#1A1A1A] underline decoration-[#DADADA] hover:decoration-[#B5B5B5] transition-colors"
       target="_blank"
       rel="noopener noreferrer"
     >
@@ -81,7 +81,7 @@ interface MDXRendererProps {
 
 export function MDXRenderer({ source, options }: MDXRendererProps) {
   return (
-    <div className="prose prose-invert max-w-none">
+    <div className="prose max-w-none">
       <MDXRemote source={source} components={components} {...options} />
     </div>
   )

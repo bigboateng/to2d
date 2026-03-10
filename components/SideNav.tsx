@@ -3,9 +3,12 @@
 import { useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation'
 
+type Status = 'stable' | 'wip' | 'note'
+
 type NavLink = {
   href: string
   label: string
+  status?: Status
   children?: NavLink[]
 }
 
@@ -22,19 +25,20 @@ const navSections = [
   {
     heading: 'Architecture',
     links: [
-      { href: '/architecture/system-identification', label: 'System Identification' },
-      { href: '/architecture/stochastic-core', label: 'Stochastic Core' },
-      { href: '/architecture/invariant-boundary', label: 'Invariant Boundary' },
-      { href: '/architecture/zero-context-architecture', label: 'Zero-Context Architecture' },
+      { href: '/architecture', label: 'System Models' },
+      { href: '/architecture/system-identification', label: 'System Identification', status: 'wip' as Status },
+      { href: '/architecture/stochastic-core', label: 'Stochastic Core', status: 'wip' as Status },
+      { href: '/architecture/invariant-boundary', label: 'Invariant Boundary', status: 'wip' as Status },
+      { href: '/architecture/zero-context-architecture', label: 'Zero-Context Architecture', status: 'wip' as Status },
     ],
   },
   {
     heading: 'Systems',
     links: [
-      { href: '/systems/browser-agents', label: 'Browser Agents' },
-      { href: '/systems/structured-output-correctness', label: 'Structured Output Correctness' },
-      { href: '/systems/agent-harness', label: 'Agent Harness' },
-      { href: '/systems/reliability-loops', label: 'Reliability Loops' },
+      { href: '/systems', label: 'Applied Architectures' },
+      { href: '/systems/browser-agents', label: 'Browser Agents', status: 'wip' as Status },
+      { href: '/systems/browser-state', label: 'Browser State', status: 'wip' as Status },
+      { href: '/systems/structured-output-systems', label: 'Structured Output Systems', status: 'wip' as Status },
     ],
   },
   {
@@ -43,38 +47,33 @@ const navSections = [
       {
         href: '/correctness',
         label: 'Reliability Boundaries',
+        status: 'stable' as Status,
         children: [
-          { href: '/correctness/where-reliability-boundaries-appear', label: 'Where Boundaries Appear' },
-          { href: '/correctness/reliability-boundaries-in-practice', label: 'Boundaries in Practice' },
-          { href: '/correctness/reliability-boundary-explorer', label: 'Using Boundaries' },
+          { href: '/correctness/where-reliability-boundaries-appear', label: 'Where Boundaries Appear', status: 'stable' as Status },
+          { href: '/correctness/reliability-boundaries-in-practice', label: 'Boundaries in Practice', status: 'stable' as Status },
+          { href: '/correctness/reliability-boundary-explorer', label: 'Using Boundaries', status: 'stable' as Status },
         ],
       },
-      {
-        href: '/correctness/determinism',
-        label: 'Deterministic Boundaries',
-        children: [
-          { href: '/correctness/structured-output-boundaries', label: 'Structured Output Contracts' },
-          { href: '/correctness/boundary-tracing', label: 'Boundary Tracing' },
-          { href: '/correctness/boundary-inspection', label: 'Boundary Inspection' },
-        ],
-      },
+      { href: '/correctness/deterministic-boundaries', label: 'Deterministic Boundaries', status: 'wip' as Status },
     ],
   },
   {
-    heading: 'Primitives',
+    heading: 'Building Blocks',
     links: [
-      { href: '/primitives/contracts', label: 'Contracts' },
-      { href: '/primitives/invariants', label: 'Invariants' },
-      { href: '/primitives/projection', label: 'Projection' },
-      { href: '/primitives/canonicalization', label: 'Canonicalization' },
+      { href: '/primitives', label: 'Building Blocks' },
+      { href: '/primitives/contracts', label: 'Contracts', status: 'wip' as Status },
+      { href: '/primitives/invariants', label: 'Invariants', status: 'wip' as Status },
+      { href: '/primitives/projection', label: 'Projection', status: 'note' as Status },
+      { href: '/primitives/canonicalization', label: 'Canonicalization', status: 'note' as Status },
     ],
   },
   {
     heading: 'Research',
     links: [
-      { href: '/research/control-systems', label: 'Control Systems' },
-      { href: '/research/control-systems-ai', label: 'Control Systems × AI' },
-      { href: '/research/language-models', label: 'Language Models' },
+      { href: '/research', label: 'Research' },
+      { href: '/research/control-systems', label: 'Control Systems', status: 'wip' as Status },
+      { href: '/research/control-systems-ai', label: 'Control Systems × AI', status: 'stable' as Status },
+      { href: '/research/language-models', label: 'Language Models', status: 'wip' as Status },
     ],
   },
   {
@@ -83,17 +82,34 @@ const navSections = [
   },
 ] satisfies NavSection[]
 
-type ShellAppearance = 'dark' | 'light' | 'correctness'
+function StatusDot({ status, active }: { status?: Status; active?: boolean }) {
+  if (!status) {
+    return null
+  }
 
-type SideNavProps = {
-  appearance: ShellAppearance
+  const color =
+    status === 'stable' ? '#3C7A52'
+    : status === 'wip' ? '#C89B2C'
+    : '#7A7A7A'
+
+  const symbol =
+    status === 'stable' ? '●'
+    : status === 'wip' ? '◌'
+    : '◦'
+
+  return (
+    <span
+      className={`text-[9px] leading-none shrink-0 ${active ? 'animate-[statusPulse_3s_ease-in-out_infinite]' : ''}`}
+      style={{ color }}
+    >
+      {symbol}
+    </span>
+  )
 }
 
-export function SideNav({ appearance }: SideNavProps) {
+export function SideNav() {
   const pathname = usePathname()
   const [mobileOpen, setMobileOpen] = useState(false)
-  const isCorrectness = appearance === 'correctness'
-  const isLight = appearance === 'light'
 
   const isActive = (href: string) =>
     pathname === href || pathname.startsWith(href + '/')
@@ -113,12 +129,7 @@ export function SideNav({ appearance }: SideNavProps) {
     <>
       <button
         onClick={() => { setMobileOpen(!mobileOpen) }}
-        className={`
-          md:hidden fixed top-3 right-4 z-50 border p-2 backdrop-blur
-          ${isCorrectness ? 'border-[#5b4126]/35 bg-[#f6eddd]/80 text-[#3a2d1f]' : ''}
-          ${isLight ? 'border-[#2f261d]/25 bg-[#f4f2ed]/90 text-[#1f1912]' : ''}
-          ${!isCorrectness && !isLight ? 'border-white/10 bg-black/80' : ''}
-        `}
+        className="md:hidden fixed top-3 right-4 z-50 border border-[#DADADA] bg-[#F1F1EE]/95 text-[#3A3A3A] p-2 backdrop-blur-sm"
         aria-label="Toggle navigation"
         aria-expanded={mobileOpen}
       >
@@ -134,46 +145,42 @@ export function SideNav({ appearance }: SideNavProps) {
       <nav
         className={`
           fixed top-0 left-0 h-screen w-[84vw] max-w-xs md:w-56 border-r
+          border-[#E8E8E6] bg-[#F1F1EE] text-[#3A3A3A]
           flex flex-col py-7 px-5 z-40
           transition-transform duration-200
-          ${isCorrectness ? 'border-[#5b4126]/20 bg-[#f2e7d3]/90 text-[#2b221a]' : ''}
-          ${isLight ? 'border-[#2f261d]/15 bg-[#f6f4ef]/95 text-[#1f1912]' : ''}
-          ${!isCorrectness && !isLight ? 'border-white/10 bg-black' : ''}
           ${mobileOpen ? 'translate-x-0' : '-translate-x-full'}
           md:translate-x-0
         `}
       >
         <a
           href="/"
-          className={`
-            text-lg font-light tracking-tight mb-8 transition-colors
-            ${isCorrectness ? 'hover:text-[#5b4126]' : ''}
-            ${isLight ? 'hover:text-[#3d342a]' : ''}
-            ${!isCorrectness && !isLight ? 'hover:text-white/70' : ''}
-          `}
+          className="text-lg font-light tracking-tight text-[#1A1A1A] mb-5 transition-colors hover:text-[#111111]"
         >
           TO2D
         </a>
+
+        <div className="flex items-center gap-4 mb-6 pb-4 border-b border-[#E8E8E6] text-[8px] font-mono tracking-wider">
+          <span className="flex items-center gap-1.5">
+            <span className="text-[9px] leading-none text-[#3C7A52]">●</span>
+            <span className="text-[#8C8C8C]">stable</span>
+          </span>
+          <span className="flex items-center gap-1.5">
+            <span className="text-[9px] leading-none text-[#C89B2C]">◌</span>
+            <span className="text-[#8C8C8C]">research</span>
+          </span>
+          <span className="flex items-center gap-1.5">
+            <span className="text-[9px] leading-none text-[#7A7A7A]">◦</span>
+            <span className="text-[#8C8C8C]">note</span>
+          </span>
+        </div>
 
         <div className="flex-1 space-y-7 overflow-y-auto pr-1">
           {navSections.map((section) => (
             <div
               key={section.heading}
-              className={`
-                first:pt-0 border-t pt-5 first:border-t-0
-                ${isCorrectness ? 'border-[#5b4126]/18' : ''}
-                ${isLight ? 'border-[#2f261d]/12' : ''}
-                ${!isCorrectness && !isLight ? 'border-white/10' : ''}
-              `}
+              className="first:pt-0 border-t border-[#E8E8E6] pt-5 first:border-t-0"
             >
-              <p
-                className={`
-                  text-[10px] font-mono tracking-[0.2em] uppercase mb-3
-                  ${isCorrectness ? 'text-[#5b4126]/70' : ''}
-                  ${isLight ? 'text-[#4b4339]/70' : ''}
-                  ${!isCorrectness && !isLight ? 'text-white/35' : ''}
-                `}
-              >
+              <p className="text-[10px] font-mono tracking-[0.2em] uppercase mb-3 text-[#8C8C8C]">
                 {section.heading}
               </p>
               <ul className="space-y-2">
@@ -185,41 +192,35 @@ export function SideNav({ appearance }: SideNavProps) {
                       href={link.href}
                       onClick={() => { setMobileOpen(false) }}
                       className={`
-                        block text-sm transition-colors
+                        flex items-center justify-between gap-2 text-sm transition-colors
                         ${
                           isLinkActive
-                            ? (isCorrectness ? 'text-[#1f1912] font-medium' : (isLight ? 'text-[#1f1912] font-medium' : 'text-white'))
-                            : (
-                                isCorrectness
-                                  ? 'text-[#5b4126]/80 hover:text-[#1f1912]'
-                                  : (isLight ? 'text-[#3f372f]/75 hover:text-[#1f1912]' : 'text-white/50 hover:text-white/80')
-                              )
+                            ? 'text-[#111111] font-medium'
+                            : 'text-[#5A5A5A] hover:text-[#1A1A1A]'
                         }
                       `}
                     >
-                      {link.label}
+                      <span>{link.label}</span>
+                      <StatusDot status={link.status} active={isLinkActive} />
                     </a>
                     {link.children && (
-                      <ul className="mt-2 ml-3 space-y-1.5 border-l border-current/20 pl-3">
+                      <ul className="mt-2 ml-3 space-y-1.5 border-l border-[#E8E8E6] pl-3">
                         {link.children.map((childLink) => (
                           <li key={childLink.href}>
                             <a
                               href={childLink.href}
                               onClick={() => { setMobileOpen(false) }}
                               className={`
-                                block text-[13px] transition-colors
+                                flex items-center justify-between gap-2 text-[13px] transition-colors
                                 ${
                                   isActive(childLink.href)
-                                    ? (isCorrectness ? 'text-[#1f1912] font-medium' : (isLight ? 'text-[#1f1912] font-medium' : 'text-white'))
-                                    : (
-                                        isCorrectness
-                                          ? 'text-[#5b4126]/70 hover:text-[#1f1912]'
-                                          : (isLight ? 'text-[#3f372f]/65 hover:text-[#1f1912]' : 'text-white/45 hover:text-white/80')
-                                      )
+                                    ? 'text-[#111111] font-medium'
+                                    : 'text-[#8C8C8C] hover:text-[#1A1A1A]'
                                 }
                               `}
                             >
-                              {childLink.label}
+                              <span>{childLink.label}</span>
+                              <StatusDot status={childLink.status} active={isActive(childLink.href)} />
                             </a>
                           </li>
                         ))}
@@ -236,12 +237,7 @@ export function SideNav({ appearance }: SideNavProps) {
 
       {mobileOpen && (
         <div
-          className={`
-            fixed inset-0 z-30 md:hidden
-            ${isCorrectness ? 'bg-[#2a2118]/35' : ''}
-            ${isLight ? 'bg-[#1f1912]/20' : ''}
-            ${!isCorrectness && !isLight ? 'bg-black/60' : ''}
-          `}
+          className="fixed inset-0 z-30 md:hidden bg-[#1A1A1A]/15"
           onClick={() => { setMobileOpen(false) }}
         />
       )}

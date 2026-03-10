@@ -27,52 +27,52 @@ function renderObservedState(exampleID: PracticeExampleID, stepID: string) {
   if (exampleID === 'extraction') {
     if (stepID === 'goal' || stepID === 'naive-automation') {
       return (
-        <div className="border border-[#5b4126]/25 bg-white/60 p-3 space-y-2">
-          <p className="font-semibold text-[#1f1912] text-[14px]">Observed Form UI</p>
-          <p className="text-[14px]">Coverage Eligibility</p>
-          <div className="text-[14px] space-y-1">
+        <div className="border border-[#DADADA] bg-[#F2F2F0] p-3 space-y-2">
+          <p className="font-semibold text-[#1A1A1A] text-xs">Observed Form UI</p>
+          <p className="text-xs">Coverage Eligibility</p>
+          <div className="text-xs space-y-1">
             <p>[x] Option A - Verified Coverage</p>
             <p>[ ] Option B - Self-Pay</p>
           </div>
-          <p className="text-[13px] text-[#5b4126]">Form constraint: exactly one option must be selected</p>
+          <p className="text-xs text-[#5A5A5A">Form constraint: exactly one option must be selected</p>
         </div>
       )
     }
     if (stepID === 'hidden-assumption') {
       return (
-        <div className="border border-[#5b4126]/25 bg-white/60 p-3 space-y-3">
-          <div className="text-[14px]">
-            <p className="font-semibold text-[#1f1912]">Observed Form UI</p>
+        <div className="border border-[#DADADA] bg-[#F2F2F0] p-3 space-y-3">
+          <div className="text-xs">
+            <p className="font-semibold text-[#1A1A1A]">Observed Form UI</p>
             <p>[x] Option A - Verified Coverage</p>
             <p>[ ] Option B - Self-Pay</p>
           </div>
-          <div className="border border-[#5b4126]/35 border-dashed bg-[#fff7ea] p-2 text-[13px]">
+          <div className="border border-[#DADADA] border-dashed bg-[#F7F7F5] p-2 text-xs">
             Assumption: coverage options are only A or B
           </div>
-          <p className="text-[13px] text-[#5b4126]">Form constraint: exactly one option must be selected</p>
+          <p className="text-xs text-[#5A5A5A">Form constraint: exactly one option must be selected</p>
         </div>
       )
     }
     if (stepID === 'failure-trigger') {
       return (
-        <div className="border border-[#5b4126]/25 bg-white/60 p-3 space-y-2">
-          <p className="font-semibold text-[#1f1912] text-[14px]">Observed Form UI</p>
-          <p className="text-[14px]">Coverage Eligibility</p>
-          <div className="text-[14px] space-y-1">
-            <p className="bg-[#f7ecd6] border border-[#5b4126]/25 px-2 py-1">[ ] Option A - Verified Coverage</p>
-            <p className="bg-[#f7ecd6] border border-[#5b4126]/25 px-2 py-1">[x] Option B - Self-Pay</p>
-            <p className="bg-[#f7ecd6] border border-[#5b4126]/25 px-2 py-1">[ ] Option C - Pending Insurance Review</p>
+        <div className="border border-[#DADADA] bg-[#F2F2F0] p-3 space-y-2">
+          <p className="font-semibold text-[#1A1A1A] text-xs">Observed Form UI</p>
+          <p className="text-xs">Coverage Eligibility</p>
+          <div className="text-xs space-y-1">
+            <p className="bg-[#F2F2F0] border border-[#DADADA] px-2 py-1">[ ] Option A - Verified Coverage</p>
+            <p className="bg-[#F2F2F0] border border-[#DADADA] px-2 py-1">[x] Option B - Self-Pay</p>
+            <p className="bg-[#F2F2F0] border border-[#DADADA] px-2 py-1">[ ] Option C - Pending Insurance Review</p>
           </div>
-          <p className="text-[13px] text-[#5b4126]">Form constraint: exactly one option must be selected</p>
-          <p className="text-[13px] text-[#5b4126]">Portal update: users on Option A are now auto-selected to Option B</p>
+          <p className="text-xs text-[#5A5A5A">Form constraint: exactly one option must be selected</p>
+          <p className="text-xs text-[#5A5A5A">Portal update: users on Option A are now auto-selected to Option B</p>
         </div>
       )
     }
     if (stepID === 'boundary-aware' || stepID === 'observable-result') {
       return (
-        <div className="border border-[#5b4126]/25 bg-white/60 p-3 space-y-3">
-          <p className="font-semibold text-[#1f1912] text-[14px]">Boundary Result</p>
-          <div className="border border-[#5b4126]/35 bg-[#fff7ea] p-2 text-[13px] space-y-1">
+        <div className="border border-[#DADADA] bg-[#F2F2F0] p-3 space-y-3">
+          <p className="font-semibold text-[#1A1A1A] text-xs">Boundary Result</p>
+          <div className="border border-[#DADADA] bg-[#F7F7F5] p-2 text-xs space-y-1">
             <p>Form state outside known admissible configuration</p>
             <p>Detected options: A, B, C</p>
             <p>Unexpected option: Pending Insurance Review</p>
@@ -86,8 +86,8 @@ function renderObservedState(exampleID: PracticeExampleID, stepID: string) {
   if (exampleID === 'sessionPortability') {
     if (stepID === 'login-goal' || stepID === 'naive-state') {
       return (
-        <div className="border border-[#5b4126]/25 bg-white/60 p-3 space-y-2 text-[14px]">
-          <p className="font-semibold text-[#1f1912]">Observed Portal</p>
+        <div className="border border-[#DADADA] bg-[#F2F2F0] p-3 space-y-2 text-xs">
+          <p className="font-semibold text-[#1A1A1A]">Observed Portal</p>
           <p>Dashboard</p>
           <p>Welcome John Doe</p>
           <p>Billing Summary</p>
@@ -96,12 +96,12 @@ function renderObservedState(exampleID: PracticeExampleID, stepID: string) {
     }
     if (stepID === 'hidden-assumption') {
       return (
-        <div className="border border-[#5b4126]/25 bg-white/60 p-3 space-y-3">
-          <div className="text-[14px] space-y-1">
-            <p className="font-semibold text-[#1f1912]">Observed Portal</p>
+        <div className="border border-[#DADADA] bg-[#F2F2F0] p-3 space-y-3">
+          <div className="text-xs space-y-1">
+            <p className="font-semibold text-[#1A1A1A]">Observed Portal</p>
             <p>Session restored from cookies</p>
           </div>
-          <div className="border border-[#5b4126]/35 border-dashed bg-[#fff7ea] p-2 text-[13px]">
+          <div className="border border-[#DADADA] border-dashed bg-[#F7F7F5] p-2 text-xs">
             Assumption: cookies == authenticated session
           </div>
         </div>
@@ -109,9 +109,9 @@ function renderObservedState(exampleID: PracticeExampleID, stepID: string) {
     }
     if (stepID === 'failure-trigger') {
       return (
-        <div className="border border-[#5b4126]/25 bg-white/60 p-3 space-y-2 text-[14px]">
-          <p className="font-semibold text-[#1f1912]">Observed Portal</p>
-          <div className="border border-[#5b4126]/30 bg-[#fff7ea] p-2">
+        <div className="border border-[#DADADA] bg-[#F2F2F0] p-3 space-y-2 text-xs">
+          <p className="font-semibold text-[#1A1A1A]">Observed Portal</p>
+          <div className="border border-[#E8E8E6] bg-[#F7F7F5] p-2">
             Security Verification Required
           </div>
           <p>Please confirm this device</p>
@@ -120,9 +120,9 @@ function renderObservedState(exampleID: PracticeExampleID, stepID: string) {
     }
     if (stepID === 'boundary-aware' || stepID === 'observable-result') {
       return (
-        <div className="border border-[#5b4126]/25 bg-white/60 p-3 space-y-3">
-          <p className="font-semibold text-[#1f1912] text-[14px]">Boundary Diagnosis</p>
-          <div className="border border-[#5b4126]/35 bg-[#fff7ea] p-2 text-[13px] space-y-1">
+        <div className="border border-[#DADADA] bg-[#F2F2F0] p-3 space-y-3">
+          <p className="font-semibold text-[#1A1A1A] text-xs">Boundary Diagnosis</p>
+          <div className="border border-[#DADADA] bg-[#F7F7F5] p-2 text-xs space-y-1">
             <p>Session restore failed</p>
             <p>Reason: device trust mismatch</p>
             <p>Action: portal re-verification required</p>
@@ -135,8 +135,8 @@ function renderObservedState(exampleID: PracticeExampleID, stepID: string) {
   if (exampleID === 'proxyEnvironment') {
     if (stepID === 'naive-setup' || stepID === 'hidden-assumption') {
       return (
-        <div className="border border-[#5b4126]/25 bg-white/60 p-3 space-y-2 text-[14px]">
-          <p className="font-semibold text-[#1f1912]">Observed Portal</p>
+        <div className="border border-[#DADADA] bg-[#F2F2F0] p-3 space-y-2 text-xs">
+          <p className="font-semibold text-[#1A1A1A]">Observed Portal</p>
           <p>Login page loads normally</p>
           <p>Environment trust not yet validated</p>
         </div>
@@ -144,17 +144,17 @@ function renderObservedState(exampleID: PracticeExampleID, stepID: string) {
     }
     if (stepID === 'failure-trigger') {
       return (
-        <div className="border border-[#5b4126]/25 bg-white/60 p-3 space-y-2 text-[14px]">
-          <p className="font-semibold text-[#1f1912]">Observed Portal</p>
-          <div className="border border-[#5b4126]/30 bg-[#fff7ea] p-2">Access Denied</div>
+        <div className="border border-[#DADADA] bg-[#F2F2F0] p-3 space-y-2 text-xs">
+          <p className="font-semibold text-[#1A1A1A]">Observed Portal</p>
+          <div className="border border-[#E8E8E6] bg-[#F7F7F5] p-2">Access Denied</div>
           <p>Unusual traffic detected</p>
         </div>
       )
     }
     if (stepID === 'alternate-success') {
       return (
-        <div className="border border-[#5b4126]/25 bg-white/60 p-3 space-y-2 text-[14px]">
-          <p className="font-semibold text-[#1f1912]">Observed Portal</p>
+        <div className="border border-[#DADADA] bg-[#F2F2F0] p-3 space-y-2 text-xs">
+          <p className="font-semibold text-[#1A1A1A]">Observed Portal</p>
           <p>Environment accepted</p>
           <p>Login allowed</p>
         </div>
@@ -162,9 +162,9 @@ function renderObservedState(exampleID: PracticeExampleID, stepID: string) {
     }
     if (stepID === 'boundary-aware' || stepID === 'observable-result') {
       return (
-        <div className="border border-[#5b4126]/25 bg-white/60 p-3 space-y-3">
-          <p className="font-semibold text-[#1f1912] text-[14px]">Environment Diagnosis</p>
-          <div className="border border-[#5b4126]/35 bg-[#fff7ea] p-2 text-[13px] space-y-1">
+        <div className="border border-[#DADADA] bg-[#F2F2F0] p-3 space-y-3">
+          <p className="font-semibold text-[#1A1A1A] text-xs">Environment Diagnosis</p>
+          <div className="border border-[#DADADA] bg-[#F7F7F5] p-2 text-xs space-y-1">
             <p>Environment mismatch</p>
             <p>Proxy type: datacenter</p>
             <p>Required: residential US</p>
@@ -444,10 +444,10 @@ export function ReliabilityBoundaryPracticeViewer() {
 
   return (
     <section className="space-y-5">
-      <p className="text-[17px] leading-relaxed text-[#2a231c]">
+      <p className="text-sm leading-relaxed text-[#5A5A5A]">
         The examples below show how different classes of automation failure become easier or harder to diagnose depending on where the reliability boundary sits.
       </p>
-      <p className="text-[15px] leading-relaxed text-[#5b4126]">
+      <p className="text-sm leading-relaxed text-[#5A5A5A">
         The website did not simply add a third option. It expanded the decision space of the form. The boundary detects when the automation no longer understands the state it is about to submit.
       </p>
 
@@ -459,10 +459,10 @@ export function ReliabilityBoundaryPracticeViewer() {
               key={example.id}
               type="button"
               onClick={() => { setSelectedExampleID(example.id) }}
-              className={`border px-3 py-1.5 text-[14px] transition-colors ${
+              className={`border px-3 py-1.5 text-xs transition-colors ${
                 isActive
-                  ? 'border-[#5b4126]/55 bg-[#f7ecd6] text-[#1f1912]'
-                  : 'border-[#5b4126]/20 bg-white/40 text-[#2a231c] hover:bg-[#f8efd9]'
+                  ? 'border-[#DADADA] bg-[#F2F2F0] text-[#1A1A1A]'
+                  : 'border-[#E8E8E6] bg-[#F7F7F5] text-[#5A5A5A] hover:bg-[#F2F2F0]'
               }`}
             >
               {example.title}
@@ -471,15 +471,15 @@ export function ReliabilityBoundaryPracticeViewer() {
         })}
       </div>
 
-      <section className="border border-[#5b4126]/25 bg-[#fffdf8]/75 p-4 md:p-5 space-y-4">
-        <header className="border-b border-[#5b4126]/20 pb-3">
-          <h3 className="text-xl font-semibold text-[#1f1912]">{selectedExample.title}</h3>
-          <p className="text-[15px] text-[#2a231c] mt-1">{selectedExample.goal}</p>
+      <section className="border border-[#DADADA] bg-[#F7F7F5] p-4 md:p-5 space-y-4">
+        <header className="border-b border-[#E8E8E6] pb-3">
+          <h3 className="text-xl font-semibold text-[#1A1A1A]">{selectedExample.title}</h3>
+          <p className="text-sm text-[#5A5A5A] mt-1">{selectedExample.goal}</p>
         </header>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="border border-[#5b4126]/20 bg-[#fffaf0]/70 p-4 min-h-[420px]">
-            <p className="text-xs uppercase tracking-[0.12em] text-[#5b4126]/75 mb-3">Boundary Sequence</p>
+          <div className="border border-[#E8E8E6] bg-[#FAFAFA] p-4 min-h-[420px]">
+            <p className="text-xs uppercase tracking-[0.12em] text-[#8C8C8C mb-3">Boundary Sequence</p>
             <div className="space-y-2">
               {selectedExample.steps.map((step, index) => {
                 const isActive = step.id === selectedStep.id
@@ -490,17 +490,17 @@ export function ReliabilityBoundaryPracticeViewer() {
                       onClick={() => { updateStep(step.id) }}
                       className={`w-full text-left border px-3 py-2.5 transition-colors ${
                         isActive
-                          ? 'border-[#5b4126]/55 bg-[#f7ecd6] text-[#1f1912]'
-                          : 'border-[#5b4126]/20 bg-white/40 text-[#2a231c] hover:bg-[#f8efd9]'
+                          ? 'border-[#DADADA] bg-[#F2F2F0] text-[#1A1A1A]'
+                          : 'border-[#E8E8E6] bg-[#F7F7F5] text-[#5A5A5A] hover:bg-[#F2F2F0]'
                       }`}
                     >
-                      <p className="text-[13px] text-[#5b4126]/80 mb-1">{index + 1}. {step.label}</p>
+                      <p className="text-xs text-[#8C8C8C mb-1">{index + 1}. {step.label}</p>
                       {step.code ? (
-                        <pre className="font-mono text-[12px] leading-relaxed whitespace-pre-wrap bg-white/40 border border-[#5b4126]/15 p-2 overflow-x-auto">
+                        <pre className="font-mono text-[12px] leading-relaxed whitespace-pre-wrap bg-[#F7F7F5] border border-[#E8E8E6] p-2 overflow-x-auto">
                           {step.code}
                         </pre>
                       ) : (
-                        <p className="text-[14px] leading-relaxed">{step.detail}</p>
+                        <p className="text-xs leading-relaxed">{step.detail}</p>
                       )}
                     </button>
                   </div>
@@ -509,16 +509,16 @@ export function ReliabilityBoundaryPracticeViewer() {
             </div>
           </div>
 
-          <div className="border border-[#5b4126]/20 bg-[#fffaf0]/70 p-4 min-h-[420px]">
-            <p className="text-xs uppercase tracking-[0.12em] text-[#5b4126]/75 mb-3">Observed Portal</p>
-            <div className="border border-[#5b4126]/25 bg-white/50 p-3 mb-3">
-              <p className="text-[15px] font-semibold text-[#1f1912]">{selectedStep.visualTitle}</p>
+          <div className="border border-[#E8E8E6] bg-[#FAFAFA] p-4 min-h-[420px]">
+            <p className="text-xs uppercase tracking-[0.12em] text-[#8C8C8C mb-3">Observed Portal</p>
+            <div className="border border-[#DADADA] bg-[#F7F7F5] p-3 mb-3">
+              <p className="text-sm font-semibold text-[#1A1A1A]">{selectedStep.visualTitle}</p>
             </div>
             <div className="space-y-3">
               {renderObservedState(selectedExample.id, selectedStep.id)}
               <ul className="space-y-2">
                 {selectedStep.visualLines.map((line) => (
-                  <li key={line} className="text-[14px] leading-relaxed text-[#2a231c]">
+                  <li key={line} className="text-xs leading-relaxed text-[#5A5A5A]">
                     {line}
                   </li>
                 ))}
@@ -527,19 +527,19 @@ export function ReliabilityBoundaryPracticeViewer() {
           </div>
         </div>
 
-        <div className="border border-[#5b4126]/20 bg-[#fffaf0]/70 p-4">
-          <p className="text-xs uppercase tracking-[0.12em] text-[#5b4126]/75 mb-2">Current Readout</p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-3 text-[14px] text-[#2a231c]">
+        <div className="border border-[#E8E8E6] bg-[#FAFAFA] p-4">
+          <p className="text-xs uppercase tracking-[0.12em] text-[#8C8C8C mb-2">Current Readout</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs text-[#5A5A5A]">
             <div>
-              <p className="font-semibold text-[#1f1912]">Current boundary</p>
+              <p className="font-semibold text-[#1A1A1A]">Current boundary</p>
               <p>{selectedStep.currentBoundary}</p>
             </div>
             <div>
-              <p className="font-semibold text-[#1f1912]">What failed</p>
+              <p className="font-semibold text-[#1A1A1A]">What failed</p>
               <p>{selectedStep.failure}</p>
             </div>
             <div>
-              <p className="font-semibold text-[#1f1912]">What becomes observable</p>
+              <p className="font-semibold text-[#1A1A1A]">What becomes observable</p>
               <p>{selectedStep.observable}</p>
             </div>
           </div>

@@ -227,28 +227,28 @@ export function ReliabilityBoundaryExplorer() {
   const modeItems = selectedBoundary[selectedMode]
 
   return (
-    <section className="border border-[#5b4126]/25 bg-[#fffdf8]/75 p-5 md:p-6 space-y-6">
+    <section className="border border-[#DADADA] bg-[#F7F7F5] p-5 md:p-6 space-y-6">
       <header className="space-y-2">
-        <h2 className="text-2xl font-semibold text-[#1f1912]">Reliability Boundary Explorer</h2>
-        <p className="text-[16px] leading-relaxed text-[#2a231c]">
+        <h2 className="text-2xl font-semibold text-[#1A1A1A]">Reliability Boundary Explorer</h2>
+        <p className="text-base leading-relaxed text-[#5A5A5A]">
           Inspect where reliability sits in an automation system.
         </p>
       </header>
 
       <div className="grid grid-cols-1 lg:grid-cols-[0.9fr_1fr_1.4fr] gap-4">
-        <aside className="border border-[#5b4126]/20 bg-[#fffaf0]/70 p-4 space-y-3">
-          <p className="text-xs uppercase tracking-[0.12em] text-[#5b4126]/75">System Chain</p>
+        <aside className="border border-[#E8E8E6] bg-[#FAFAFA] p-4 space-y-3">
+          <p className="text-xs uppercase tracking-[0.12em] text-[#8C8C8C">System Chain</p>
           <ol className="space-y-2">
             {SYSTEM_CHAIN.map((node) => (
-              <li key={node} className="text-[15px] text-[#2a231c]">
+              <li key={node} className="text-sm text-[#5A5A5A]">
                 {node}
               </li>
             ))}
           </ol>
         </aside>
 
-        <aside className="border border-[#5b4126]/20 bg-[#fffaf0]/70 p-4 space-y-3">
-          <p className="text-xs uppercase tracking-[0.12em] text-[#5b4126]/75">Boundary Layers</p>
+        <aside className="border border-[#E8E8E6] bg-[#FAFAFA] p-4 space-y-3">
+          <p className="text-xs uppercase tracking-[0.12em] text-[#8C8C8C">Boundary Layers</p>
           <div className="space-y-2">
             {BOUNDARIES.map((boundary) => {
               const isActive = boundary.id === selectedBoundaryID
@@ -257,10 +257,10 @@ export function ReliabilityBoundaryExplorer() {
                   key={boundary.id}
                   type="button"
                   onClick={() => { setSelectedBoundaryID(boundary.id) }}
-                  className={`w-full text-left border px-3 py-2 text-[14px] leading-snug transition-colors ${
+                  className={`w-full text-left border px-3 py-2 text-xs leading-snug transition-colors ${
                     isActive
-                      ? 'border-[#5b4126]/50 bg-[#f7ecd6] text-[#1f1912]'
-                      : 'border-[#5b4126]/20 bg-white/40 text-[#2a231c] hover:bg-[#f8efd9]'
+                      ? 'border-[#DADADA] bg-[#F2F2F0] text-[#1A1A1A]'
+                      : 'border-[#E8E8E6] bg-[#F7F7F5] text-[#5A5A5A] hover:bg-[#F2F2F0]'
                   }`}
                 >
                   {boundary.title}
@@ -270,10 +270,10 @@ export function ReliabilityBoundaryExplorer() {
           </div>
         </aside>
 
-        <section className="border border-[#5b4126]/20 bg-[#fffaf0]/70 p-4 space-y-4">
-          <div className="border-b border-[#5b4126]/20 pb-3">
-            <h3 className="text-lg font-semibold text-[#1f1912]">{selectedBoundary.title}</h3>
-            <p className="text-[15px] leading-relaxed text-[#2a231c] mt-1">
+        <section className="border border-[#E8E8E6] bg-[#FAFAFA] p-4 space-y-4">
+          <div className="border-b border-[#E8E8E6] pb-3">
+            <h3 className="text-lg font-semibold text-[#1A1A1A]">{selectedBoundary.title}</h3>
+            <p className="text-sm leading-relaxed text-[#5A5A5A] mt-1">
               {selectedBoundary.shortDescription}
             </p>
           </div>
@@ -286,10 +286,10 @@ export function ReliabilityBoundaryExplorer() {
                   key={mode.id}
                   type="button"
                   onClick={() => { setSelectedMode(mode.id) }}
-                  className={`border px-3 py-1.5 text-[13px] transition-colors ${
+                  className={`border px-3 py-1.5 text-xs transition-colors ${
                     isActive
-                      ? 'border-[#5b4126]/55 bg-[#f7ecd6] text-[#1f1912]'
-                      : 'border-[#5b4126]/20 bg-white/40 text-[#2a231c] hover:bg-[#f8efd9]'
+                      ? 'border-[#DADADA] bg-[#F2F2F0] text-[#1A1A1A]'
+                      : 'border-[#E8E8E6] bg-[#F7F7F5] text-[#5A5A5A] hover:bg-[#F2F2F0]'
                   }`}
                 >
                   {mode.label}
@@ -298,13 +298,13 @@ export function ReliabilityBoundaryExplorer() {
             })}
           </div>
 
-          <div className="min-h-[260px] border border-[#5b4126]/20 bg-white/40 p-4">
-            <p className="text-xs uppercase tracking-[0.12em] text-[#5b4126]/75 mb-3">
+          <div className="min-h-[260px] border border-[#E8E8E6] bg-[#F7F7F5] p-4">
+            <p className="text-xs uppercase tracking-[0.12em] text-[#8C8C8C mb-3">
               {MODES.find((mode) => mode.id === selectedMode)?.label}
             </p>
             <ul className="space-y-2">
               {modeItems.map((item) => (
-                <li key={item} className="text-[15px] leading-relaxed text-[#2a231c]">
+                <li key={item} className="text-sm leading-relaxed text-[#5A5A5A]">
                   {item}
                 </li>
               ))}
