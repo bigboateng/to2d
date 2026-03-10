@@ -128,36 +128,35 @@ export default function CorrectnessPage() {
           </section>
 
           <section className="border-t border-[#5b4126]/20 pt-8 space-y-5">
-            <p className="text-sm tracking-wide text-[#5b4126]/75 uppercase">Sequence</p>
+            <p className="text-sm tracking-wide text-[#5b4126]/75 uppercase">Deterministic Boundary Stack</p>
             <ol className="space-y-2 text-[17px] text-[#2a231c]">
-              <li className="font-semibold">1. Correctness</li>
-              <li>
-                <a href="/correctness/where-reliability-boundaries-appear" className="underline decoration-[#5b4126]/35 underline-offset-4 hover:decoration-[#5b4126]">
-                  2. Where Reliability Boundaries Appear
-                </a>
-              </li>
-              <li>
-                <a href="/correctness/reliability-boundaries-in-practice" className="underline decoration-[#5b4126]/35 underline-offset-4 hover:decoration-[#5b4126]">
-                  3. Reliability Boundaries in Practice
-                </a>
-              </li>
-              <li>
-                <a href="/correctness/reliability-boundary-explorer" className="underline decoration-[#5b4126]/35 underline-offset-4 hover:decoration-[#5b4126]">
-                  4. Reliability Boundary Explorer
-                </a>
-              </li>
               <li>
                 <a href="/correctness/determinism" className="underline decoration-[#5b4126]/35 underline-offset-4 hover:decoration-[#5b4126]">
-                  5. Deterministic Boundaries
+                  1. Deterministic Boundaries
+                </a>
+              </li>
+              <li>
+                <a href="/correctness/structured-output-boundaries" className="underline decoration-[#5b4126]/35 underline-offset-4 hover:decoration-[#5b4126]">
+                  2. Structured Output Contracts
+                </a>
+              </li>
+              <li>
+                <a href="/correctness/boundary-tracing" className="underline decoration-[#5b4126]/35 underline-offset-4 hover:decoration-[#5b4126]">
+                  3. Boundary Tracing
+                </a>
+              </li>
+              <li>
+                <a href="/correctness/boundary-inspection" className="underline decoration-[#5b4126]/35 underline-offset-4 hover:decoration-[#5b4126]">
+                  4. Boundary Inspection
                 </a>
               </li>
             </ol>
             <div className="pt-2">
               <a
-                href="/correctness/where-reliability-boundaries-appear"
+                href="/correctness/determinism"
                 className="inline-block border border-[#5b4126]/30 px-4 py-2 text-[15px] text-[#2a231c] hover:bg-[#f8f0df] transition-colors"
               >
-                Next: Where Reliability Boundaries Appear ->
+                Next: Deterministic Boundaries -&gt;
               </a>
             </div>
           </section>

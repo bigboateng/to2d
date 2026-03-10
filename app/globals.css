@@ -61,6 +61,39 @@ a {
   color: #251f19;
 }
 
+.to2d-light-shell {
+  background:
+    radial-gradient(circle at 18% 8%, rgba(255, 255, 255, 0.5), transparent 36%),
+    linear-gradient(180deg, #f8f5ee 0%, #f1ede4 100%);
+  color: #1f1912;
+}
+
+.to2d-light-shell [class*="text-white"] {
+  color: rgba(31, 25, 18, 0.85) !important;
+}
+
+.to2d-light-shell [class*="border-white"] {
+  border-color: rgba(31, 25, 18, 0.15) !important;
+}
+
+.to2d-light-shell [class*="bg-white"] {
+  background-color: rgba(255, 255, 255, 0.56) !important;
+}
+
+.to2d-light-shell a:hover {
+  color: #1f1912;
+}
+
+.to2d-light-shell ::selection {
+  background: rgba(171, 129, 70, 0.35);
+  color: #1f1912;
+}
+
+.to2d-light-shell ::-moz-selection {
+  background: rgba(171, 129, 70, 0.35);
+  color: #1f1912;
+}
+
 .correctness-shell ::selection {
   background: rgba(171, 129, 70, 0.35);
   color: #1f1912;
