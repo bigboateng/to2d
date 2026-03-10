@@ -436,21 +436,6 @@ deterministic software`}
         </p>
       </section>
 
-      {/* Navigation */}
-      <section className="border-t border-[#E8E8E6] pt-8 flex flex-wrap gap-3">
-        <a
-          href="/correctness/structured-output-boundaries"
-          className="inline-block border border-[#DADADA] px-4 py-2 text-sm text-[#1A1A1A] hover:bg-[#F2F2F0] transition-colors"
-        >
-          Next: Structured Output Contracts →
-        </a>
-        <a
-          href="/correctness"
-          className="inline-block border border-[#DADADA] px-4 py-2 text-sm text-[#1A1A1A] hover:bg-[#F2F2F0] transition-colors"
-        >
-          ← Back: Reliability Boundaries
-        </a>
-      </section>
     </div>
   )
 }

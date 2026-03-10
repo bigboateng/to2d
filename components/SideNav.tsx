@@ -20,12 +20,12 @@ type NavSection = {
 const navSections = [
   {
     heading: 'Overview',
-    links: [{ href: '/', label: 'Overview' }],
+    links: [{ href: '/', label: 'Overview', status: 'wip' as Status }],
   },
   {
     heading: 'Architecture',
     links: [
-      { href: '/architecture', label: 'System Models' },
+      { href: '/architecture', label: 'System Models', status: 'wip' as Status },
       { href: '/architecture/system-identification', label: 'System Identification', status: 'wip' as Status },
       { href: '/architecture/stochastic-core', label: 'Stochastic Core', status: 'wip' as Status },
       { href: '/architecture/invariant-boundary', label: 'Invariant Boundary', status: 'wip' as Status },
@@ -35,7 +35,7 @@ const navSections = [
   {
     heading: 'Systems',
     links: [
-      { href: '/systems', label: 'Applied Architectures' },
+      { href: '/systems', label: 'Applied Architectures', status: 'wip' as Status },
       { href: '/systems/browser-agents', label: 'Browser Agents', status: 'wip' as Status },
       { href: '/systems/browser-state', label: 'Browser State', status: 'wip' as Status },
       { href: '/systems/structured-output-systems', label: 'Structured Output Systems', status: 'wip' as Status },
@@ -54,31 +54,31 @@ const navSections = [
           { href: '/correctness/reliability-boundary-explorer', label: 'Using Boundaries', status: 'stable' as Status },
         ],
       },
-      { href: '/correctness/deterministic-boundaries', label: 'Deterministic Boundaries', status: 'wip' as Status },
+      { href: '/correctness/deterministic-boundaries', label: 'Deterministic Boundaries', status: 'stable' as Status },
     ],
   },
   {
     heading: 'Building Blocks',
     links: [
-      { href: '/primitives', label: 'Building Blocks' },
+      { href: '/primitives', label: 'Building Blocks', status: 'wip' as Status },
       { href: '/primitives/contracts', label: 'Contracts', status: 'wip' as Status },
       { href: '/primitives/invariants', label: 'Invariants', status: 'wip' as Status },
-      { href: '/primitives/projection', label: 'Projection', status: 'note' as Status },
-      { href: '/primitives/canonicalization', label: 'Canonicalization', status: 'note' as Status },
+      { href: '/primitives/projection', label: 'Projection', status: 'wip' as Status },
+      { href: '/primitives/canonicalization', label: 'Canonicalization', status: 'wip' as Status },
     ],
   },
   {
     heading: 'Research',
     links: [
-      { href: '/research', label: 'Research' },
+      { href: '/research', label: 'Research', status: 'wip' as Status },
       { href: '/research/control-systems', label: 'Control Systems', status: 'wip' as Status },
-      { href: '/research/control-systems-ai', label: 'Control Systems × AI', status: 'stable' as Status },
+      { href: '/research/control-systems-ai', label: 'Control Systems × AI', status: 'wip' as Status },
       { href: '/research/language-models', label: 'Language Models', status: 'wip' as Status },
     ],
   },
   {
     heading: 'Open Source',
-    links: [{ href: '/open-source', label: 'Open Source' }],
+    links: [{ href: '/open-source', label: 'Open Source', status: 'wip' as Status }],
   },
 ] satisfies NavSection[]
 
