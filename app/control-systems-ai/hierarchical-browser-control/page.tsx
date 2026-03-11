@@ -140,7 +140,7 @@ function ControlLoopAnimation() {
     <div className="my-8 flex justify-center">
       <canvas
         ref={canvasRef}
-        className="rounded border border-white/10"
+        className="rounded border border-[#E8E8E6]"
         style={{ background: 'rgba(0, 0, 0, 0.3)' }}
       />
     </div>
@@ -276,7 +276,7 @@ function StateSpaceDecompositionAnimation() {
     <div className="my-8 flex justify-center">
       <canvas
         ref={canvasRef}
-        className="rounded border border-white/10"
+        className="rounded border border-[#E8E8E6]"
         style={{ background: 'rgba(0, 0, 0, 0.3)' }}
       />
     </div>
@@ -476,7 +476,7 @@ function HierarchicalControlAnimation() {
     <div className="my-8 flex justify-center">
       <canvas
         ref={canvasRef}
-        className="rounded border border-white/10"
+        className="rounded border border-[#E8E8E6]"
         style={{ background: 'rgba(0, 0, 0, 0.3)' }}
       />
     </div>
@@ -643,7 +643,7 @@ function SensorFusionAnimation() {
     <div className="my-8 flex justify-center">
       <canvas
         ref={canvasRef}
-        className="rounded border border-white/10"
+        className="rounded border border-[#E8E8E6]"
         style={{ background: 'rgba(0, 0, 0, 0.3)' }}
       />
     </div>
@@ -854,7 +854,7 @@ function FailureIsolationAnimation() {
     <div className="my-8 flex justify-center">
       <canvas
         ref={canvasRef}
-        className="rounded border border-white/10"
+        className="rounded border border-[#E8E8E6]"
         style={{ background: 'rgba(0, 0, 0, 0.3)' }}
       />
     </div>
@@ -865,30 +865,30 @@ export default function HierarchicalBrowserControlPage() {
   return (
     <div className="space-y-12 max-w-3xl">
       <section>
-        <h1 className="text-3xl font-thin tracking-tight mb-4">
+        <h1 className="text-3xl font-light tracking-tight mb-4">
           Hierarchical Control for Browser Automation
         </h1>
-        <p className="text-white/50 text-sm mb-2">
+        <p className="text-[#8C8C8C] text-sm mb-2">
           Applying supervisory control and distributed systems theory to agentic architectures
         </p>
-        <p className="text-white/40 text-xs mb-8">
+        <p className="text-[#8C8C8C] text-xs mb-8">
           December 9, 2025
         </p>
       </section>
 
-      <article className="prose prose-invert max-w-none">
-        <div className="text-white/70 text-sm leading-relaxed space-y-6">
+      <article className="prose max-w-none">
+        <div className="text-[#5A5A5A] text-sm leading-relaxed space-y-6">
           
-          <section className="border-l-2 border-white/20 pl-4 py-2 bg-white/5">
-            <h2 className="text-lg font-thin text-white/90 mb-3">Abstract</h2>
+          <section className="border-l-2 border-[#DADADA] pl-4 py-2 bg-[#FFFFFF]">
+            <h2 className="text-lg font-light text-[#1A1A1A] mb-3">Abstract</h2>
             <p>
               Browser automation agents face a fundamental architectural constraint: single-page state binding forces sequential, destructive navigation patterns that mirror the limitations of single-loop control systems. This paper presents multi-context browser control through the lens of control systems engineering, demonstrating that isolated page spawning enables a transition from monolithic to hierarchical control architectures. We draw parallels to supervisory control, distributed model predictive control (DMPC), and sensor fusion strategies, showing how concepts from aerospace, chemical process control, and autonomous vehicles inform the design of robust agentic systems.
             </p>
           </section>
 
-          <h2 className="text-xl font-thin text-white/90 mt-10 mb-4">1. The Control Problem in Browser Automation</h2>
+          <h2 className="text-xl font-light text-[#1A1A1A] mt-10 mb-4">1. The Control Problem in Browser Automation</h2>
 
-          <h3 className="text-lg font-thin text-white/80 mt-6 mb-3">1.1 Agents as Feedback Controllers</h3>
+          <h3 className="text-lg font-light text-[#2A2A2A] mt-6 mb-3">1.1 Agents as Feedback Controllers</h3>
           
           <p>
             At its core, a browser automation agent is a feedback control system:
@@ -896,42 +896,42 @@ export default function HierarchicalBrowserControlPage() {
 
           <ControlLoopAnimation />
 
-          <ul className="text-white/60 space-y-2 ml-6 list-disc">
-            <li><strong className="text-white/80">Reference signal</strong>: The task specification ("Fill out this form and submit")</li>
-            <li><strong className="text-white/80">Controller</strong>: The LLM reasoning about actions to take</li>
-            <li><strong className="text-white/80">Plant</strong>: The browser environment being manipulated</li>
-            <li><strong className="text-white/80">Sensor/Observer</strong>: Screenshots and DOM state returned to the agent</li>
-            <li><strong className="text-white/80">Actuation</strong>: Mouse clicks, keyboard input, navigation commands</li>
+          <ul className="text-[#5A5A5A] space-y-2 ml-6 list-disc">
+            <li><strong className="text-[#2A2A2A]">Reference signal</strong>: The task specification ("Fill out this form and submit")</li>
+            <li><strong className="text-[#2A2A2A]">Controller</strong>: The LLM reasoning about actions to take</li>
+            <li><strong className="text-[#2A2A2A]">Plant</strong>: The browser environment being manipulated</li>
+            <li><strong className="text-[#2A2A2A]">Sensor/Observer</strong>: Screenshots and DOM state returned to the agent</li>
+            <li><strong className="text-[#2A2A2A]">Actuation</strong>: Mouse clicks, keyboard input, navigation commands</li>
           </ul>
 
-          <h3 className="text-lg font-thin text-white/80 mt-6 mb-3">1.2 The Single-Loop Limitation</h3>
+          <h3 className="text-lg font-light text-[#2A2A2A] mt-6 mb-3">1.2 The Single-Loop Limitation</h3>
           
           <p>
-            Traditional browser agents operate as <strong className="text-white/80">single-input single-output (SISO) controllers</strong> with one observation channel (the current page) and one actuation channel (commands to that page).
+            Traditional browser agents operate as <strong className="text-[#2A2A2A]">single-input single-output (SISO) controllers</strong> with one observation channel (the current page) and one actuation channel (commands to that page).
           </p>
 
           <div className="overflow-x-auto my-6">
             <table className="w-full text-sm border-collapse">
               <thead>
-                <tr className="border-b border-white/20">
-                  <th className="text-left py-2 px-3 text-white/70 font-medium">Control Theory Concept</th>
-                  <th className="text-left py-2 px-3 text-white/70 font-medium">Browser Agent Manifestation</th>
+                <tr className="border-b border-[#DADADA]">
+                  <th className="text-left py-2 px-3 text-[#5A5A5A] font-medium">Control Theory Concept</th>
+                  <th className="text-left py-2 px-3 text-[#5A5A5A] font-medium">Browser Agent Manifestation</th>
                 </tr>
               </thead>
-              <tbody className="text-white/60">
-                <tr className="border-b border-white/10">
+              <tbody className="text-[#5A5A5A]">
+                <tr className="border-b border-[#E8E8E6]">
                   <td className="py-2 px-3">Limited bandwidth</td>
                   <td className="py-2 px-3">Can only observe/actuate one page</td>
                 </tr>
-                <tr className="border-b border-white/10">
+                <tr className="border-b border-[#E8E8E6]">
                   <td className="py-2 px-3">No parallel estimation</td>
                   <td className="py-2 px-3">Cannot gather information from multiple sources simultaneously</td>
                 </tr>
-                <tr className="border-b border-white/10">
+                <tr className="border-b border-[#E8E8E6]">
                   <td className="py-2 px-3">State destruction on mode switch</td>
                   <td className="py-2 px-3">Navigation overwrites current context</td>
                 </tr>
-                <tr className="border-b border-white/10">
+                <tr className="border-b border-[#E8E8E6]">
                   <td className="py-2 px-3">No hierarchical decomposition</td>
                   <td className="py-2 px-3">All tasks handled by single control loop</td>
                 </tr>
@@ -943,85 +943,85 @@ export default function HierarchicalBrowserControlPage() {
             </table>
           </div>
 
-          <p className="text-white/80 italic">
+          <p className="text-[#2A2A2A] italic">
             Industrial control systems solved these problems decades ago through multi-loop architectures, supervisory control, and distributed controllers.
           </p>
 
-          <h2 className="text-xl font-thin text-white/90 mt-10 mb-4">2. State-Space Representation</h2>
+          <h2 className="text-xl font-light text-[#1A1A1A] mt-10 mb-4">2. State-Space Representation</h2>
 
           <p>
             In control theory, a system is described by its state-space representation:
           </p>
 
-          <div className="bg-black/40 border border-white/10 rounded p-4 my-4 font-mono text-sm">
-            <p className="text-white/70">ẋ = f(x, u)    <span className="text-white/40">// state dynamics</span></p>
-            <p className="text-white/70">y = g(x)       <span className="text-white/40">// observation equation</span></p>
+          <div className="bg-black/40 border border-[#E8E8E6] rounded p-4 my-4 font-mono text-sm">
+            <p className="text-[#5A5A5A]">ẋ = f(x, u)    <span className="text-[#8C8C8C]">// state dynamics</span></p>
+            <p className="text-[#5A5A5A]">y = g(x)       <span className="text-[#8C8C8C]">// observation equation</span></p>
           </div>
 
           <p>
             For browser automation:
           </p>
 
-          <ul className="text-white/60 space-y-2 ml-6 list-disc">
-            <li><strong className="text-white/80">State vector x</strong>: Complete browser state (DOM, cookies, localStorage, network state)</li>
-            <li><strong className="text-white/80">Input vector u</strong>: Agent actions (click, type, navigate, scroll)</li>
-            <li><strong className="text-white/80">Output vector y</strong>: Observable state (screenshot, accessibility tree)</li>
+          <ul className="text-[#5A5A5A] space-y-2 ml-6 list-disc">
+            <li><strong className="text-[#2A2A2A]">State vector x</strong>: Complete browser state (DOM, cookies, localStorage, network state)</li>
+            <li><strong className="text-[#2A2A2A]">Input vector u</strong>: Agent actions (click, type, navigate, scroll)</li>
+            <li><strong className="text-[#2A2A2A]">Output vector y</strong>: Observable state (screenshot, accessibility tree)</li>
           </ul>
 
-          <p className="text-white/80 font-medium mt-4">
+          <p className="text-[#2A2A2A] font-medium mt-4">
             The critical insight: the state space is partitioned across pages, but certain state components are shared across the partition.
           </p>
 
           <StateSpaceDecompositionAnimation />
 
-          <div className="bg-black/40 border border-white/10 rounded p-4 my-4 font-mono text-xs">
-            <p className="text-white/70 mb-2">x = [x_shared, x_page1, x_page2, ..., x_pageN]</p>
-            <p className="text-white/50 mb-1">where:</p>
-            <p className="text-white/60 ml-4">x_shared = [cookies, localStorage, proxy_state, session_tokens]</p>
-            <p className="text-white/60 ml-4">x_pageI  = [DOM_I, render_state_I, JS_runtime_I, network_I]</p>
+          <div className="bg-black/40 border border-[#E8E8E6] rounded p-4 my-4 font-mono text-xs">
+            <p className="text-[#5A5A5A] mb-2">x = [x_shared, x_page1, x_page2, ..., x_pageN]</p>
+            <p className="text-[#8C8C8C] mb-1">where:</p>
+            <p className="text-[#5A5A5A] ml-4">x_shared = [cookies, localStorage, proxy_state, session_tokens]</p>
+            <p className="text-[#5A5A5A] ml-4">x_pageI  = [DOM_I, render_state_I, JS_runtime_I, network_I]</p>
           </div>
 
-          <h3 className="text-lg font-thin text-white/80 mt-6 mb-3">2.1 Multi-Context as State-Space Decomposition</h3>
+          <h3 className="text-lg font-light text-[#2A2A2A] mt-6 mb-3">2.1 Multi-Context as State-Space Decomposition</h3>
           
           <p>
-            With page spawning capability, the architecture supports <strong className="text-white/80">parallel state partitions</strong>:
+            With page spawning capability, the architecture supports <strong className="text-[#2A2A2A]">parallel state partitions</strong>:
           </p>
 
-          <div className="bg-black/40 border border-white/10 rounded p-4 my-4 font-mono text-xs">
-            <p className="text-white/70">y₁ = g(x_shared, x_page1)    <span className="text-white/40">// Main agent observes page 1</span></p>
-            <p className="text-white/70">y₂ = g(x_shared, x_page2)    <span className="text-white/40">// Tool observes page 2</span></p>
-            <p className="text-white/70">y₃ = g(x_shared, x_page3)    <span className="text-white/40">// Another tool observes page 3</span></p>
-            <p className="text-white/50 mt-2">u₁ affects x_page1           <span className="text-white/40">// Main agent actuates page 1</span></p>
-            <p className="text-white/50">u₂ affects x_page2           <span className="text-white/40">// Tool actuates page 2</span></p>
-            <p className="text-white/50">u₃ affects x_page3           <span className="text-white/40">// Tool actuates page 3</span></p>
+          <div className="bg-black/40 border border-[#E8E8E6] rounded p-4 my-4 font-mono text-xs">
+            <p className="text-[#5A5A5A]">y₁ = g(x_shared, x_page1)    <span className="text-[#8C8C8C]">// Main agent observes page 1</span></p>
+            <p className="text-[#5A5A5A]">y₂ = g(x_shared, x_page2)    <span className="text-[#8C8C8C]">// Tool observes page 2</span></p>
+            <p className="text-[#5A5A5A]">y₃ = g(x_shared, x_page3)    <span className="text-[#8C8C8C]">// Another tool observes page 3</span></p>
+            <p className="text-[#8C8C8C] mt-2">u₁ affects x_page1           <span className="text-[#8C8C8C]">// Main agent actuates page 1</span></p>
+            <p className="text-[#8C8C8C]">u₂ affects x_page2           <span className="text-[#8C8C8C]">// Tool actuates page 2</span></p>
+            <p className="text-[#8C8C8C]">u₃ affects x_page3           <span className="text-[#8C8C8C]">// Tool actuates page 3</span></p>
           </div>
 
           <p>
-            Critically, <strong className="text-white/80">x_shared is accessible to all controllers</strong>, enabling authenticated operations across all pages.
+            Critically, <strong className="text-[#2A2A2A]">x_shared is accessible to all controllers</strong>, enabling authenticated operations across all pages.
           </p>
 
-          <h2 className="text-xl font-thin text-white/90 mt-10 mb-4">3. Hierarchical Control Architecture</h2>
+          <h2 className="text-xl font-light text-[#1A1A1A] mt-10 mb-4">3. Hierarchical Control Architecture</h2>
 
-          <h3 className="text-lg font-thin text-white/80 mt-6 mb-3">3.1 Supervisory Control Framework</h3>
+          <h3 className="text-lg font-light text-[#2A2A2A] mt-6 mb-3">3.1 Supervisory Control Framework</h3>
           
           <p>
-            The multi-context architecture naturally maps to <strong className="text-white/80">supervisory control</strong>, a well-established pattern in industrial automation:
+            The multi-context architecture naturally maps to <strong className="text-[#2A2A2A]">supervisory control</strong>, a well-established pattern in industrial automation:
           </p>
 
           <HierarchicalControlAnimation />
 
-          <h3 className="text-lg font-thin text-white/80 mt-6 mb-3">3.2 Control Hierarchy Levels</h3>
+          <h3 className="text-lg font-light text-[#2A2A2A] mt-6 mb-3">3.2 Control Hierarchy Levels</h3>
 
           <div className="space-y-4">
-            <div className="border border-white/10 p-4 rounded">
-              <p className="text-white/80 font-medium mb-2">Level 0 — Plant</p>
-              <p className="text-white/60 text-sm">The browser context containing all pages and shared state</p>
+            <div className="border border-[#E8E8E6] p-4 rounded">
+              <p className="text-[#2A2A2A] font-medium mb-2">Level 0 — Plant</p>
+              <p className="text-[#5A5A5A] text-sm">The browser context containing all pages and shared state</p>
             </div>
             
-            <div className="border border-white/10 p-4 rounded">
-              <p className="text-white/80 font-medium mb-2">Level 1 — Local Controllers</p>
-              <p className="text-white/60 text-sm mb-2">Tools that operate on specific pages:</p>
-              <ul className="text-white/50 text-sm space-y-1 ml-4 list-disc">
+            <div className="border border-[#E8E8E6] p-4 rounded">
+              <p className="text-[#2A2A2A] font-medium mb-2">Level 1 — Local Controllers</p>
+              <p className="text-[#5A5A5A] text-sm mb-2">Tools that operate on specific pages:</p>
+              <ul className="text-[#8C8C8C] text-sm space-y-1 ml-4 list-disc">
                 <li>Receive high-level objectives from supervisory layer</li>
                 <li>Execute local control loops to achieve objectives</li>
                 <li>Return structured results to supervisory layer</li>
@@ -1029,10 +1029,10 @@ export default function HierarchicalBrowserControlPage() {
               </ul>
             </div>
             
-            <div className="border border-white/10 p-4 rounded">
-              <p className="text-white/80 font-medium mb-2">Level 2 — Supervisory Controller</p>
-              <p className="text-white/60 text-sm mb-2">The primary agent:</p>
-              <ul className="text-white/50 text-sm space-y-1 ml-4 list-disc">
+            <div className="border border-[#E8E8E6] p-4 rounded">
+              <p className="text-[#2A2A2A] font-medium mb-2">Level 2 — Supervisory Controller</p>
+              <p className="text-[#5A5A5A] text-sm mb-2">The primary agent:</p>
+              <ul className="text-[#8C8C8C] text-sm space-y-1 ml-4 list-disc">
                 <li>Decomposes complex tasks into subtasks</li>
                 <li>Dispatches subtasks to appropriate local controllers</li>
                 <li>Aggregates results and maintains global state estimate</li>
@@ -1041,9 +1041,9 @@ export default function HierarchicalBrowserControlPage() {
             </div>
           </div>
 
-          <h2 className="text-xl font-thin text-white/90 mt-10 mb-4">4. Parallel Observation and Sensor Fusion</h2>
+          <h2 className="text-xl font-light text-[#1A1A1A] mt-10 mb-4">4. Parallel Observation and Sensor Fusion</h2>
 
-          <h3 className="text-lg font-thin text-white/80 mt-6 mb-3">4.1 Aerospace Analogy: Multiple Kalman Filters</h3>
+          <h3 className="text-lg font-light text-[#2A2A2A] mt-6 mb-3">4.1 Aerospace Analogy: Multiple Kalman Filters</h3>
           
           <p>
             In aerospace systems, multiple observers process different sensor streams. Each filter processes a specific sensor modality, has its own noise characteristics, and provides a state estimate. The fusion layer combines estimates weighted by confidence.
@@ -1051,13 +1051,13 @@ export default function HierarchicalBrowserControlPage() {
 
           <SensorFusionAnimation />
 
-          <h3 className="text-lg font-thin text-white/80 mt-6 mb-3">4.2 Browser Automation Parallel</h3>
+          <h3 className="text-lg font-light text-[#2A2A2A] mt-6 mb-3">4.2 Browser Automation Parallel</h3>
           
           <p>
             In browser automation, multiple pages function as independent observers:
           </p>
 
-          <ul className="text-white/60 space-y-2 ml-6 list-disc">
+          <ul className="text-[#5A5A5A] space-y-2 ml-6 list-disc">
             <li>Each page provides a different "sensor reading" from a different source</li>
             <li>Each observer has reliability weight (site availability, selector stability)</li>
             <li>The supervisory agent fuses these observations</li>
@@ -1067,25 +1067,25 @@ export default function HierarchicalBrowserControlPage() {
           <div className="overflow-x-auto my-6">
             <table className="w-full text-sm border-collapse">
               <thead>
-                <tr className="border-b border-white/20">
-                  <th className="text-left py-2 px-3 text-white/70 font-medium">Aerospace Concept</th>
-                  <th className="text-left py-2 px-3 text-white/70 font-medium">Browser Automation Equivalent</th>
+                <tr className="border-b border-[#DADADA]">
+                  <th className="text-left py-2 px-3 text-[#5A5A5A] font-medium">Aerospace Concept</th>
+                  <th className="text-left py-2 px-3 text-[#5A5A5A] font-medium">Browser Automation Equivalent</th>
                 </tr>
               </thead>
-              <tbody className="text-white/60">
-                <tr className="border-b border-white/10">
+              <tbody className="text-[#5A5A5A]">
+                <tr className="border-b border-[#E8E8E6]">
                   <td className="py-2 px-3">Sensor modality</td>
                   <td className="py-2 px-3">Web source (news, social, market, regulatory)</td>
                 </tr>
-                <tr className="border-b border-white/10">
+                <tr className="border-b border-[#E8E8E6]">
                   <td className="py-2 px-3">Measurement noise</td>
                   <td className="py-2 px-3">Site reliability, selector stability</td>
                 </tr>
-                <tr className="border-b border-white/10">
+                <tr className="border-b border-[#E8E8E6]">
                   <td className="py-2 px-3">State estimate</td>
                   <td className="py-2 px-3">Extracted data with confidence</td>
                 </tr>
-                <tr className="border-b border-white/10">
+                <tr className="border-b border-[#E8E8E6]">
                   <td className="py-2 px-3">Kalman filter</td>
                   <td className="py-2 px-3">Page-specific extraction logic</td>
                 </tr>
@@ -1097,51 +1097,51 @@ export default function HierarchicalBrowserControlPage() {
             </table>
           </div>
 
-          <h2 className="text-xl font-thin text-white/90 mt-10 mb-4">5. Stability and Failure Mode Analysis</h2>
+          <h2 className="text-xl font-light text-[#1A1A1A] mt-10 mb-4">5. Stability and Failure Mode Analysis</h2>
 
-          <h3 className="text-lg font-thin text-white/80 mt-6 mb-3">5.1 Failure Mode Isolation</h3>
+          <h3 className="text-lg font-light text-[#2A2A2A] mt-6 mb-3">5.1 Failure Mode Isolation</h3>
           
           <p>
-            A key property of multi-context architecture is <strong className="text-white/80">failure isolation</strong>. In control theory, this is analogous to fault-tolerant control systems where subsystem failures don't cascade to global failure.
+            A key property of multi-context architecture is <strong className="text-[#2A2A2A]">failure isolation</strong>. In control theory, this is analogous to fault-tolerant control systems where subsystem failures don't cascade to global failure.
           </p>
 
           <FailureIsolationAnimation />
 
-          <h3 className="text-lg font-thin text-white/80 mt-6 mb-3">5.2 BIBO Stability Properties</h3>
+          <h3 className="text-lg font-light text-[#2A2A2A] mt-6 mb-3">5.2 BIBO Stability Properties</h3>
           
           <p>
-            <strong className="text-white/80">Bounded-Input Bounded-Output (BIBO) Stability</strong> requires:
+            <strong className="text-[#2A2A2A]">Bounded-Input Bounded-Output (BIBO) Stability</strong> requires:
           </p>
 
-          <ul className="text-white/60 space-y-2 ml-6 list-disc">
+          <ul className="text-[#5A5A5A] space-y-2 ml-6 list-disc">
             <li>Bounded tool inputs (valid URLs, reasonable parameters)</li>
             <li>Bounded outputs (structured results, error messages)</li>
             <li>Tools should never hang indefinitely or crash the browser context</li>
             <li>Timeouts and cleanup ensure bounded execution time</li>
           </ul>
 
-          <h3 className="text-lg font-thin text-white/80 mt-6 mb-3">5.3 Disturbance Rejection</h3>
+          <h3 className="text-lg font-light text-[#2A2A2A] mt-6 mb-3">5.3 Disturbance Rejection</h3>
           
           <p>
             Robust tools implement disturbance rejection patterns:
           </p>
 
           <div className="space-y-3">
-            <div className="border border-white/10 p-3 rounded">
-              <p className="text-white/80 text-sm font-medium">1. Sensor Redundancy</p>
-              <p className="text-white/50 text-xs">Multiple extraction strategies (CSS selectors, ARIA labels, text matching)</p>
+            <div className="border border-[#E8E8E6] p-3 rounded">
+              <p className="text-[#2A2A2A] text-sm font-medium">1. Sensor Redundancy</p>
+              <p className="text-[#8C8C8C] text-xs">Multiple extraction strategies (CSS selectors, ARIA labels, text matching)</p>
             </div>
-            <div className="border border-white/10 p-3 rounded">
-              <p className="text-white/80 text-sm font-medium">2. Retry with Backoff</p>
-              <p className="text-white/50 text-xs">Exponential backoff for transient network failures</p>
+            <div className="border border-[#E8E8E6] p-3 rounded">
+              <p className="text-[#2A2A2A] text-sm font-medium">2. Retry with Backoff</p>
+              <p className="text-[#8C8C8C] text-xs">Exponential backoff for transient network failures</p>
             </div>
-            <div className="border border-white/10 p-3 rounded">
-              <p className="text-white/80 text-sm font-medium">3. Graceful Degradation</p>
-              <p className="text-white/50 text-xs">Return partial results with confidence indicators</p>
+            <div className="border border-[#E8E8E6] p-3 rounded">
+              <p className="text-[#2A2A2A] text-sm font-medium">3. Graceful Degradation</p>
+              <p className="text-[#8C8C8C] text-xs">Return partial results with confidence indicators</p>
             </div>
           </div>
 
-          <h2 className="text-xl font-thin text-white/90 mt-10 mb-4">6. Chemical Process Control Analogy</h2>
+          <h2 className="text-xl font-light text-[#1A1A1A] mt-10 mb-4">6. Chemical Process Control Analogy</h2>
 
           <p>
             Chemical plants employ a well-established control hierarchy that directly maps to browser automation:
@@ -1150,21 +1150,21 @@ export default function HierarchicalBrowserControlPage() {
           <div className="overflow-x-auto my-6">
             <table className="w-full text-sm border-collapse">
               <thead>
-                <tr className="border-b border-white/20">
-                  <th className="text-left py-2 px-3 text-white/70 font-medium">Process Control Level</th>
-                  <th className="text-left py-2 px-3 text-white/70 font-medium">Browser Automation Equivalent</th>
+                <tr className="border-b border-[#DADADA]">
+                  <th className="text-left py-2 px-3 text-[#5A5A5A] font-medium">Process Control Level</th>
+                  <th className="text-left py-2 px-3 text-[#5A5A5A] font-medium">Browser Automation Equivalent</th>
                 </tr>
               </thead>
-              <tbody className="text-white/60">
-                <tr className="border-b border-white/10">
+              <tbody className="text-[#5A5A5A]">
+                <tr className="border-b border-[#E8E8E6]">
                   <td className="py-2 px-3">Level 3: Supervisory/Optimization</td>
                   <td className="py-2 px-3">Primary Agent (LLM reasoning)</td>
                 </tr>
-                <tr className="border-b border-white/10">
+                <tr className="border-b border-[#E8E8E6]">
                   <td className="py-2 px-3">Level 2: Advanced Process Control</td>
                   <td className="py-2 px-3">Tool invocations and coordination</td>
                 </tr>
-                <tr className="border-b border-white/10">
+                <tr className="border-b border-[#E8E8E6]">
                   <td className="py-2 px-3">Level 1: Regulatory Control (PID)</td>
                   <td className="py-2 px-3">Tool internal logic (click, fill, extract)</td>
                 </tr>
@@ -1176,30 +1176,30 @@ export default function HierarchicalBrowserControlPage() {
             </table>
           </div>
 
-          <h2 className="text-xl font-thin text-white/90 mt-10 mb-4">7. Architectural Constraints as Control-Theoretic Boundaries</h2>
+          <h2 className="text-xl font-light text-[#1A1A1A] mt-10 mb-4">7. Architectural Constraints as Control-Theoretic Boundaries</h2>
 
           <div className="overflow-x-auto my-6">
             <table className="w-full text-sm border-collapse">
               <thead>
-                <tr className="border-b border-white/20">
-                  <th className="text-left py-2 px-3 text-white/70 font-medium">Browser Limitation</th>
-                  <th className="text-left py-2 px-3 text-white/70 font-medium">Control Theory Analog</th>
+                <tr className="border-b border-[#DADADA]">
+                  <th className="text-left py-2 px-3 text-[#5A5A5A] font-medium">Browser Limitation</th>
+                  <th className="text-left py-2 px-3 text-[#5A5A5A] font-medium">Control Theory Analog</th>
                 </tr>
               </thead>
-              <tbody className="text-white/60">
-                <tr className="border-b border-white/10">
+              <tbody className="text-[#5A5A5A]">
+                <tr className="border-b border-[#E8E8E6]">
                   <td className="py-2 px-3">No cross-page communication</td>
                   <td className="py-2 px-3">No direct inter-controller coupling</td>
                 </tr>
-                <tr className="border-b border-white/10">
+                <tr className="border-b border-[#E8E8E6]">
                   <td className="py-2 px-3">Sequential sub-agent execution</td>
                   <td className="py-2 px-3">Time-sliced control loops</td>
                 </tr>
-                <tr className="border-b border-white/10">
+                <tr className="border-b border-[#E8E8E6]">
                   <td className="py-2 px-3">Page lifetime = tool call duration</td>
                   <td className="py-2 px-3">Controllers without persistent internal state</td>
                 </tr>
-                <tr className="border-b border-white/10">
+                <tr className="border-b border-[#E8E8E6]">
                   <td className="py-2 px-3">Shared cookies/storage only</td>
                   <td className="py-2 px-3">Limited shared state space</td>
                 </tr>
@@ -1211,34 +1211,34 @@ export default function HierarchicalBrowserControlPage() {
             </table>
           </div>
 
-          <h2 className="text-xl font-thin text-white/90 mt-10 mb-4">8. Conclusion</h2>
+          <h2 className="text-xl font-light text-[#1A1A1A] mt-10 mb-4">8. Conclusion</h2>
 
           <p>
             Multi-context browser control represents a fundamental architectural evolution that has clear parallels in decades of control systems engineering. By framing the browser context as a shared plant, the primary agent as a supervisory controller, and spawned pages as local controllers, we can apply well-established principles from hierarchical control, distributed systems, and sensor fusion.
           </p>
 
-          <p className="text-white/80 font-medium">
+          <p className="text-[#2A2A2A] font-medium">
             Key insights from the control-theoretic perspective:
           </p>
 
-          <ol className="text-white/60 space-y-3 ml-6 list-decimal">
-            <li><strong className="text-white/80">State-Space Decomposition</strong>: Multi-context enables parallel observation and actuation on partitioned state while maintaining coupling through shared session state.</li>
-            <li><strong className="text-white/80">Hierarchical Control</strong>: The architecture naturally supports supervisory patterns where high-level reasoning is separated from low-level actuation.</li>
-            <li><strong className="text-white/80">Parallel Observation</strong>: Multiple pages functioning as independent observers improves information gathering, analogous to sensor fusion in aerospace systems.</li>
-            <li><strong className="text-white/80">Failure Isolation</strong>: Page-level isolation provides disturbance rejection properties that make the overall system more robust.</li>
+          <ol className="text-[#5A5A5A] space-y-3 ml-6 list-decimal">
+            <li><strong className="text-[#2A2A2A]">State-Space Decomposition</strong>: Multi-context enables parallel observation and actuation on partitioned state while maintaining coupling through shared session state.</li>
+            <li><strong className="text-[#2A2A2A]">Hierarchical Control</strong>: The architecture naturally supports supervisory patterns where high-level reasoning is separated from low-level actuation.</li>
+            <li><strong className="text-[#2A2A2A]">Parallel Observation</strong>: Multiple pages functioning as independent observers improves information gathering, analogous to sensor fusion in aerospace systems.</li>
+            <li><strong className="text-[#2A2A2A]">Failure Isolation</strong>: Page-level isolation provides disturbance rejection properties that make the overall system more robust.</li>
           </ol>
 
-          <p className="text-white/80 italic mt-6">
+          <p className="text-[#2A2A2A] italic mt-6">
             The page spawning primitive is small in implementation but significant in architectural impact. It transforms browser automation from single-loop control to distributed hierarchical control, unlocking patterns that industrial control systems have relied on for decades.
           </p>
 
-          <div className="border-l-2 border-white/20 pl-4 py-2 mt-8 bg-white/5">
-            <p className="text-white/60 text-sm">
+          <div className="border-l-2 border-[#DADADA] pl-4 py-2 mt-8 bg-[#FFFFFF]">
+            <p className="text-[#5A5A5A] text-sm">
               For implementation details and code examples:
             </p>
             <a 
               href="/ai-era/multi-context-browser-control" 
-              className="text-white/80 hover:text-white transition-colors underline text-sm mt-2 inline-block"
+              className="text-[#2A2A2A] hover:text-[#1A1A1A] transition-colors underline text-sm mt-2 inline-block"
             >
               Multi-Context Browser Control for Agentic Systems →
             </a>
@@ -1247,8 +1247,8 @@ export default function HierarchicalBrowserControlPage() {
         </div>
       </article>
 
-      <section className="text-white/40 text-sm border-t border-white/10 pt-6">
-        <a href="/control-systems-ai" className="hover:text-white/60 transition-colors">
+      <section className="text-[#8C8C8C] text-sm border-t border-[#E8E8E6] pt-6">
+        <a href="/control-systems-ai" className="hover:text-[#5A5A5A] transition-colors">
           ← Back to Control Systems × AI
         </a>
       </section>

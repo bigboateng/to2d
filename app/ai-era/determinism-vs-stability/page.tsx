@@ -86,7 +86,7 @@ function StabilityConvergenceAnimation() {
       ref={canvasRef}
       width={500}
       height={150}
-      className="w-full max-w-md mx-auto rounded border border-white/10"
+      className="w-full max-w-md mx-auto rounded border border-[#E8E8E6]"
     />
   )
 }
@@ -200,7 +200,7 @@ function FunctionVsSystemAnimation() {
       ref={canvasRef}
       width={500}
       height={180}
-      className="w-full max-w-md mx-auto rounded border border-white/10"
+      className="w-full max-w-md mx-auto rounded border border-[#E8E8E6]"
     />
   )
 }
@@ -306,7 +306,7 @@ function EnvironmentDriftAnimation() {
       ref={canvasRef}
       width={500}
       height={120}
-      className="w-full max-w-md mx-auto rounded border border-white/10"
+      className="w-full max-w-md mx-auto rounded border border-[#E8E8E6]"
     />
   )
 }
@@ -396,7 +396,7 @@ function DeterminismScopeAnimation() {
       ref={canvasRef}
       width={500}
       height={200}
-      className="w-full max-w-md mx-auto rounded border border-white/10"
+      className="w-full max-w-md mx-auto rounded border border-[#E8E8E6]"
     />
   )
 }
@@ -406,11 +406,11 @@ export default function DeterminismVsStabilityPage() {
     <div className="space-y-8">
       <div className="max-w-3xl">
         <header className="mb-12">
-          <p className="text-white/40 text-sm mb-2">Dec 14, 2025</p>
-          <h1 className="text-3xl font-thin tracking-tight mb-4">
+          <p className="text-[#8C8C8C] text-sm mb-2">Dec 14, 2025</p>
+          <h1 className="text-3xl font-light tracking-tight mb-4">
             Determinism vs Stability
           </h1>
-          <p className="text-white/60 text-lg">
+          <p className="text-[#5A5A5A] text-lg">
             Designing Systems in Non-Deterministic Environments
           </p>
         </header>
@@ -418,17 +418,17 @@ export default function DeterminismVsStabilityPage() {
 
       <figure className="w-full max-w-xl mx-auto my-10">
         <StabilityConvergenceAnimation />
-        <figcaption className="text-white/40 text-xs mt-3 text-center">
+        <figcaption className="text-[#8C8C8C] text-xs mt-3 text-center">
           Stable systems converge within bounds · Unstable systems diverge over time
         </figcaption>
       </figure>
 
-      <article className="max-w-3xl space-y-8 text-white/70 leading-relaxed">
+      <article className="max-w-3xl space-y-8 text-[#5A5A5A] leading-relaxed">
         <p>
           Modern systems increasingly operate in environments that are not deterministic.
         </p>
 
-        <div className="text-white/50 space-y-1 pl-4 border-l border-white/10">
+        <div className="text-[#8C8C8C] space-y-1 pl-4 border-l border-[#E8E8E6]">
           <p>Inputs are noisy.</p>
           <p>Interfaces change.</p>
           <p>Timing varies.</p>
@@ -442,31 +442,31 @@ export default function DeterminismVsStabilityPage() {
           AI, and real-world interaction.
         </p>
 
-        <p className="text-white/50 italic">
+        <p className="text-[#8C8C8C] italic">
           This is not a failure of engineering discipline.<br />
           It is a mismatch of abstraction.
         </p>
 
-        <div className="border-l-2 border-white/20 pl-6 my-8 py-2 bg-white/5 rounded-r">
-          <p className="text-white/60 text-sm">
-            This distinction is closely related to <a href="/ai-era/model-coupled-vs-decoupled" className="text-white/80 underline underline-offset-2 hover:text-white">model-coupled vs model-decoupled systems</a>. 
+        <div className="border-l-2 border-[#DADADA] pl-6 my-8 py-2 bg-[#FFFFFF] rounded-r">
+          <p className="text-[#5A5A5A] text-sm">
+            This distinction is closely related to <a href="/ai-era/model-coupled-vs-decoupled" className="text-[#2A2A2A] underline underline-offset-2 hover:text-[#1A1A1A]">model-coupled vs model-decoupled systems</a>. 
             Model-decoupled systems are inherently designed for stability over determinism — their correctness 
             comes from architectural constraints, not model precision.
           </p>
         </div>
 
         <section className="space-y-6">
-          <h2 className="text-xl font-thin text-white/90 pt-6">What Determinism Actually Solves</h2>
+          <h2 className="text-xl font-light text-[#1A1A1A] pt-6">What Determinism Actually Solves</h2>
           
           <p>
-            Determinism is a <em className="text-white/80">local property</em>.
+            Determinism is a <em className="text-[#2A2A2A]">local property</em>.
           </p>
 
           <p>
             It is extremely effective for problems with:
           </p>
 
-          <ul className="list-disc list-inside text-white/60 space-y-1 ml-4">
+          <ul className="list-disc list-inside text-[#5A5A5A] space-y-1 ml-4">
             <li>Fixed inputs</li>
             <li>Well-defined outputs</li>
             <li>Closed environments</li>
@@ -476,20 +476,20 @@ export default function DeterminismVsStabilityPage() {
           <p>Examples include:</p>
 
           <div className="grid grid-cols-2 gap-4 my-6">
-            <div className="border border-white/10 p-4 rounded">
-              <p className="text-white/60 text-sm">Data validation</p>
+            <div className="border border-[#E8E8E6] p-4 rounded">
+              <p className="text-[#5A5A5A] text-sm">Data validation</p>
             </div>
-            <div className="border border-white/10 p-4 rounded">
-              <p className="text-white/60 text-sm">Parsing known formats</p>
+            <div className="border border-[#E8E8E6] p-4 rounded">
+              <p className="text-[#5A5A5A] text-sm">Parsing known formats</p>
             </div>
-            <div className="border border-white/10 p-4 rounded">
-              <p className="text-white/60 text-sm">Schema enforcement</p>
+            <div className="border border-[#E8E8E6] p-4 rounded">
+              <p className="text-[#5A5A5A] text-sm">Schema enforcement</p>
             </div>
-            <div className="border border-white/10 p-4 rounded">
-              <p className="text-white/60 text-sm">Business rules</p>
+            <div className="border border-[#E8E8E6] p-4 rounded">
+              <p className="text-[#5A5A5A] text-sm">Business rules</p>
             </div>
-            <div className="border border-white/10 p-4 rounded col-span-2">
-              <p className="text-white/60 text-sm">State serialization</p>
+            <div className="border border-[#E8E8E6] p-4 rounded col-span-2">
+              <p className="text-[#5A5A5A] text-sm">State serialization</p>
             </div>
           </div>
 
@@ -498,21 +498,21 @@ export default function DeterminismVsStabilityPage() {
             Removing it would make systems worse, not better.
           </p>
 
-          <p className="text-white/50">
+          <p className="text-[#8C8C8C]">
             The problem arises when determinism is extended beyond its natural scope.
           </p>
         </section>
 
         <section className="space-y-6">
-          <h2 className="text-xl font-thin text-white/90 pt-6">Where Determinism Breaks Down</h2>
+          <h2 className="text-xl font-light text-[#1A1A1A] pt-6">Where Determinism Breaks Down</h2>
 
           <p>
-            Many real-world systems are not functions. They are <em className="text-white/80">dynamic systems</em>.
+            Many real-world systems are not functions. They are <em className="text-[#2A2A2A]">dynamic systems</em>.
           </p>
 
           <p>They involve:</p>
 
-          <ul className="list-disc list-inside text-white/60 space-y-1 ml-4">
+          <ul className="list-disc list-inside text-[#5A5A5A] space-y-1 ml-4">
             <li>Feedback loops</li>
             <li>Delayed signals</li>
             <li>Partial observability</li>
@@ -524,60 +524,60 @@ export default function DeterminismVsStabilityPage() {
 
       <figure className="w-full max-w-xl mx-auto my-10">
         <FunctionVsSystemAnimation />
-        <figcaption className="text-white/40 text-xs mt-3 text-center">
+        <figcaption className="text-[#8C8C8C] text-xs mt-3 text-center">
           Functions: input → output · Systems: continuous feedback and adaptation
         </figcaption>
       </figure>
 
-      <article className="max-w-3xl space-y-8 text-white/70 leading-relaxed">
+      <article className="max-w-3xl space-y-8 text-[#5A5A5A] leading-relaxed">
         <p>Examples include:</p>
 
         <div className="grid grid-cols-3 gap-3 my-6">
-          <div className="border border-white/10 p-3 rounded text-center">
-            <p className="text-white/60 text-xs">Browser automation</p>
+          <div className="border border-[#E8E8E6] p-3 rounded text-center">
+            <p className="text-[#5A5A5A] text-xs">Browser automation</p>
           </div>
-          <div className="border border-white/10 p-3 rounded text-center">
-            <p className="text-white/60 text-xs">Distributed systems</p>
+          <div className="border border-[#E8E8E6] p-3 rounded text-center">
+            <p className="text-[#5A5A5A] text-xs">Distributed systems</p>
           </div>
-          <div className="border border-white/10 p-3 rounded text-center">
-            <p className="text-white/60 text-xs">Robotics</p>
+          <div className="border border-[#E8E8E6] p-3 rounded text-center">
+            <p className="text-[#5A5A5A] text-xs">Robotics</p>
           </div>
-          <div className="border border-white/10 p-3 rounded text-center">
-            <p className="text-white/60 text-xs">Control systems</p>
+          <div className="border border-[#E8E8E6] p-3 rounded text-center">
+            <p className="text-[#5A5A5A] text-xs">Control systems</p>
           </div>
-          <div className="border border-white/10 p-3 rounded text-center">
-            <p className="text-white/60 text-xs">Human-in-the-loop</p>
+          <div className="border border-[#E8E8E6] p-3 rounded text-center">
+            <p className="text-[#5A5A5A] text-xs">Human-in-the-loop</p>
           </div>
-          <div className="border border-white/10 p-3 rounded text-center">
-            <p className="text-white/60 text-xs">AI-driven interfaces</p>
+          <div className="border border-[#E8E8E6] p-3 rounded text-center">
+            <p className="text-[#5A5A5A] text-xs">AI-driven interfaces</p>
           </div>
         </div>
 
         <p>
           In these systems, insisting on end-to-end determinism is not just expensive — 
-          it is <em className="text-white/80">counterproductive</em>.
+          it is <em className="text-[#2A2A2A]">counterproductive</em>.
         </p>
 
-        <div className="text-white/50 space-y-1 pl-4 border-l border-white/10">
+        <div className="text-[#8C8C8C] space-y-1 pl-4 border-l border-[#E8E8E6]">
           <p>You can add more rules.</p>
           <p>You can chase edge cases.</p>
           <p>You can tighten constraints.</p>
         </div>
 
-        <p className="text-white/60">
+        <p className="text-[#5A5A5A]">
           But complexity grows faster than correctness.
         </p>
 
         <section className="space-y-6">
-          <h2 className="text-xl font-thin text-white/90 pt-6">The Hidden Assumption Behind Determinism</h2>
+          <h2 className="text-xl font-light text-[#1A1A1A] pt-6">The Hidden Assumption Behind Determinism</h2>
 
-          <p className="text-white/80 font-medium">
+          <p className="text-[#2A2A2A] font-medium">
             Determinism assumes the environment cooperates.
           </p>
 
           <p>That assumption quietly fails once:</p>
 
-          <ul className="list-disc list-inside text-white/60 space-y-1 ml-4">
+          <ul className="list-disc list-inside text-[#5A5A5A] space-y-1 ml-4">
             <li>Interfaces drift</li>
             <li>Timing changes</li>
             <li>Inputs become ambiguous</li>
@@ -586,10 +586,10 @@ export default function DeterminismVsStabilityPage() {
           </ul>
 
           <p>
-            At that point, deterministic logic doesn&apos;t converge. It <em className="text-white/80">oscillates</em>.
+            At that point, deterministic logic doesn&apos;t converge. It <em className="text-[#2A2A2A]">oscillates</em>.
           </p>
 
-          <p className="text-white/50 italic">
+          <p className="text-[#8C8C8C] italic">
             More precision does not produce more reliability.
           </p>
         </section>
@@ -597,27 +597,27 @@ export default function DeterminismVsStabilityPage() {
 
       <figure className="w-full max-w-xl mx-auto my-10">
         <EnvironmentDriftAnimation />
-        <figcaption className="text-white/40 text-xs mt-3 text-center">
+        <figcaption className="text-[#8C8C8C] text-xs mt-3 text-center">
           Stable systems track drifting targets · Deterministic systems break when targets move
         </figcaption>
       </figure>
 
-      <article className="max-w-3xl space-y-8 text-white/70 leading-relaxed">
+      <article className="max-w-3xl space-y-8 text-[#5A5A5A] leading-relaxed">
         <section className="space-y-6">
-          <h2 className="text-xl font-thin text-white/90 pt-6">Stability Is a Different Goal</h2>
+          <h2 className="text-xl font-light text-[#1A1A1A] pt-6">Stability Is a Different Goal</h2>
 
           <p>
-            Stability is a <em className="text-white/80">system-level property</em>, not a local one.
+            Stability is a <em className="text-[#2A2A2A]">system-level property</em>, not a local one.
           </p>
 
           <p>
             A stable system is not one that always behaves the same way.<br />
-            It is one that behaves <em className="text-white/80">within acceptable bounds</em> over time.
+            It is one that behaves <em className="text-[#2A2A2A]">within acceptable bounds</em> over time.
           </p>
 
           <p>Stability means:</p>
 
-          <ul className="list-disc list-inside text-white/60 space-y-1 ml-4">
+          <ul className="list-disc list-inside text-[#5A5A5A] space-y-1 ml-4">
             <li>Errors do not cascade</li>
             <li>Retries converge instead of loop</li>
             <li>Failures are detectable and classifiable</li>
@@ -625,37 +625,37 @@ export default function DeterminismVsStabilityPage() {
             <li>Recovery is possible without panic</li>
           </ul>
 
-          <p className="text-white/50 italic">
+          <p className="text-[#8C8C8C] italic">
             A stable system may produce different outputs across runs — and still be correct.
           </p>
         </section>
 
         <section className="space-y-6">
-          <h2 className="text-xl font-thin text-white/90 pt-6">Systems vs Functions</h2>
+          <h2 className="text-xl font-light text-[#1A1A1A] pt-6">Systems vs Functions</h2>
 
           <p>A useful distinction:</p>
 
           <div className="grid grid-cols-2 gap-6 my-8">
             <div className="border border-green-500/20 bg-green-500/5 p-6 rounded">
               <h3 className="text-green-400/80 font-medium mb-3">Function</h3>
-              <p className="text-white/60 text-sm mb-2">Correct or incorrect</p>
-              <p className="text-white/40 text-xs">Determinism optimizes functions</p>
+              <p className="text-[#5A5A5A] text-sm mb-2">Correct or incorrect</p>
+              <p className="text-[#8C8C8C] text-xs">Determinism optimizes functions</p>
             </div>
             <div className="border border-blue-500/20 bg-blue-500/5 p-6 rounded">
               <h3 className="text-blue-400/80 font-medium mb-3">System</h3>
-              <p className="text-white/60 text-sm mb-2">Converges or diverges</p>
-              <p className="text-white/40 text-xs">Stability governs systems</p>
+              <p className="text-[#5A5A5A] text-sm mb-2">Converges or diverges</p>
+              <p className="text-[#8C8C8C] text-xs">Stability governs systems</p>
             </div>
           </div>
 
-          <p className="text-white/80">
+          <p className="text-[#2A2A2A]">
             Most real-world problems that feel &quot;hard&quot; are hard because they are being treated 
             like functions when they are systems.
           </p>
         </section>
 
         <section className="space-y-6">
-          <h2 className="text-xl font-thin text-white/90 pt-6">Why AI Makes This Unavoidable</h2>
+          <h2 className="text-xl font-light text-[#1A1A1A] pt-6">Why AI Makes This Unavoidable</h2>
 
           <p>
             AI-driven systems expose this mismatch clearly.
@@ -663,7 +663,7 @@ export default function DeterminismVsStabilityPage() {
 
           <p>AI operates in domains that are:</p>
 
-          <ul className="list-disc list-inside text-white/60 space-y-1 ml-4">
+          <ul className="list-disc list-inside text-[#5A5A5A] space-y-1 ml-4">
             <li>Ambiguous</li>
             <li>Probabilistic</li>
             <li>Context-sensitive</li>
@@ -674,23 +674,23 @@ export default function DeterminismVsStabilityPage() {
 
           <div className="grid grid-cols-2 gap-3 my-6">
             <div className="border border-red-500/20 bg-red-500/5 p-3 rounded">
-              <p className="text-white/60 text-xs">Brittle prompting</p>
+              <p className="text-[#5A5A5A] text-xs">Brittle prompting</p>
             </div>
             <div className="border border-red-500/20 bg-red-500/5 p-3 rounded">
-              <p className="text-white/60 text-xs">Excessive retries</p>
+              <p className="text-[#5A5A5A] text-xs">Excessive retries</p>
             </div>
             <div className="border border-red-500/20 bg-red-500/5 p-3 rounded">
-              <p className="text-white/60 text-xs">Silent failure modes</p>
+              <p className="text-[#5A5A5A] text-xs">Silent failure modes</p>
             </div>
             <div className="border border-red-500/20 bg-red-500/5 p-3 rounded">
-              <p className="text-white/60 text-xs">Overconfidence in evals</p>
+              <p className="text-[#5A5A5A] text-xs">Overconfidence in evals</p>
             </div>
             <div className="border border-red-500/20 bg-red-500/5 p-3 rounded col-span-2">
-              <p className="text-white/60 text-xs">Systems that degrade under pressure</p>
+              <p className="text-[#5A5A5A] text-xs">Systems that degrade under pressure</p>
             </div>
           </div>
 
-          <p className="text-white/50 italic">
+          <p className="text-[#8C8C8C] italic">
             The solution is not &quot;better prompts&quot; or &quot;bigger models.&quot;<br />
             It is architectural stability.
           </p>
@@ -699,23 +699,23 @@ export default function DeterminismVsStabilityPage() {
 
       <figure className="w-full max-w-xl mx-auto my-10">
         <DeterminismScopeAnimation />
-        <figcaption className="text-white/40 text-xs mt-3 text-center">
+        <figcaption className="text-[#8C8C8C] text-xs mt-3 text-center">
           Deterministic core · Non-deterministic boundary · Stability at the system level
         </figcaption>
       </figure>
 
-      <article className="max-w-3xl space-y-8 text-white/70 leading-relaxed">
+      <article className="max-w-3xl space-y-8 text-[#5A5A5A] leading-relaxed">
         <section className="space-y-6">
-          <h2 className="text-xl font-thin text-white/90 pt-6">The Right Division of Responsibility</h2>
+          <h2 className="text-xl font-light text-[#1A1A1A] pt-6">The Right Division of Responsibility</h2>
 
           <p>
-            Effective systems use both determinism and non-determinism — but <em className="text-white/80">intentionally</em>.
+            Effective systems use both determinism and non-determinism — but <em className="text-[#2A2A2A]">intentionally</em>.
           </p>
 
           <div className="grid grid-cols-2 gap-6 my-8">
             <div className="border border-green-500/20 bg-green-500/5 p-5 rounded">
               <h3 className="text-green-400/80 font-medium mb-3 text-sm">Determinism belongs in:</h3>
-              <ul className="text-white/60 text-sm space-y-1">
+              <ul className="text-[#5A5A5A] text-sm space-y-1">
                 <li>• Constraints</li>
                 <li>• Validation</li>
                 <li>• Invariants</li>
@@ -725,7 +725,7 @@ export default function DeterminismVsStabilityPage() {
             </div>
             <div className="border border-amber-500/20 bg-amber-500/5 p-5 rounded">
               <h3 className="text-amber-400/80 font-medium mb-3 text-sm">Non-determinism belongs where:</h3>
-              <ul className="text-white/60 text-sm space-y-1">
+              <ul className="text-[#5A5A5A] text-sm space-y-1">
                 <li>• Interpretation is required</li>
                 <li>• Environments are noisy</li>
                 <li>• Adaptation matters</li>
@@ -733,18 +733,18 @@ export default function DeterminismVsStabilityPage() {
             </div>
           </div>
 
-          <p className="text-white/80">
+          <p className="text-[#2A2A2A]">
             The system as a whole is not deterministic.<br />
             It is <em>stable</em>.
           </p>
         </section>
 
         <section className="space-y-6">
-          <h2 className="text-xl font-thin text-white/90 pt-6">A Simple Test</h2>
+          <h2 className="text-xl font-light text-[#1A1A1A] pt-6">A Simple Test</h2>
 
           <p>Ask one question:</p>
 
-          <blockquote className="border-l-2 border-white/30 pl-6 my-6 text-white/80 italic">
+          <blockquote className="border-l-2 border-[#DADADA] pl-6 my-6 text-[#2A2A2A] italic">
             If the environment changes slightly, does the system recover or collapse?
           </blockquote>
 
@@ -752,13 +752,13 @@ export default function DeterminismVsStabilityPage() {
             If it collapses, more deterministic logic will not save it.
           </p>
 
-          <p className="text-white/80">
+          <p className="text-[#2A2A2A]">
             Only better system design will.
           </p>
         </section>
 
         <section className="space-y-6">
-          <h2 className="text-xl font-thin text-white/90 pt-6">Why This Distinction Matters</h2>
+          <h2 className="text-xl font-light text-[#1A1A1A] pt-6">Why This Distinction Matters</h2>
 
           <p>
             Many teams interpret friction as failure.
@@ -766,7 +766,7 @@ export default function DeterminismVsStabilityPage() {
 
           <p>In practice, friction often signals that:</p>
 
-          <ul className="list-disc list-inside text-white/60 space-y-1 ml-4">
+          <ul className="list-disc list-inside text-[#5A5A5A] space-y-1 ml-4">
             <li>Assumptions have met reality</li>
             <li>Local correctness is no longer sufficient</li>
             <li>Architecture, not logic, is now the bottleneck</li>
@@ -779,18 +779,18 @@ export default function DeterminismVsStabilityPage() {
           <p>The work shifts from:</p>
 
           <div className="flex items-center gap-4 my-6">
-            <div className="border border-white/20 px-4 py-2 rounded">
-              <p className="text-white/60 text-sm">&quot;Make this exact&quot;</p>
+            <div className="border border-[#DADADA] px-4 py-2 rounded">
+              <p className="text-[#5A5A5A] text-sm">&quot;Make this exact&quot;</p>
             </div>
-            <span className="text-white/40">→</span>
-            <div className="border border-white/20 px-4 py-2 rounded">
-              <p className="text-white/60 text-sm">&quot;Make this resilient&quot;</p>
+            <span className="text-[#8C8C8C]">→</span>
+            <div className="border border-[#DADADA] px-4 py-2 rounded">
+              <p className="text-[#5A5A5A] text-sm">&quot;Make this resilient&quot;</p>
             </div>
           </div>
         </section>
 
         <section className="space-y-6 pb-8">
-          <h2 className="text-xl font-thin text-white/90 pt-6">Closing Thought</h2>
+          <h2 className="text-xl font-light text-[#1A1A1A] pt-6">Closing Thought</h2>
 
           <p>
             Determinism is a powerful tool.<br />
@@ -801,11 +801,11 @@ export default function DeterminismVsStabilityPage() {
             The goal is systems that remain correct under uncertainty, drift, and pressure.
           </p>
 
-          <p className="text-white/80 font-medium">
+          <p className="text-[#2A2A2A] font-medium">
             That is stability.
           </p>
 
-          <p className="text-white/50 italic">
+          <p className="text-[#8C8C8C] italic">
             And stability is not something you add with more logic.<br />
             It is something you design for from the start.
           </p>

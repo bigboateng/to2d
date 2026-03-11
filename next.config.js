@@ -29,11 +29,6 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/control-systems-ai/:path*',
-        destination: '/research/control-systems-ai',
-        permanent: true,
-      },
-      {
         source: '/ai-era/zero-context-architecture',
         destination: '/architecture/zero-context-architecture',
         permanent: true,
@@ -65,11 +60,6 @@ const nextConfig = {
       },
       {
         source: '/ai-era',
-        destination: '/systems',
-        permanent: true,
-      },
-      {
-        source: '/ai-era/:path*',
         destination: '/systems',
         permanent: true,
       },

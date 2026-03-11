@@ -26,6 +26,7 @@ const navSections = [
     heading: 'Language Models',
     links: [
       { href: '/language-models', label: 'Language Models', status: 'stable' as Status },
+      { href: '/language-models/llms-in-software-systems', label: 'LLMs in Software Systems', status: 'stable' as Status },
       { href: '/language-models/domain-operators', label: 'Domain Operators', status: 'stable' as Status },
       { href: '/language-models/representation-mapping', label: 'Representation Mapping', status: 'stable' as Status },
       { href: '/language-models/error-signals', label: 'Error Signals', status: 'stable' as Status },
@@ -97,9 +98,9 @@ function StatusDot({ status, active }: { status?: Status; active?: boolean }) {
   }
 
   const color =
-    status === 'stable' ? '#3C7A52'
-    : status === 'wip' ? '#C89B2C'
-    : '#7A7A7A'
+    status === 'stable' ? 'var(--color-stable)'
+    : status === 'wip' ? 'var(--color-wip)'
+    : 'var(--color-note)'
 
   const symbol =
     status === 'stable' ? '●'
@@ -138,7 +139,7 @@ export function SideNav() {
     <>
       <button
         onClick={() => { setMobileOpen(!mobileOpen) }}
-        className="md:hidden fixed top-3 right-4 z-50 border border-[#DADADA] bg-[#F1F1EE]/95 text-[#3A3A3A] p-2 backdrop-blur-sm"
+        className="md:hidden fixed top-3 right-4 z-50 border border-[#DADADA] bg-[#F1F1EE]/95 dark:bg-[#0D0D0D]/95 text-[#3A3A3A] p-2 backdrop-blur-sm transition-colors"
         aria-label="Toggle navigation"
         aria-expanded={mobileOpen}
       >
@@ -154,9 +155,9 @@ export function SideNav() {
       <nav
         className={`
           fixed top-0 left-0 h-screen w-[84vw] max-w-xs md:w-56 border-r
-          border-[#E8E8E6] bg-[#F1F1EE] text-[#3A3A3A]
+          border-[#E8E8E6] bg-[#F1F1EE] dark:bg-[#0D0D0D] text-[#3A3A3A]
           flex flex-col py-7 px-5 z-40
-          transition-transform duration-200
+          transition-transform duration-200 transition-colors
           ${mobileOpen ? 'translate-x-0' : '-translate-x-full'}
           md:translate-x-0
         `}
@@ -170,15 +171,15 @@ export function SideNav() {
 
         <div className="flex items-center gap-4 mb-6 pb-4 border-b border-[#E8E8E6] text-[8px] font-mono tracking-wider">
           <span className="flex items-center gap-1.5">
-            <span className="text-[9px] leading-none text-[#3C7A52]">●</span>
+            <span className="text-[9px] leading-none" style={{ color: 'var(--color-stable)' }}>●</span>
             <span className="text-[#8C8C8C]">stable</span>
           </span>
           <span className="flex items-center gap-1.5">
-            <span className="text-[9px] leading-none text-[#C89B2C]">◌</span>
+            <span className="text-[9px] leading-none" style={{ color: 'var(--color-wip)' }}>◌</span>
             <span className="text-[#8C8C8C]">research</span>
           </span>
           <span className="flex items-center gap-1.5">
-            <span className="text-[9px] leading-none text-[#7A7A7A]">◦</span>
+            <span className="text-[9px] leading-none" style={{ color: 'var(--color-note)' }}>◦</span>
             <span className="text-[#8C8C8C]">note</span>
           </span>
         </div>
@@ -246,7 +247,7 @@ export function SideNav() {
 
       {mobileOpen && (
         <div
-          className="fixed inset-0 z-30 md:hidden bg-[#1A1A1A]/15"
+          className="fixed inset-0 z-30 md:hidden bg-[#1A1A1A]/15 dark:bg-[#000000]/40"
           onClick={() => { setMobileOpen(false) }}
         />
       )}

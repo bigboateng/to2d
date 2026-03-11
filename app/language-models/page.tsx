@@ -277,15 +277,25 @@ What can be learned from failure?`}
       <section className="space-y-6 border-t border-[#E8E8E6] pt-10">
         <p className="text-[10px] font-mono tracking-[0.2em] text-[#8C8C8C] uppercase">Topics</p>
         <div className="grid grid-cols-1 gap-6">
-          <a
-            href="/language-models/domain-operators"
-            className="border border-[#E8E8E6] hover:border-[#DADADA] p-7 transition-colors group block"
-          >
-            <h3 className="text-lg font-light mb-3 text-[#1A1A1A] group-hover:text-[#111111]">Domain Operators</h3>
-            <p className="text-[#5A5A5A] text-sm">
-              Using language models to transform between domains rather than only generate final answers.
-            </p>
-          </a>
+                <a
+                  href="/language-models/llms-in-software-systems"
+                  className="border border-[#E8E8E6] hover:border-[#DADADA] p-7 transition-colors group block"
+                >
+                  <h3 className="text-lg font-light mb-3 text-[#1A1A1A] group-hover:text-[#111111]">LLMs in Software Systems</h3>
+                  <p className="text-[#5A5A5A] text-sm">
+                    What kind of component language models actually are, and why the surrounding architecture matters more than the model.
+                  </p>
+                </a>
+
+                <a
+                  href="/language-models/domain-operators"
+                  className="border border-[#E8E8E6] hover:border-[#DADADA] p-7 transition-colors group block"
+                >
+                  <h3 className="text-lg font-light mb-3 text-[#1A1A1A] group-hover:text-[#111111]">Domain Operators</h3>
+                  <p className="text-[#5A5A5A] text-sm">
+                    Using language models to transform between domains rather than only generate final answers.
+                  </p>
+                </a>
 
           <a
             href="/language-models/representation-mapping"

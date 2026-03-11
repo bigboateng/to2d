@@ -154,7 +154,7 @@ function MultiContextAnimation() {
     <div className="my-8 flex justify-center">
       <canvas
         ref={canvasRef}
-        className="rounded border border-white/10"
+        className="rounded border border-[#E8E8E6]"
         style={{ background: 'rgba(0, 0, 0, 0.3)' }}
       />
     </div>
@@ -308,7 +308,7 @@ function DistributedAgentAnimation() {
     <div className="my-8 flex justify-center">
       <canvas
         ref={canvasRef}
-        className="rounded border border-white/10"
+        className="rounded border border-[#E8E8E6]"
         style={{ background: 'rgba(0, 0, 0, 0.3)' }}
       />
     </div>
@@ -320,20 +320,20 @@ export default function MultiContextBrowserControlPage() {
     <div className="space-y-12">
       <div className="max-w-3xl">
         <section>
-          <h1 className="text-3xl font-thin tracking-tight mb-4">
+          <h1 className="text-3xl font-light tracking-tight mb-4">
             Multi-Context Browser Control for Agentic Systems
           </h1>
-          <p className="text-white/50 text-sm mb-2">
+          <p className="text-[#8C8C8C] text-sm mb-2">
             A foundational primitive for distributed browser intelligence
           </p>
-          <p className="text-white/40 text-xs mb-8">
+          <p className="text-[#8C8C8C] text-xs mb-8">
             Dec 9, 2025
           </p>
         </section>
       </div>
 
       <figure className="w-full max-w-5xl">
-        <div className="border border-white/20 rounded-lg overflow-hidden bg-black/60 p-2">
+        <div className="border border-[#DADADA] rounded-lg overflow-hidden bg-black/60 p-2">
           <Image
             src="/images/ai/multi-context-browser-control.png"
             alt="Multi-Context Browser Control Architecture"
@@ -343,78 +343,78 @@ export default function MultiContextBrowserControlPage() {
             priority
           />
         </div>
-        <figcaption className="text-white/40 text-xs mt-4 text-center">
+        <figcaption className="text-[#8C8C8C] text-xs mt-4 text-center">
           Browser context with shared session state enabling parallel page operations
         </figcaption>
       </figure>
 
-      <article className="prose prose-invert max-w-3xl">
-        <div className="text-white/70 text-sm leading-relaxed space-y-6">
+      <article className="prose max-w-3xl">
+        <div className="text-[#5A5A5A] text-sm leading-relaxed space-y-6">
           
-          <section className="border-l-2 border-white/20 pl-4 py-2 bg-white/5">
-            <h2 className="text-lg font-thin text-white/90 mb-3">Abstract</h2>
+          <section className="border-l-2 border-[#DADADA] pl-4 py-2 bg-[#FFFFFF]">
+            <h2 className="text-lg font-light text-[#1A1A1A] mb-3">Abstract</h2>
             <p>
               Contemporary browser automation agents operate under a fundamental constraint: single-page state binding. This limitation creates friction in real-world workflows that inherently require multi-context operations—email verification flows, OAuth handshakes, cross-domain data aggregation, and popup-based interactions. This document presents a minimal architectural extension that enables custom tools to spawn isolated pages within a shared browser session, transforming tools from pure compute operations into autonomous micro-agents capable of independent browser manipulation.
             </p>
           </section>
 
-          <h2 className="text-xl font-thin text-white/90 mt-10 mb-4">1. Problem Statement</h2>
+          <h2 className="text-xl font-light text-[#1A1A1A] mt-10 mb-4">1. Problem Statement</h2>
 
-          <h3 className="text-lg font-thin text-white/80 mt-6 mb-3">1.1 The Single-Context Assumption</h3>
+          <h3 className="text-lg font-light text-[#2A2A2A] mt-6 mb-3">1.1 The Single-Context Assumption</h3>
           
           <p>
             Modern LLM-powered browser agents are architected around an implicit assumption:
           </p>
           
-          <blockquote className="border-l-2 border-white/30 pl-4 italic text-white/60 my-4">
+          <blockquote className="border-l-2 border-[#DADADA] pl-4 italic text-[#5A5A5A] my-4">
             "The agent has one environment window. Tool calls are stateless compute operations."
           </blockquote>
           
           <p>This assumption manifests in several ways:</p>
           
-          <ul className="text-white/60 space-y-2 ml-6 list-disc">
+          <ul className="text-[#5A5A5A] space-y-2 ml-6 list-disc">
             <li>Tools receive parameters and return results without environment access</li>
             <li>The agent's "world state" is limited to a single page</li>
             <li>Navigation to a new URL overwrites the current context entirely</li>
             <li>No mechanism exists for parallel or branched browser operations</li>
           </ul>
 
-          <h3 className="text-lg font-thin text-white/80 mt-6 mb-3">1.2 Real-World Workflow Patterns</h3>
+          <h3 className="text-lg font-light text-[#2A2A2A] mt-6 mb-3">1.2 Real-World Workflow Patterns</h3>
           
           <p>Production automation workflows frequently exhibit patterns that violate single-context assumptions:</p>
 
           <div className="overflow-x-auto my-6">
             <table className="w-full text-sm border-collapse">
               <thead>
-                <tr className="border-b border-white/20">
-                  <th className="text-left py-2 px-3 text-white/70 font-medium">Pattern</th>
-                  <th className="text-left py-2 px-3 text-white/70 font-medium">Description</th>
-                  <th className="text-left py-2 px-3 text-white/70 font-medium">Failure Mode</th>
+                <tr className="border-b border-[#DADADA]">
+                  <th className="text-left py-2 px-3 text-[#5A5A5A] font-medium">Pattern</th>
+                  <th className="text-left py-2 px-3 text-[#5A5A5A] font-medium">Description</th>
+                  <th className="text-left py-2 px-3 text-[#5A5A5A] font-medium">Failure Mode</th>
                 </tr>
               </thead>
-              <tbody className="text-white/60">
-                <tr className="border-b border-white/10">
-                  <td className="py-2 px-3 font-medium text-white/80">Email Verification</td>
+              <tbody className="text-[#5A5A5A]">
+                <tr className="border-b border-[#E8E8E6]">
+                  <td className="py-2 px-3 font-medium text-[#2A2A2A]">Email Verification</td>
                   <td className="py-2 px-3">Activation links must be followed without disrupting main flow</td>
                   <td className="py-2 px-3">Loses form state when navigating to link</td>
                 </tr>
-                <tr className="border-b border-white/10">
-                  <td className="py-2 px-3 font-medium text-white/80">OAuth/SSO Flows</td>
+                <tr className="border-b border-[#E8E8E6]">
+                  <td className="py-2 px-3 font-medium text-[#2A2A2A]">OAuth/SSO Flows</td>
                   <td className="py-2 px-3">Authentication opens in popup or redirect</td>
                   <td className="py-2 px-3">Cannot return to original page with tokens</td>
                 </tr>
-                <tr className="border-b border-white/10">
-                  <td className="py-2 px-3 font-medium text-white/80">Cross-Domain Lookup</td>
+                <tr className="border-b border-[#E8E8E6]">
+                  <td className="py-2 px-3 font-medium text-[#2A2A2A]">Cross-Domain Lookup</td>
                   <td className="py-2 px-3">Data required from Site B during Site A workflow</td>
                   <td className="py-2 px-3">Must complete Site A before fetching from B</td>
                 </tr>
-                <tr className="border-b border-white/10">
-                  <td className="py-2 px-3 font-medium text-white/80">Popup Interactions</td>
+                <tr className="border-b border-[#E8E8E6]">
+                  <td className="py-2 px-3 font-medium text-[#2A2A2A]">Popup Interactions</td>
                   <td className="py-2 px-3">Site spawns modal windows for actions</td>
                   <td className="py-2 px-3">Agent cannot interact with secondary windows</td>
                 </tr>
                 <tr>
-                  <td className="py-2 px-3 font-medium text-white/80">Parallel Verification</td>
+                  <td className="py-2 px-3 font-medium text-[#2A2A2A]">Parallel Verification</td>
                   <td className="py-2 px-3">Multiple URLs need simultaneous validation</td>
                   <td className="py-2 px-3">Sequential processing with state loss</td>
                 </tr>
@@ -422,47 +422,47 @@ export default function MultiContextBrowserControlPage() {
             </table>
           </div>
 
-          <h3 className="text-lg font-thin text-white/80 mt-6 mb-3">1.3 Current Workarounds and Their Limitations</h3>
+          <h3 className="text-lg font-light text-[#2A2A2A] mt-6 mb-3">1.3 Current Workarounds and Their Limitations</h3>
 
           <div className="space-y-4">
-            <div className="border border-white/10 p-4 rounded">
-              <p className="text-white/80 font-medium mb-2">1. Multiple Agent Instances</p>
-              <p className="text-white/60 text-sm mb-2">Separate processes with isolated browsers</p>
-              <ul className="text-white/50 text-sm space-y-1 ml-4">
+            <div className="border border-[#E8E8E6] p-4 rounded">
+              <p className="text-[#2A2A2A] font-medium mb-2">1. Multiple Agent Instances</p>
+              <p className="text-[#5A5A5A] text-sm mb-2">Separate processes with isolated browsers</p>
+              <ul className="text-[#8C8C8C] text-sm space-y-1 ml-4">
                 <li>❌ No session sharing (cookies, storage, proxy config)</li>
                 <li>❌ Coordination overhead between processes</li>
                 <li>❌ Resource multiplication</li>
               </ul>
             </div>
             
-            <div className="border border-white/10 p-4 rounded">
-              <p className="text-white/80 font-medium mb-2">2. State Serialization</p>
-              <p className="text-white/60 text-sm mb-2">Save/restore page state around navigations</p>
-              <ul className="text-white/50 text-sm space-y-1 ml-4">
+            <div className="border border-[#E8E8E6] p-4 rounded">
+              <p className="text-[#2A2A2A] font-medium mb-2">2. State Serialization</p>
+              <p className="text-[#5A5A5A] text-sm mb-2">Save/restore page state around navigations</p>
+              <ul className="text-[#8C8C8C] text-sm space-y-1 ml-4">
                 <li>❌ Incomplete state capture (WebSocket connections, timers)</li>
                 <li>❌ Race conditions in dynamic applications</li>
                 <li>❌ Implementation complexity</li>
               </ul>
             </div>
             
-            <div className="border border-white/10 p-4 rounded">
-              <p className="text-white/80 font-medium mb-2">3. Deferred Execution</p>
-              <p className="text-white/60 text-sm mb-2">Queue secondary operations for later</p>
-              <ul className="text-white/50 text-sm space-y-1 ml-4">
+            <div className="border border-[#E8E8E6] p-4 rounded">
+              <p className="text-[#2A2A2A] font-medium mb-2">3. Deferred Execution</p>
+              <p className="text-[#5A5A5A] text-sm mb-2">Queue secondary operations for later</p>
+              <ul className="text-[#8C8C8C] text-sm space-y-1 ml-4">
                 <li>❌ Breaks time-sensitive flows (OTP expiration)</li>
                 <li>❌ Cannot handle blocking dependencies</li>
               </ul>
             </div>
           </div>
 
-          <h2 className="text-xl font-thin text-white/90 mt-10 mb-4">2. Solution: Context-Aware Tool Execution</h2>
+          <h2 className="text-xl font-light text-[#1A1A1A] mt-10 mb-4">2. Solution: Context-Aware Tool Execution</h2>
 
-          <h3 className="text-lg font-thin text-white/80 mt-6 mb-3">2.1 Core Primitive</h3>
+          <h3 className="text-lg font-light text-[#2A2A2A] mt-6 mb-3">2.1 Core Primitive</h3>
           
           <p>The solution introduces a single capability to the tool execution context:</p>
 
-          <pre className="bg-black/40 border border-white/10 rounded p-4 overflow-x-auto text-xs my-4">
-            <code className="text-white/70">{`interface ToolExecutionContext {
+          <pre className="bg-black/40 border border-[#E8E8E6] rounded p-4 overflow-x-auto text-xs my-4">
+            <code className="text-[#5A5A5A]">{`interface ToolExecutionContext {
   /** The primary page under agent control */
   page?: Page;
 
@@ -474,34 +474,34 @@ export default function MultiContextBrowserControlPage() {
 }`}</code>
           </pre>
 
-          <p>The <code className="text-white/80 bg-white/10 px-1 rounded">createPage()</code> function is the key primitive. It:</p>
+          <p>The <code className="text-[#2A2A2A] bg-[#F2F2F0] px-1 rounded">createPage()</code> function is the key primitive. It:</p>
           
-          <ul className="text-white/60 space-y-2 ml-6 list-disc">
-            <li>Creates a new page within the <strong className="text-white/80">existing</strong> browser context</li>
+          <ul className="text-[#5A5A5A] space-y-2 ml-6 list-disc">
+            <li>Creates a new page within the <strong className="text-[#2A2A2A]">existing</strong> browser context</li>
             <li>Inherits all session state (cookies, localStorage, proxy configuration)</li>
             <li>Applies anti-detection scripts automatically</li>
             <li>Tracks created pages for cleanup on errors</li>
           </ul>
 
-          <h3 className="text-lg font-thin text-white/80 mt-6 mb-3">2.2 Architectural Implications</h3>
+          <h3 className="text-lg font-light text-[#2A2A2A] mt-6 mb-3">2.2 Architectural Implications</h3>
           
           <p>This seemingly simple addition fundamentally changes the tool-agent relationship:</p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
-            <div className="border border-white/10 p-4 rounded bg-white/5">
-              <p className="text-white/60 text-sm mb-2">Before</p>
-              <p className="text-white/80 font-mono text-sm">Tools are functions</p>
-              <p className="text-white/50 font-mono text-xs mt-1">f(params) → result</p>
+            <div className="border border-[#E8E8E6] p-4 rounded bg-[#FFFFFF]">
+              <p className="text-[#5A5A5A] text-sm mb-2">Before</p>
+              <p className="text-[#2A2A2A] font-mono text-sm">Tools are functions</p>
+              <p className="text-[#8C8C8C] font-mono text-xs mt-1">f(params) → result</p>
             </div>
-            <div className="border border-white/20 p-4 rounded bg-white/10">
-              <p className="text-white/60 text-sm mb-2">After</p>
-              <p className="text-white/80 font-mono text-sm">Tools are micro-agents</p>
-              <p className="text-white/50 font-mono text-xs mt-1">f(params, environment) → result</p>
+            <div className="border border-[#DADADA] p-4 rounded bg-[#F2F2F0]">
+              <p className="text-[#5A5A5A] text-sm mb-2">After</p>
+              <p className="text-[#2A2A2A] font-mono text-sm">Tools are micro-agents</p>
+              <p className="text-[#8C8C8C] font-mono text-xs mt-1">f(params, environment) → result</p>
             </div>
           </div>
 
           <p>Tools can now:</p>
-          <ul className="text-white/60 space-y-2 ml-6 list-disc">
+          <ul className="text-[#5A5A5A] space-y-2 ml-6 list-disc">
             <li>Navigate independently without affecting the main agent</li>
             <li>Perform multi-step browser operations</li>
             <li>Spawn their own sub-agents for complex tasks</li>
@@ -510,14 +510,14 @@ export default function MultiContextBrowserControlPage() {
 
           <MultiContextAnimation />
 
-          <h2 className="text-xl font-thin text-white/90 mt-10 mb-4">3. Implementation Patterns</h2>
+          <h2 className="text-xl font-light text-[#1A1A1A] mt-10 mb-4">3. Implementation Patterns</h2>
 
-          <h3 className="text-lg font-thin text-white/80 mt-6 mb-3">3.1 Pattern: Isolated Page Operations</h3>
+          <h3 className="text-lg font-light text-[#2A2A2A] mt-6 mb-3">3.1 Pattern: Isolated Page Operations</h3>
           
           <p>The simplest pattern—perform an operation on a separate page without affecting the main workflow.</p>
 
-          <pre className="bg-black/40 border border-white/10 rounded p-4 overflow-x-auto text-xs my-4">
-            <code className="text-white/70">{`class EmailActivationTool implements ComputerUseTool {
+          <pre className="bg-black/40 border border-[#E8E8E6] rounded p-4 overflow-x-auto text-xs my-4">
+            <code className="text-[#5A5A5A]">{`class EmailActivationTool implements ComputerUseTool {
   name = "activate_email_link";
 
   async call(
@@ -556,22 +556,22 @@ export default function MultiContextBrowserControlPage() {
 }`}</code>
           </pre>
 
-          <div className="bg-white/5 border border-white/10 rounded p-4 my-4">
-            <p className="text-white/70 font-medium text-sm mb-2">Key characteristics:</p>
-            <ul className="text-white/50 text-sm space-y-1 ml-4 list-disc">
+          <div className="bg-[#FFFFFF] border border-[#E8E8E6] rounded p-4 my-4">
+            <p className="text-[#5A5A5A] font-medium text-sm mb-2">Key characteristics:</p>
+            <ul className="text-[#8C8C8C] text-sm space-y-1 ml-4 list-disc">
               <li>Main agent page remains untouched</li>
               <li>Session cookies are shared (important for authenticated activation links)</li>
-              <li>Page is always closed in <code className="bg-white/10 px-1 rounded">finally</code> block</li>
+              <li>Page is always closed in <code className="bg-[#F2F2F0] px-1 rounded">finally</code> block</li>
               <li>Structured result enables downstream decision-making</li>
             </ul>
           </div>
 
-          <h3 className="text-lg font-thin text-white/80 mt-6 mb-3">3.2 Pattern: Cross-Domain Data Aggregation</h3>
+          <h3 className="text-lg font-light text-[#2A2A2A] mt-6 mb-3">3.2 Pattern: Cross-Domain Data Aggregation</h3>
           
           <p>Fetch data from external sources during a workflow without losing context.</p>
 
-          <pre className="bg-black/40 border border-white/10 rounded p-4 overflow-x-auto text-xs my-4">
-            <code className="text-white/70">{`class CrossDomainLookupTool implements ComputerUseTool {
+          <pre className="bg-black/40 border border-[#E8E8E6] rounded p-4 overflow-x-auto text-xs my-4">
+            <code className="text-[#5A5A5A]">{`class CrossDomainLookupTool implements ComputerUseTool {
   name = "lookup_external_data";
 
   private readonly endpoints = {
@@ -605,16 +605,16 @@ export default function MultiContextBrowserControlPage() {
 }`}</code>
           </pre>
 
-          <p className="text-white/60 italic">
+          <p className="text-[#5A5A5A] italic">
             Use case: An agent filling out a form on Site A needs a registration number from Site B. The tool fetches it without the agent ever leaving Site A.
           </p>
 
-          <h3 className="text-lg font-thin text-white/80 mt-6 mb-3">3.3 Pattern: Sub-Agent Delegation</h3>
+          <h3 className="text-lg font-light text-[#2A2A2A] mt-6 mb-3">3.3 Pattern: Sub-Agent Delegation</h3>
           
           <p>The most powerful pattern—spawn a complete sub-agent to handle complex subtasks.</p>
 
-          <pre className="bg-black/40 border border-white/10 rounded p-4 overflow-x-auto text-xs my-4">
-            <code className="text-white/70">{`class DelegatedExtractionTool implements ComputerUseTool {
+          <pre className="bg-black/40 border border-[#E8E8E6] rounded p-4 overflow-x-auto text-xs my-4">
+            <code className="text-[#5A5A5A]">{`class DelegatedExtractionTool implements ComputerUseTool {
   name = "delegate_extraction";
 
   async call(params, ctx?: ToolExecutionContext): Promise<ToolResult> {
@@ -646,9 +646,9 @@ export default function MultiContextBrowserControlPage() {
 }`}</code>
           </pre>
 
-          <div className="bg-white/5 border border-white/10 rounded p-4 my-4">
-            <p className="text-white/70 font-medium text-sm mb-2">Architectural significance:</p>
-            <ul className="text-white/50 text-sm space-y-1 ml-4 list-disc">
+          <div className="bg-[#FFFFFF] border border-[#E8E8E6] rounded p-4 my-4">
+            <p className="text-[#5A5A5A] font-medium text-sm mb-2">Architectural significance:</p>
+            <ul className="text-[#8C8C8C] text-sm space-y-1 ml-4 list-disc">
               <li>A coordinator agent manages high-level workflow</li>
               <li>Specialized sub-agents handle domain-specific tasks</li>
               <li>Each sub-agent operates in an isolated context</li>
@@ -656,12 +656,12 @@ export default function MultiContextBrowserControlPage() {
             </ul>
           </div>
 
-          <h3 className="text-lg font-thin text-white/80 mt-6 mb-3">3.4 Pattern: Parallel Page Operations</h3>
+          <h3 className="text-lg font-light text-[#2A2A2A] mt-6 mb-3">3.4 Pattern: Parallel Page Operations</h3>
           
           <p>Execute multiple browser operations concurrently.</p>
 
-          <pre className="bg-black/40 border border-white/10 rounded p-4 overflow-x-auto text-xs my-4">
-            <code className="text-white/70">{`class ParallelAvailabilityTool implements ComputerUseTool {
+          <pre className="bg-black/40 border border-[#E8E8E6] rounded p-4 overflow-x-auto text-xs my-4">
+            <code className="text-[#5A5A5A]">{`class ParallelAvailabilityTool implements ComputerUseTool {
   name = "check_urls_parallel";
 
   async call(params, ctx?: ToolExecutionContext): Promise<ToolResult> {
@@ -701,47 +701,47 @@ export default function MultiContextBrowserControlPage() {
 }`}</code>
           </pre>
 
-          <p className="text-white/60 italic">
+          <p className="text-[#5A5A5A] italic">
             Performance: N pages checked in ~1x time vs Nx time sequentially, bounded by browser context resource limits.
           </p>
 
-          <h2 className="text-xl font-thin text-white/90 mt-10 mb-4">4. Architectural Analysis</h2>
+          <h2 className="text-xl font-light text-[#1A1A1A] mt-10 mb-4">4. Architectural Analysis</h2>
 
-          <h3 className="text-lg font-thin text-white/80 mt-6 mb-3">4.1 Session Continuity Model</h3>
+          <h3 className="text-lg font-light text-[#2A2A2A] mt-6 mb-3">4.1 Session Continuity Model</h3>
           
-          <p>All pages created via <code className="text-white/80 bg-white/10 px-1 rounded">createPage()</code> share:</p>
+          <p>All pages created via <code className="text-[#2A2A2A] bg-[#F2F2F0] px-1 rounded">createPage()</code> share:</p>
 
           <div className="overflow-x-auto my-6">
             <table className="w-full text-sm border-collapse">
               <thead>
-                <tr className="border-b border-white/20">
-                  <th className="text-left py-2 px-3 text-white/70 font-medium">Resource</th>
-                  <th className="text-center py-2 px-3 text-white/70 font-medium">Shared</th>
-                  <th className="text-left py-2 px-3 text-white/70 font-medium">Implications</th>
+                <tr className="border-b border-[#DADADA]">
+                  <th className="text-left py-2 px-3 text-[#5A5A5A] font-medium">Resource</th>
+                  <th className="text-center py-2 px-3 text-[#5A5A5A] font-medium">Shared</th>
+                  <th className="text-left py-2 px-3 text-[#5A5A5A] font-medium">Implications</th>
                 </tr>
               </thead>
-              <tbody className="text-white/60">
-                <tr className="border-b border-white/10">
+              <tbody className="text-[#5A5A5A]">
+                <tr className="border-b border-[#E8E8E6]">
                   <td className="py-2 px-3">Cookies</td>
                   <td className="py-2 px-3 text-center text-green-400">✓</td>
                   <td className="py-2 px-3">Authentication persists across pages</td>
                 </tr>
-                <tr className="border-b border-white/10">
+                <tr className="border-b border-[#E8E8E6]">
                   <td className="py-2 px-3">localStorage</td>
                   <td className="py-2 px-3 text-center text-green-400">✓</td>
                   <td className="py-2 px-3">Application state accessible</td>
                 </tr>
-                <tr className="border-b border-white/10">
+                <tr className="border-b border-[#E8E8E6]">
                   <td className="py-2 px-3">sessionStorage</td>
                   <td className="py-2 px-3 text-center text-red-400">✗</td>
                   <td className="py-2 px-3">Per-page isolation maintained</td>
                 </tr>
-                <tr className="border-b border-white/10">
+                <tr className="border-b border-[#E8E8E6]">
                   <td className="py-2 px-3">Proxy Configuration</td>
                   <td className="py-2 px-3 text-center text-green-400">✓</td>
                   <td className="py-2 px-3">IP consistency for bot detection</td>
                 </tr>
-                <tr className="border-b border-white/10">
+                <tr className="border-b border-[#E8E8E6]">
                   <td className="py-2 px-3">Anti-Detection Scripts</td>
                   <td className="py-2 px-3 text-center text-green-400">✓</td>
                   <td className="py-2 px-3">Consistent fingerprint</td>
@@ -755,39 +755,39 @@ export default function MultiContextBrowserControlPage() {
             </table>
           </div>
 
-          <h3 className="text-lg font-thin text-white/80 mt-6 mb-3">4.2 Comparison with Alternative Architectures</h3>
+          <h3 className="text-lg font-light text-[#2A2A2A] mt-6 mb-3">4.2 Comparison with Alternative Architectures</h3>
 
           <div className="overflow-x-auto my-6">
             <table className="w-full text-sm border-collapse">
               <thead>
-                <tr className="border-b border-white/20">
-                  <th className="text-left py-2 px-3 text-white/70 font-medium">Approach</th>
-                  <th className="text-center py-2 px-3 text-white/70 font-medium">Session Sharing</th>
-                  <th className="text-center py-2 px-3 text-white/70 font-medium">Resource Efficiency</th>
-                  <th className="text-center py-2 px-3 text-white/70 font-medium">Coordination</th>
+                <tr className="border-b border-[#DADADA]">
+                  <th className="text-left py-2 px-3 text-[#5A5A5A] font-medium">Approach</th>
+                  <th className="text-center py-2 px-3 text-[#5A5A5A] font-medium">Session Sharing</th>
+                  <th className="text-center py-2 px-3 text-[#5A5A5A] font-medium">Resource Efficiency</th>
+                  <th className="text-center py-2 px-3 text-[#5A5A5A] font-medium">Coordination</th>
                 </tr>
               </thead>
-              <tbody className="text-white/60">
-                <tr className="border-b border-white/10">
+              <tbody className="text-[#5A5A5A]">
+                <tr className="border-b border-[#E8E8E6]">
                   <td className="py-2 px-3">Single Context (baseline)</td>
                   <td className="py-2 px-3 text-center">N/A</td>
                   <td className="py-2 px-3 text-center text-green-400">High</td>
                   <td className="py-2 px-3 text-center">N/A</td>
                 </tr>
-                <tr className="border-b border-white/10">
+                <tr className="border-b border-[#E8E8E6]">
                   <td className="py-2 px-3">Multi-Process Agents</td>
                   <td className="py-2 px-3 text-center text-red-400">None</td>
                   <td className="py-2 px-3 text-center text-red-400">Low</td>
                   <td className="py-2 px-3 text-center text-red-400">High</td>
                 </tr>
-                <tr className="border-b border-white/10">
+                <tr className="border-b border-[#E8E8E6]">
                   <td className="py-2 px-3">Browser Context per Tool</td>
                   <td className="py-2 px-3 text-center text-yellow-400">Partial</td>
                   <td className="py-2 px-3 text-center text-yellow-400">Medium</td>
                   <td className="py-2 px-3 text-center text-yellow-400">Medium</td>
                 </tr>
-                <tr className="bg-white/5">
-                  <td className="py-2 px-3 font-medium text-white/80">Shared Context + createPage()</td>
+                <tr className="bg-[#FFFFFF]">
+                  <td className="py-2 px-3 font-medium text-[#2A2A2A]">Shared Context + createPage()</td>
                   <td className="py-2 px-3 text-center text-green-400">Full</td>
                   <td className="py-2 px-3 text-center text-green-400">High</td>
                   <td className="py-2 px-3 text-center text-green-400">Low</td>
@@ -796,12 +796,12 @@ export default function MultiContextBrowserControlPage() {
             </table>
           </div>
 
-          <h2 className="text-xl font-thin text-white/90 mt-10 mb-4">5. Use Cases</h2>
+          <h2 className="text-xl font-light text-[#1A1A1A] mt-10 mb-4">5. Use Cases</h2>
 
           <div className="space-y-6">
-            <div className="border border-white/10 p-4 rounded">
-              <h4 className="text-white/80 font-medium mb-3">5.1 Insurance Claims Processing</h4>
-              <pre className="text-white/50 text-xs bg-black/30 p-3 rounded overflow-x-auto">
+            <div className="border border-[#E8E8E6] p-4 rounded">
+              <h4 className="text-[#2A2A2A] font-medium mb-3">5.1 Insurance Claims Processing</h4>
+              <pre className="text-[#8C8C8C] text-xs bg-black/30 p-3 rounded overflow-x-auto">
 {`Agent Workflow:
 1. Navigate to claims portal
 2. Fill claim form with policyholder data
@@ -811,14 +811,14 @@ export default function MultiContextBrowserControlPage() {
 6. [Tool] Activate email confirmation link
 7. Return confirmation number`}
               </pre>
-              <p className="text-white/50 text-sm mt-3 italic">
+              <p className="text-[#8C8C8C] text-sm mt-3 italic">
                 Without multi-context: Steps 3, 4, 6 would each destroy the form state.
               </p>
             </div>
 
-            <div className="border border-white/10 p-4 rounded">
-              <h4 className="text-white/80 font-medium mb-3">5.2 E-Commerce Order Management</h4>
-              <pre className="text-white/50 text-xs bg-black/30 p-3 rounded overflow-x-auto">
+            <div className="border border-[#E8E8E6] p-4 rounded">
+              <h4 className="text-[#2A2A2A] font-medium mb-3">5.2 E-Commerce Order Management</h4>
+              <pre className="text-[#8C8C8C] text-xs bg-black/30 p-3 rounded overflow-x-auto">
 {`Agent Workflow:
 1. Log into merchant dashboard
 2. For each pending order:
@@ -828,14 +828,14 @@ export default function MultiContextBrowserControlPage() {
    d. Update order status
 3. Generate summary report`}
               </pre>
-              <p className="text-white/50 text-sm mt-3 italic">
+              <p className="text-[#8C8C8C] text-sm mt-3 italic">
                 Parallel competitor checks complete in ~1x time instead of 5x.
               </p>
             </div>
 
-            <div className="border border-white/10 p-4 rounded">
-              <h4 className="text-white/80 font-medium mb-3">5.3 Compliance Verification</h4>
-              <pre className="text-white/50 text-xs bg-black/30 p-3 rounded overflow-x-auto">
+            <div className="border border-[#E8E8E6] p-4 rounded">
+              <h4 className="text-[#2A2A2A] font-medium mb-3">5.3 Compliance Verification</h4>
+              <pre className="text-[#8C8C8C] text-xs bg-black/30 p-3 rounded overflow-x-auto">
 {`Agent Workflow:
 1. Open regulatory submission form
 2. [Tool] Sub-agent extracts data from uploaded PDF (new page)
@@ -843,96 +843,96 @@ export default function MultiContextBrowserControlPage() {
 4. [Tool] Verify signatory authorization in corporate registry
 5. Complete and submit form`}
               </pre>
-              <p className="text-white/50 text-sm mt-3 italic">
+              <p className="text-[#8C8C8C] text-sm mt-3 italic">
                 Each verification maintains session context for authenticated registries.
               </p>
             </div>
           </div>
 
-          <h2 className="text-xl font-thin text-white/90 mt-10 mb-4">6. Implications for Agent Architecture</h2>
+          <h2 className="text-xl font-light text-[#1A1A1A] mt-10 mb-4">6. Implications for Agent Architecture</h2>
 
-          <h3 className="text-lg font-thin text-white/80 mt-6 mb-3">6.1 Toward Distributed Intelligence</h3>
+          <h3 className="text-lg font-light text-[#2A2A2A] mt-6 mb-3">6.1 Toward Distributed Intelligence</h3>
           
           <p>This primitive enables a shift from monolithic to distributed agent architectures:</p>
 
           <DistributedAgentAnimation />
 
-          <h3 className="text-lg font-thin text-white/80 mt-6 mb-3">6.2 Emergent Capabilities</h3>
+          <h3 className="text-lg font-light text-[#2A2A2A] mt-6 mb-3">6.2 Emergent Capabilities</h3>
 
           <div className="overflow-x-auto my-6">
             <table className="w-full text-sm border-collapse">
               <thead>
-                <tr className="border-b border-white/20">
-                  <th className="text-left py-2 px-3 text-white/70 font-medium">Capability</th>
-                  <th className="text-left py-2 px-3 text-white/70 font-medium">Enabled By</th>
+                <tr className="border-b border-[#DADADA]">
+                  <th className="text-left py-2 px-3 text-[#5A5A5A] font-medium">Capability</th>
+                  <th className="text-left py-2 px-3 text-[#5A5A5A] font-medium">Enabled By</th>
                 </tr>
               </thead>
-              <tbody className="text-white/60">
-                <tr className="border-b border-white/10">
-                  <td className="py-2 px-3 font-medium text-white/80">Task Decomposition</td>
+              <tbody className="text-[#5A5A5A]">
+                <tr className="border-b border-[#E8E8E6]">
+                  <td className="py-2 px-3 font-medium text-[#2A2A2A]">Task Decomposition</td>
                   <td className="py-2 px-3">Sub-agents handle subtasks independently</td>
                 </tr>
-                <tr className="border-b border-white/10">
-                  <td className="py-2 px-3 font-medium text-white/80">Parallel Execution</td>
+                <tr className="border-b border-[#E8E8E6]">
+                  <td className="py-2 px-3 font-medium text-[#2A2A2A]">Parallel Execution</td>
                   <td className="py-2 px-3">Multiple pages operate concurrently</td>
                 </tr>
-                <tr className="border-b border-white/10">
-                  <td className="py-2 px-3 font-medium text-white/80">Failure Isolation</td>
+                <tr className="border-b border-[#E8E8E6]">
+                  <td className="py-2 px-3 font-medium text-[#2A2A2A]">Failure Isolation</td>
                   <td className="py-2 px-3">Tool page crash doesn't affect main agent</td>
                 </tr>
-                <tr className="border-b border-white/10">
-                  <td className="py-2 px-3 font-medium text-white/80">Specialization</td>
+                <tr className="border-b border-[#E8E8E6]">
+                  <td className="py-2 px-3 font-medium text-[#2A2A2A]">Specialization</td>
                   <td className="py-2 px-3">Different sub-agents optimized for different domains</td>
                 </tr>
                 <tr>
-                  <td className="py-2 px-3 font-medium text-white/80">State Preservation</td>
+                  <td className="py-2 px-3 font-medium text-[#2A2A2A]">State Preservation</td>
                   <td className="py-2 px-3">Main workflow state maintained through branches</td>
                 </tr>
               </tbody>
             </table>
           </div>
 
-          <h3 className="text-lg font-thin text-white/80 mt-6 mb-3">6.3 Design Principles</h3>
+          <h3 className="text-lg font-light text-[#2A2A2A] mt-6 mb-3">6.3 Design Principles</h3>
 
-          <ol className="text-white/60 space-y-3 ml-6 list-decimal">
-            <li><strong className="text-white/80">Tools as Capability Boundaries</strong>: Tools define what additional browser access an agent can request</li>
-            <li><strong className="text-white/80">Explicit Page Lifecycle</strong>: Tools must manage page creation and cleanup</li>
-            <li><strong className="text-white/80">Session as Shared Resource</strong>: Authentication is ambient, not passed explicitly</li>
-            <li><strong className="text-white/80">Structured Results</strong>: Tool outputs should enable downstream reasoning</li>
+          <ol className="text-[#5A5A5A] space-y-3 ml-6 list-decimal">
+            <li><strong className="text-[#2A2A2A]">Tools as Capability Boundaries</strong>: Tools define what additional browser access an agent can request</li>
+            <li><strong className="text-[#2A2A2A]">Explicit Page Lifecycle</strong>: Tools must manage page creation and cleanup</li>
+            <li><strong className="text-[#2A2A2A]">Session as Shared Resource</strong>: Authentication is ambient, not passed explicitly</li>
+            <li><strong className="text-[#2A2A2A]">Structured Results</strong>: Tool outputs should enable downstream reasoning</li>
           </ol>
 
-          <h2 className="text-xl font-thin text-white/90 mt-10 mb-4">7. Limitations and Future Work</h2>
+          <h2 className="text-xl font-light text-[#1A1A1A] mt-10 mb-4">7. Limitations and Future Work</h2>
 
-          <h3 className="text-lg font-thin text-white/80 mt-6 mb-3">7.1 Current Limitations</h3>
+          <h3 className="text-lg font-light text-[#2A2A2A] mt-6 mb-3">7.1 Current Limitations</h3>
 
-          <ul className="text-white/60 space-y-2 ml-6 list-disc">
-            <li><strong className="text-white/70">No Cross-Page Communication</strong>: Pages cannot directly share runtime state</li>
-            <li><strong className="text-white/70">Sequential Sub-Agent Execution</strong>: Sub-agents run one at a time per tool call</li>
-            <li><strong className="text-white/70">Memory Overhead</strong>: Each page consumes browser resources</li>
-            <li><strong className="text-white/70">No Page Persistence</strong>: Tool pages exist only for the duration of the tool call</li>
+          <ul className="text-[#5A5A5A] space-y-2 ml-6 list-disc">
+            <li><strong className="text-[#5A5A5A]">No Cross-Page Communication</strong>: Pages cannot directly share runtime state</li>
+            <li><strong className="text-[#5A5A5A]">Sequential Sub-Agent Execution</strong>: Sub-agents run one at a time per tool call</li>
+            <li><strong className="text-[#5A5A5A]">Memory Overhead</strong>: Each page consumes browser resources</li>
+            <li><strong className="text-[#5A5A5A]">No Page Persistence</strong>: Tool pages exist only for the duration of the tool call</li>
           </ul>
 
-          <h3 className="text-lg font-thin text-white/80 mt-6 mb-3">7.2 Future Directions</h3>
+          <h3 className="text-lg font-light text-[#2A2A2A] mt-6 mb-3">7.2 Future Directions</h3>
 
-          <ol className="text-white/60 space-y-2 ml-6 list-decimal">
-            <li><strong className="text-white/70">Page Pooling</strong>: Reusable pre-warmed pages for frequent operations</li>
-            <li><strong className="text-white/70">Inter-Page Messaging</strong>: Event-based communication between pages</li>
-            <li><strong className="text-white/70">Persistent Tool Pages</strong>: Long-lived pages for stateful tools</li>
-            <li><strong className="text-white/70">Resource Quotas</strong>: Limits on concurrent pages per agent</li>
-            <li><strong className="text-white/70">Distributed Contexts</strong>: Browser contexts across multiple machines</li>
+          <ol className="text-[#5A5A5A] space-y-2 ml-6 list-decimal">
+            <li><strong className="text-[#5A5A5A]">Page Pooling</strong>: Reusable pre-warmed pages for frequent operations</li>
+            <li><strong className="text-[#5A5A5A]">Inter-Page Messaging</strong>: Event-based communication between pages</li>
+            <li><strong className="text-[#5A5A5A]">Persistent Tool Pages</strong>: Long-lived pages for stateful tools</li>
+            <li><strong className="text-[#5A5A5A]">Resource Quotas</strong>: Limits on concurrent pages per agent</li>
+            <li><strong className="text-[#5A5A5A]">Distributed Contexts</strong>: Browser contexts across multiple machines</li>
           </ol>
 
-          <h2 className="text-xl font-thin text-white/90 mt-10 mb-4">8. Conclusion</h2>
+          <h2 className="text-xl font-light text-[#1A1A1A] mt-10 mb-4">8. Conclusion</h2>
 
           <p>
             Multi-context browser control addresses a fundamental limitation in agentic browser automation. By enabling tools to spawn isolated pages within a shared session, the architecture transforms tools from pure functions into autonomous micro-agents capable of independent browser manipulation.
           </p>
 
           <p>
-            This primitive—a single <code className="text-white/80 bg-white/10 px-1 rounded">createPage()</code> function—unlocks:
+            This primitive—a single <code className="text-[#2A2A2A] bg-[#F2F2F0] px-1 rounded">createPage()</code> function—unlocks:
           </p>
 
-          <ul className="text-white/60 space-y-2 ml-6 list-disc">
+          <ul className="text-[#5A5A5A] space-y-2 ml-6 list-disc">
             <li>Non-destructive auxiliary operations (email verification, OAuth)</li>
             <li>Cross-domain data aggregation during workflows</li>
             <li>Hierarchical agent architectures with sub-agent delegation</li>
@@ -943,21 +943,21 @@ export default function MultiContextBrowserControlPage() {
             The implications extend beyond implementation convenience. This capability enables distributed intelligence architectures where reasoning, environment manipulation, and verification can be separated across specialized agents while maintaining session continuity.
           </p>
 
-          <p className="text-white/80 font-medium italic">
+          <p className="text-[#2A2A2A] font-medium italic">
             As browser automation agents take on increasingly complex workflows, multi-context control becomes not an optimization but a necessity.
           </p>
 
-          <div className="border border-white/20 rounded-lg p-6 my-10 bg-gradient-to-r from-white/5 to-transparent">
+          <div className="border border-[#DADADA] rounded-lg p-6 my-10 bg-gradient-to-r from-white/5 to-transparent">
             <div className="flex items-start gap-4">
               <div className="text-2xl">🚀</div>
               <div>
-                <h3 className="text-white/90 font-medium mb-2">Use This in Your Projects</h3>
-                <p className="text-white/60 text-sm mb-4">
-                  These multi-context capabilities are available in our open-source BrowserAgent package. Build custom tools with <code className="text-white/80 bg-white/10 px-1 rounded">createPage()</code>, access <code className="text-white/80 bg-white/10 px-1 rounded">browserContext</code>, and create hierarchical agent architectures today.
+                <h3 className="text-[#1A1A1A] font-medium mb-2">Use This in Your Projects</h3>
+                <p className="text-[#5A5A5A] text-sm mb-4">
+                  These multi-context capabilities are available in our open-source BrowserAgent package. Build custom tools with <code className="text-[#2A2A2A] bg-[#F2F2F0] px-1 rounded">createPage()</code>, access <code className="text-[#2A2A2A] bg-[#F2F2F0] px-1 rounded">browserContext</code>, and create hierarchical agent architectures today.
                 </p>
                 <a 
                   href="https://www.npmjs.com/package/@centralinc/browseragent" 
-                  className="inline-flex items-center gap-2 text-white/80 hover:text-white transition-colors text-sm font-medium border border-white/20 px-4 py-2 rounded hover:border-white/40"
+                  className="inline-flex items-center gap-2 text-[#2A2A2A] hover:text-[#1A1A1A] transition-colors text-sm font-medium border border-[#DADADA] px-4 py-2 rounded hover:border-[#DADADA]"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -968,21 +968,21 @@ export default function MultiContextBrowserControlPage() {
             </div>
           </div>
 
-          <h2 className="text-xl font-thin text-white/90 mt-10 mb-4">References</h2>
+          <h2 className="text-xl font-light text-[#1A1A1A] mt-10 mb-4">References</h2>
 
-          <ul className="text-white/60 space-y-2 ml-6 list-disc text-sm">
+          <ul className="text-[#5A5A5A] space-y-2 ml-6 list-disc text-sm">
             <li>
-              <a href="https://docs.anthropic.com/en/docs/agents-and-tools/tool-use/computer-use-tool" className="text-white/70 hover:text-white transition-colors underline" target="_blank" rel="noopener noreferrer">
+              <a href="https://docs.anthropic.com/en/docs/agents-and-tools/tool-use/computer-use-tool" className="text-[#5A5A5A] hover:text-[#1A1A1A] transition-colors underline" target="_blank" rel="noopener noreferrer">
                 Anthropic Computer Use Documentation
               </a>
             </li>
             <li>
-              <a href="https://playwright.dev/docs/browser-contexts" className="text-white/70 hover:text-white transition-colors underline" target="_blank" rel="noopener noreferrer">
+              <a href="https://playwright.dev/docs/browser-contexts" className="text-[#5A5A5A] hover:text-[#1A1A1A] transition-colors underline" target="_blank" rel="noopener noreferrer">
                 Playwright Browser Contexts
               </a>
             </li>
             <li>
-              <a href="https://docs.anthropic.com/en/docs/build-with-claude/extended-thinking" className="text-white/70 hover:text-white transition-colors underline" target="_blank" rel="noopener noreferrer">
+              <a href="https://docs.anthropic.com/en/docs/build-with-claude/extended-thinking" className="text-[#5A5A5A] hover:text-[#1A1A1A] transition-colors underline" target="_blank" rel="noopener noreferrer">
                 Extended Thinking
               </a>
             </li>
@@ -991,8 +991,8 @@ export default function MultiContextBrowserControlPage() {
         </div>
       </article>
 
-      <section className="text-white/40 text-sm border-t border-white/10 pt-6 max-w-3xl">
-        <a href="/ai-era" className="hover:text-white/60 transition-colors">
+      <section className="text-[#8C8C8C] text-sm border-t border-[#E8E8E6] pt-6 max-w-3xl">
+        <a href="/ai-era" className="hover:text-[#5A5A5A] transition-colors">
           ← Back to AI Era
         </a>
       </section>

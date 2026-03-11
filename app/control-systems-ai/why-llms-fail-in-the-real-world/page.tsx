@@ -30,19 +30,19 @@ export default function DesignTimeOptimizationVsRealTimeStabilityPage() {
   return (
     <div className="space-y-12 max-w-3xl">
       <section>
-        <h1 className="text-3xl font-thin tracking-tight mb-4">
+        <h1 className="text-3xl font-light tracking-tight mb-4">
           Why LLMs Fail in the Real World: Design-Time Optimization vs Real-Time Stability
         </h1>
-        <p className="text-white/50 text-sm mb-8">
+        <p className="text-[#8C8C8C] text-sm mb-8">
           December 1, 2025
         </p>
-        <p className="text-white/60 text-sm mb-8">
+        <p className="text-[#5A5A5A] text-sm mb-8">
           Why modern LLM systems overfit the setup phase and collapse during execution
         </p>
       </section>
 
       <figure className="my-10">
-        <div className="border border-white/20 rounded overflow-hidden bg-white/5 p-4">
+        <div className="border border-[#DADADA] rounded overflow-hidden bg-[#FFFFFF] p-4">
           <Image
             src="/images/ai/design_time_optimization.png"
             alt="Design-Time Optimization vs Real-Time Stability Diagram"
@@ -52,23 +52,23 @@ export default function DesignTimeOptimizationVsRealTimeStabilityPage() {
             priority
           />
         </div>
-        <figcaption className="text-white/40 text-xs mt-3 text-center">
+        <figcaption className="text-[#8C8C8C] text-xs mt-3 text-center">
           Design-time preparation vs real-time adaptation in control systems
         </figcaption>
       </figure>
 
-      <article className="prose prose-invert max-w-none">
-        <div className="text-white/70 text-sm leading-relaxed space-y-6">
+      <article className="prose max-w-none">
+        <div className="text-[#5A5A5A] text-sm leading-relaxed space-y-6">
           <p>
             In classical control engineering, every system is shaped by two forces:
           </p>
           
-          <ul className="text-white/60 space-y-2 ml-6 list-disc">
+          <ul className="text-[#5A5A5A] space-y-2 ml-6 list-disc">
             <li>How well it is designed before operation</li>
             <li>How well it stabilizes itself during operation</li>
           </ul>
           
-          <p className="text-white/80 font-medium">
+          <p className="text-[#2A2A2A] font-medium">
             These are not interchangeable.
           </p>
           
@@ -84,25 +84,25 @@ export default function DesignTimeOptimizationVsRealTimeStabilityPage() {
             This chapter explains why that imbalance exists, how it manifests in LLM agents and browser automation, and why the future of AI requires shifting from feed-forward thinking to control-theoretic architectures.
           </p>
           
-          <h2 className="text-xl font-thin text-white/90 mt-8 mb-4">1. The Two Forces That Shape Intelligent Systems</h2>
+          <h2 className="text-xl font-light text-[#1A1A1A] mt-8 mb-4">1. The Two Forces That Shape Intelligent Systems</h2>
           
           <p>
             In manufacturing, robotics, aerospace, and even biology, the distinction is universal:
           </p>
           
-          <p className="text-white/80 font-medium">
+          <p className="text-[#2A2A2A] font-medium">
             Design-time optimization
           </p>
           
-          <p className="text-white/60 ml-4">
+          <p className="text-[#5A5A5A] ml-4">
             prepares the system.
           </p>
           
-          <p className="text-white/80 font-medium">
+          <p className="text-[#2A2A2A] font-medium">
             Real-time stability
           </p>
           
-          <p className="text-white/60 ml-4">
+          <p className="text-[#5A5A5A] ml-4">
             keeps the system alive.
           </p>
           
@@ -122,21 +122,21 @@ export default function DesignTimeOptimizationVsRealTimeStabilityPage() {
             But the moment their systems touch the real world — the browser, APIs, timing, partial observability, corrupted states — everything becomes unstable.
           </p>
           
-          <p className="text-white/80 font-medium">
+          <p className="text-[#2A2A2A] font-medium">
             Why?
           </p>
           
-          <p className="text-white/80 italic">
+          <p className="text-[#2A2A2A] italic">
             Because design-time optimization cannot substitute for real-time control.
           </p>
           
-          <h2 className="text-xl font-thin text-white/90 mt-8 mb-4">2. What AI Engineers Call "Performance" Is Mostly Design-Time Optimization</h2>
+          <h2 className="text-xl font-light text-[#1A1A1A] mt-8 mb-4">2. What AI Engineers Call "Performance" Is Mostly Design-Time Optimization</h2>
           
           <p>
             In LLM systems, design-time optimization includes:
           </p>
           
-          <ul className="text-white/60 space-y-2 ml-6 list-disc">
+          <ul className="text-[#5A5A5A] space-y-2 ml-6 list-disc">
             <li>prompt engineering</li>
             <li>chain-of-thought templates</li>
             <li>RAG tuning</li>
@@ -152,21 +152,21 @@ export default function DesignTimeOptimizationVsRealTimeStabilityPage() {
             These techniques modify the initial feed-forward policy of the model.
           </p>
           
-          <p className="text-white/80 italic">
+          <p className="text-[#2A2A2A] italic">
             They improve the start of the trajectory — not the behavior of the trajectory itself.
           </p>
           
-          <div className="border-l-2 border-white/20 pl-6 my-6">
-            <p className="text-white/80 font-medium mb-2">Example:</p>
-            <p className="text-white/60 text-sm mb-2">
+          <div className="border-l-2 border-[#DADADA] pl-6 my-6">
+            <p className="text-[#2A2A2A] font-medium mb-2">Example:</p>
+            <p className="text-[#5A5A5A] text-sm mb-2">
               A browser agent's YAML spec makes it start with a better plan.
             </p>
-            <p className="text-white/60 text-sm mb-2">
+            <p className="text-[#5A5A5A] text-sm mb-2">
               But once the DOM shifts?<br />
               Once a button moves?<br />
               Once a flow times out?
             </p>
-            <p className="text-white/60 text-sm">
+            <p className="text-[#5A5A5A] text-sm">
               The plan becomes irrelevant.
             </p>
           </div>
@@ -179,11 +179,11 @@ export default function DesignTimeOptimizationVsRealTimeStabilityPage() {
             They cannot correct runtime error.
           </p>
           
-          <p className="text-white/80 italic">
+          <p className="text-[#2A2A2A] italic">
             This limitation is universal — you can prompt your way to a better launch, but not to a stable flight.
           </p>
           
-          <h2 className="text-xl font-thin text-white/90 mt-8 mb-4">3. Why Real-Time Stability Is a Different Category of Intelligence</h2>
+          <h2 className="text-xl font-light text-[#1A1A1A] mt-8 mb-4">3. Why Real-Time Stability Is a Different Category of Intelligence</h2>
           
           <p>
             Real-time stability is not about better prompts or better models.
@@ -197,7 +197,7 @@ export default function DesignTimeOptimizationVsRealTimeStabilityPage() {
             In control engineering, this is called closed-loop control:
           </p>
           
-          <ol className="text-white/60 space-y-1 ml-6 list-decimal text-sm">
+          <ol className="text-[#5A5A5A] space-y-1 ml-6 list-decimal text-sm">
             <li>Observe the world</li>
             <li>Compare expected vs. actual</li>
             <li>Compute error</li>
@@ -209,7 +209,7 @@ export default function DesignTimeOptimizationVsRealTimeStabilityPage() {
             This loop is what stabilizes:
           </p>
           
-          <ul className="text-white/60 space-y-2 ml-6 list-disc">
+          <ul className="text-[#5A5A5A] space-y-2 ml-6 list-disc">
             <li>drones</li>
             <li>rockets</li>
             <li>autonomous vehicles</li>
@@ -225,7 +225,7 @@ export default function DesignTimeOptimizationVsRealTimeStabilityPage() {
             When an LLM agent interacts with the browser, the filesystem, or an API, it needs to:
           </p>
           
-          <ul className="text-white/60 space-y-2 ml-6 list-disc">
+          <ul className="text-[#5A5A5A] space-y-2 ml-6 list-disc">
             <li>detect when it misclicked</li>
             <li>validate that it reached the correct state</li>
             <li>handle dynamic changes</li>
@@ -240,29 +240,29 @@ export default function DesignTimeOptimizationVsRealTimeStabilityPage() {
             This is online adaptation, not offline tuning.
           </p>
           
-          <p className="text-white/80 italic">
+          <p className="text-[#2A2A2A] italic">
             It is what separates "smart models" from "reliable systems."
           </p>
           
-          <h2 className="text-xl font-thin text-white/90 mt-8 mb-4">4. The Core Distinction: Preparation vs. Survival</h2>
+          <h2 className="text-xl font-light text-[#1A1A1A] mt-8 mb-4">4. The Core Distinction: Preparation vs. Survival</h2>
           
           <p>
             Let's frame this concretely.
           </p>
           
-          <p className="text-white/80 font-medium">
+          <p className="text-[#2A2A2A] font-medium">
             Design-time optimization
           </p>
           
-          <p className="text-white/60 ml-4">
+          <p className="text-[#5A5A5A] ml-4">
             is tuning an autopilot controller before takeoff.
           </p>
           
-          <p className="text-white/80 font-medium">
+          <p className="text-[#2A2A2A] font-medium">
             Real-time stability
           </p>
           
-          <p className="text-white/60 ml-4">
+          <p className="text-[#5A5A5A] ml-4">
             is adjusting thrust and pitch 200 times per second as the aircraft descends through turbulence.
           </p>
           
@@ -274,11 +274,11 @@ export default function DesignTimeOptimizationVsRealTimeStabilityPage() {
             But they solve fundamentally different problems.
           </p>
           
-          <p className="text-white/80 font-medium mt-4">
+          <p className="text-[#2A2A2A] font-medium mt-4">
             In AI terms:
           </p>
           
-          <ul className="text-white/60 space-y-2 ml-6 list-disc">
+          <ul className="text-[#5A5A5A] space-y-2 ml-6 list-disc">
             <li>prompt engineering ≈ adjusting parameters before takeoff</li>
             <li>fine-tuning ≈ improving the default controller before leaving the ground</li>
             <li>planning ≈ optimizing the initial flight path</li>
@@ -288,11 +288,11 @@ export default function DesignTimeOptimizationVsRealTimeStabilityPage() {
             These all happen before the system touches uncertainty.
           </p>
           
-          <p className="text-white/80 font-medium mt-4">
+          <p className="text-[#2A2A2A] font-medium mt-4">
             In contrast:
           </p>
           
-          <ul className="text-white/60 space-y-2 ml-6 list-disc">
+          <ul className="text-[#5A5A5A] space-y-2 ml-6 list-disc">
             <li>DOM validation</li>
             <li>state checking</li>
             <li>corrective loops</li>
@@ -305,11 +305,11 @@ export default function DesignTimeOptimizationVsRealTimeStabilityPage() {
             These happen inside uncertainty.
           </p>
           
-          <p className="text-white/80 italic">
+          <p className="text-[#2A2A2A] italic">
             This is why browser automation reveals the truth faster than any other domain:
           </p>
           
-          <p className="text-white/80 font-medium">
+          <p className="text-[#2A2A2A] font-medium">
             An LLM without real-time stability is a rocket without sensors.
           </p>
           
@@ -317,13 +317,13 @@ export default function DesignTimeOptimizationVsRealTimeStabilityPage() {
             It might launch beautifully, but it cannot land.
           </p>
           
-          <h2 className="text-xl font-thin text-white/90 mt-8 mb-4">5. Why Fine-Tuning Feels Like Magic — But Isn't Enough</h2>
+          <h2 className="text-xl font-light text-[#1A1A1A] mt-8 mb-4">5. Why Fine-Tuning Feels Like Magic — But Isn't Enough</h2>
           
           <p>
             Fine-tuning looks powerful because it introduces offline feedback:
           </p>
           
-          <ul className="text-white/60 space-y-2 ml-6 list-disc">
+          <ul className="text-[#5A5A5A] space-y-2 ml-6 list-disc">
             <li>The model sees its past failure</li>
             <li>It adjusts its internal policy</li>
             <li>It improves the first step next time</li>
@@ -337,11 +337,11 @@ export default function DesignTimeOptimizationVsRealTimeStabilityPage() {
             But it is still design-time correction, not runtime correction.
           </p>
           
-          <p className="text-white/80 font-medium mt-4">
+          <p className="text-[#2A2A2A] font-medium mt-4">
             During execution:
           </p>
           
-          <ul className="text-white/60 space-y-2 ml-6 list-disc">
+          <ul className="text-[#5A5A5A] space-y-2 ml-6 list-disc">
             <li>fine-tuning cannot detect drift</li>
             <li>fine-tuning cannot apply corrective action</li>
             <li>fine-tuning cannot recover from invalid states</li>
@@ -357,7 +357,7 @@ export default function DesignTimeOptimizationVsRealTimeStabilityPage() {
             It does not enable the model to stabilize itself.
           </p>
           
-          <p className="text-white/80 italic">
+          <p className="text-[#2A2A2A] italic">
             A tuned policy is still open-loop.
           </p>
           
@@ -365,14 +365,14 @@ export default function DesignTimeOptimizationVsRealTimeStabilityPage() {
             Closed-loop architecture is where stability actually emerges.
           </p>
           
-          <h2 className="text-xl font-thin text-white/90 mt-8 mb-4">6. The Control-Theoretic Reframe for AI Engineers</h2>
+          <h2 className="text-xl font-light text-[#1A1A1A] mt-8 mb-4">6. The Control-Theoretic Reframe for AI Engineers</h2>
           
-          <div className="border-l-4 border-white/20 pl-6 my-6">
-            <p className="text-white/80 font-medium mb-2">The key insight:</p>
-            <p className="text-white/60 italic">
+          <div className="border-l-4 border-[#DADADA] pl-6 my-6">
+            <p className="text-[#2A2A2A] font-medium mb-2">The key insight:</p>
+            <p className="text-[#5A5A5A] italic">
               The missing piece isn't in the model.
             </p>
-            <p className="text-white/60 italic">
+            <p className="text-[#5A5A5A] italic">
               It's in the architecture around the model.
             </p>
           </div>
@@ -389,22 +389,22 @@ export default function DesignTimeOptimizationVsRealTimeStabilityPage() {
             Today's systems are:
           </p>
           
-          <ul className="text-white/60 space-y-2 ml-6 list-disc">
+          <ul className="text-[#5A5A5A] space-y-2 ml-6 list-disc">
             <li>intelligent without stability</li>
             <li>powerful without robustness</li>
             <li>capable without awareness</li>
             <li>high-performance without self-correction</li>
           </ul>
           
-          <p className="text-white/80 font-medium">
+          <p className="text-[#2A2A2A] font-medium">
             This is why every serious agent engineering team is converging toward the same realization:
           </p>
           
-          <p className="text-white/80 italic">
+          <p className="text-[#2A2A2A] italic">
             We don't need smarter models.
           </p>
           
-          <p className="text-white/80 italic">
+          <p className="text-[#2A2A2A] italic">
             We need architectures that keep models stable during execution.
           </p>
           
@@ -412,14 +412,14 @@ export default function DesignTimeOptimizationVsRealTimeStabilityPage() {
             Closed-loop systems are the only known solution to this problem in every other field.
           </p>
           
-          <p className="text-white/80 font-medium">
+          <p className="text-[#2A2A2A] font-medium">
             AI is no exception.
           </p>
         </div>
       </article>
 
-      <section className="text-white/40 text-sm border-t border-white/10 pt-6">
-        <a href="/control-systems-ai" className="hover:text-white/60 transition-colors">
+      <section className="text-[#8C8C8C] text-sm border-t border-[#E8E8E6] pt-6">
+        <a href="/control-systems-ai" className="hover:text-[#5A5A5A] transition-colors">
           ← Back to Control Systems × AI
         </a>
       </section>

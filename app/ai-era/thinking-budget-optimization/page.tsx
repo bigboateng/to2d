@@ -89,7 +89,7 @@ function ReasoningPhaseAnimation() {
       ref={canvasRef}
       width={450}
       height={160}
-      className="w-full max-w-md mx-auto rounded border border-white/10"
+      className="w-full max-w-md mx-auto rounded border border-[#E8E8E6]"
     />
   )
 }
@@ -212,7 +212,7 @@ function TokenComparisonAnimation() {
       ref={canvasRef}
       width={450}
       height={170}
-      className="w-full max-w-md mx-auto rounded border border-white/10"
+      className="w-full max-w-md mx-auto rounded border border-[#E8E8E6]"
     />
   )
 }
@@ -330,7 +330,7 @@ function ExecutionModeAnimation() {
       ref={canvasRef}
       width={450}
       height={160}
-      className="w-full max-w-md mx-auto rounded border border-white/10"
+      className="w-full max-w-md mx-auto rounded border border-[#E8E8E6]"
     />
   )
 }
@@ -340,22 +340,22 @@ export default function ThinkingBudgetOptimizationPage() {
     <div className="space-y-8">
       <div className="max-w-3xl">
         <header className="mb-12">
-          <p className="text-white/40 text-sm mb-2">Dec 19, 2025</p>
-          <h1 className="text-3xl font-thin tracking-tight mb-4">
+          <p className="text-[#8C8C8C] text-sm mb-2">Dec 19, 2025</p>
+          <h1 className="text-3xl font-light tracking-tight mb-4">
             Thinking Budget Optimization for Agentic Systems
           </h1>
-          <p className="text-white/60 text-lg">
+          <p className="text-[#5A5A5A] text-lg">
             Reducing cost without degrading reasoning quality
           </p>
-          <p className="text-white/40 text-xs mt-4">
+          <p className="text-[#8C8C8C] text-xs mt-4">
             agentic systems · reasoning efficiency · token economics · execution planning
           </p>
         </header>
       </div>
 
-      <article className="max-w-3xl space-y-8 text-white/70 leading-relaxed">
+      <article className="max-w-3xl space-y-8 text-[#5A5A5A] leading-relaxed">
         <section className="space-y-6">
-          <h2 className="text-xl font-thin text-white/90">The Hidden Cost of &quot;Smarter&quot; Models</h2>
+          <h2 className="text-xl font-light text-[#1A1A1A]">The Hidden Cost of &quot;Smarter&quot; Models</h2>
           
           <p>
             Extended reasoning is one of the most powerful capabilities of modern language models. 
@@ -365,7 +365,7 @@ export default function ThinkingBudgetOptimizationPage() {
 
           <p>But there is a catch.</p>
 
-          <div className="text-white/50 space-y-1 pl-4 border-l border-white/10">
+          <div className="text-[#8C8C8C] space-y-1 pl-4 border-l border-[#E8E8E6]">
             <p>Reasoning tokens are not free.</p>
             <p>If a model is given a large reasoning budget, it will use it — even when the task is trivial.</p>
           </div>
@@ -374,50 +374,50 @@ export default function ThinkingBudgetOptimizationPage() {
             This creates a quiet cost center in agentic systems. Teams often respond in one of three ways:
           </p>
 
-          <ul className="list-disc list-inside text-white/60 space-y-1 ml-4">
-            <li>Enable large reasoning budgets everywhere <span className="text-white/40">(expensive)</span></li>
-            <li>Disable reasoning entirely <span className="text-white/40">(fragile)</span></li>
-            <li>Pick a compromise and accept inefficiency <span className="text-white/40">(suboptimal)</span></li>
+          <ul className="list-disc list-inside text-[#5A5A5A] space-y-1 ml-4">
+            <li>Enable large reasoning budgets everywhere <span className="text-[#8C8C8C]">(expensive)</span></li>
+            <li>Disable reasoning entirely <span className="text-[#8C8C8C]">(fragile)</span></li>
+            <li>Pick a compromise and accept inefficiency <span className="text-[#8C8C8C]">(suboptimal)</span></li>
           </ul>
 
           <p>None of these approaches scale well.</p>
 
-          <p className="text-white/50 italic">
+          <p className="text-[#8C8C8C] italic">
             The core issue is not model capability.<br />
             It is how reasoning is allocated over time.
           </p>
         </section>
 
         <section className="space-y-6">
-          <h2 className="text-xl font-thin text-white/90 pt-6">Reasoning Is Not Uniform Across a Task</h2>
+          <h2 className="text-xl font-light text-[#1A1A1A] pt-6">Reasoning Is Not Uniform Across a Task</h2>
 
           <p>
-            In most agentic workflows, reasoning requirements are <em className="text-white/80">highly uneven</em>.
+            In most agentic workflows, reasoning requirements are <em className="text-[#2A2A2A]">highly uneven</em>.
           </p>
 
           <p>Consider a multi-step automation:</p>
 
           <div className="overflow-x-auto my-6">
-            <table className="w-full text-sm border border-white/10">
+            <table className="w-full text-sm border border-[#E8E8E6]">
               <thead>
-                <tr className="border-b border-white/10 bg-white/5">
-                  <th className="text-left p-3 text-white/60 font-normal">Phase</th>
-                  <th className="text-left p-3 text-white/60 font-normal">What the model is doing</th>
-                  <th className="text-left p-3 text-white/60 font-normal">Reasoning need</th>
+                <tr className="border-b border-[#E8E8E6] bg-[#FFFFFF]">
+                  <th className="text-left p-3 text-[#5A5A5A] font-normal">Phase</th>
+                  <th className="text-left p-3 text-[#5A5A5A] font-normal">What the model is doing</th>
+                  <th className="text-left p-3 text-[#5A5A5A] font-normal">Reasoning need</th>
                 </tr>
               </thead>
-              <tbody className="text-white/50">
-                <tr className="border-b border-white/5">
+              <tbody className="text-[#8C8C8C]">
+                <tr className="border-b border-[#E8E8E6]">
                   <td className="p-3">Planning</td>
                   <td className="p-3">Interpreting intent, forming strategy</td>
                   <td className="p-3 text-blue-400/80">High</td>
                 </tr>
-                <tr className="border-b border-white/5">
+                <tr className="border-b border-[#E8E8E6]">
                   <td className="p-3">Execution</td>
                   <td className="p-3">Following known steps</td>
                   <td className="p-3 text-green-400/80">Low</td>
                 </tr>
-                <tr className="border-b border-white/5">
+                <tr className="border-b border-[#E8E8E6]">
                   <td className="p-3">Unexpected state</td>
                   <td className="p-3">Adapting to change</td>
                   <td className="p-3 text-amber-400/80">Medium–High</td>
@@ -425,7 +425,7 @@ export default function ThinkingBudgetOptimizationPage() {
                 <tr>
                   <td className="p-3">Final output</td>
                   <td className="p-3">Formatting result</td>
-                  <td className="p-3 text-white/40">Minimal</td>
+                  <td className="p-3 text-[#8C8C8C]">Minimal</td>
                 </tr>
               </tbody>
             </table>
@@ -435,9 +435,9 @@ export default function ThinkingBudgetOptimizationPage() {
             Yet many systems apply the same reasoning budget at every step.
           </p>
 
-          <p className="text-white/80">This is wasteful.</p>
+          <p className="text-[#2A2A2A]">This is wasteful.</p>
 
-          <p className="text-white/50 italic">
+          <p className="text-[#8C8C8C] italic">
             Once a plan exists, repeatedly re-deriving it does not improve outcomes. 
             It only increases token usage.
           </p>
@@ -446,26 +446,26 @@ export default function ThinkingBudgetOptimizationPage() {
 
       <figure className="w-full max-w-xl mx-auto my-10">
         <ReasoningPhaseAnimation />
-        <figcaption className="text-white/40 text-xs mt-3 text-center">
+        <figcaption className="text-[#8C8C8C] text-xs mt-3 text-center">
           Reasoning budget varies by phase · Planning high · Execution low · Adaptation medium
         </figcaption>
       </figure>
 
-      <article className="max-w-3xl space-y-8 text-white/70 leading-relaxed">
+      <article className="max-w-3xl space-y-8 text-[#5A5A5A] leading-relaxed">
         <section className="space-y-6">
-          <h2 className="text-xl font-thin text-white/90 pt-6">Step-Aware Reasoning Budgets</h2>
+          <h2 className="text-xl font-light text-[#1A1A1A] pt-6">Step-Aware Reasoning Budgets</h2>
 
           <p>
-            A more effective approach is <em className="text-white/80">step-aware reasoning</em>.
+            A more effective approach is <em className="text-[#2A2A2A]">step-aware reasoning</em>.
           </p>
 
           <p>
             Instead of assigning a flat reasoning budget, the system allocates reasoning based on execution phase.
           </p>
 
-          <h3 className="text-white/70 font-medium pt-4">The Pattern</h3>
+          <h3 className="text-[#5A5A5A] font-medium pt-4">The Pattern</h3>
 
-          <div className="bg-white/5 border border-white/10 rounded p-4 font-mono text-sm text-white/60 my-4">
+          <div className="bg-[#FFFFFF] border border-[#E8E8E6] rounded p-4 font-mono text-sm text-[#5A5A5A] my-4">
             <p>Step 0 (Planning):&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;High reasoning budget</p>
             <p>Steps 1+ (Execution):&nbsp;&nbsp;&nbsp;Low reasoning budget</p>
             <p>Exception handling:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Medium reasoning budget</p>
@@ -473,23 +473,23 @@ export default function ThinkingBudgetOptimizationPage() {
           </div>
 
           <p>
-            The key insight is that planning and execution are <em className="text-white/80">different cognitive modes</em>.
+            The key insight is that planning and execution are <em className="text-[#2A2A2A]">different cognitive modes</em>.
           </p>
 
           <div className="grid grid-cols-2 gap-4 my-6">
             <div className="border border-blue-500/20 bg-blue-500/5 p-4 rounded">
               <p className="text-blue-400/80 font-medium mb-2">Planning</p>
-              <p className="text-white/60 text-sm">Benefits from expansive reasoning</p>
+              <p className="text-[#5A5A5A] text-sm">Benefits from expansive reasoning</p>
             </div>
             <div className="border border-green-500/20 bg-green-500/5 p-4 rounded">
               <p className="text-green-400/80 font-medium mb-2">Execution</p>
-              <p className="text-white/60 text-sm">Benefits from constraint</p>
+              <p className="text-[#5A5A5A] text-sm">Benefits from constraint</p>
             </div>
           </div>
         </section>
 
         <section className="space-y-6">
-          <h2 className="text-xl font-thin text-white/90 pt-6">Why This Works</h2>
+          <h2 className="text-xl font-light text-[#1A1A1A] pt-6">Why This Works</h2>
 
           <p>
             During the initial planning step, the model generates a strategy. 
@@ -498,7 +498,7 @@ export default function ThinkingBudgetOptimizationPage() {
 
           <p>
             On subsequent steps, the model does not need to rediscover the plan. 
-            It only needs to <em className="text-white/80">apply it</em>.
+            It only needs to <em className="text-[#2A2A2A]">apply it</em>.
           </p>
 
           <p>
@@ -506,7 +506,7 @@ export default function ThinkingBudgetOptimizationPage() {
             It makes it verbose.
           </p>
 
-          <p className="text-white/50 italic">
+          <p className="text-[#8C8C8C] italic">
             In practice, most token waste comes from models restating what they already know.
           </p>
         </section>
@@ -514,17 +514,17 @@ export default function ThinkingBudgetOptimizationPage() {
 
       <figure className="w-full max-w-xl mx-auto my-10">
         <ExecutionModeAnimation />
-        <figcaption className="text-white/40 text-xs mt-3 text-center">
+        <figcaption className="text-[#8C8C8C] text-xs mt-3 text-center">
           Planning mode: deep reasoning · Execution mode: apply the plan with minimal overhead
         </figcaption>
       </figure>
 
-      <article className="max-w-3xl space-y-8 text-white/70 leading-relaxed">
+      <article className="max-w-3xl space-y-8 text-[#5A5A5A] leading-relaxed">
         <section className="space-y-6">
-          <h2 className="text-xl font-thin text-white/90 pt-6">Guiding the Model Into Execution Mode</h2>
+          <h2 className="text-xl font-light text-[#1A1A1A] pt-6">Guiding the Model Into Execution Mode</h2>
 
           <p>
-            One of the most effective optimizations is <em className="text-white/80">post-planning prompt injection</em>.
+            One of the most effective optimizations is <em className="text-[#2A2A2A]">post-planning prompt injection</em>.
           </p>
 
           <p>
@@ -532,10 +532,10 @@ export default function ThinkingBudgetOptimizationPage() {
             shift the model into execution mode.
           </p>
 
-          <h3 className="text-white/70 font-medium pt-4">Example: Execution Constraint</h3>
+          <h3 className="text-[#5A5A5A] font-medium pt-4">Example: Execution Constraint</h3>
 
-          <div className="bg-white/5 border border-white/10 rounded p-4 font-mono text-xs text-white/50 my-4 space-y-2">
-            <p className="text-white/70">You are now executing an existing plan.</p>
+          <div className="bg-[#FFFFFF] border border-[#E8E8E6] rounded p-4 font-mono text-xs text-[#8C8C8C] my-4 space-y-2">
+            <p className="text-[#5A5A5A]">You are now executing an existing plan.</p>
             <p className="mt-3">Rules:</p>
             <p>- Do not restate the plan.</p>
             <p>- Do not explain obvious actions.</p>
@@ -547,52 +547,52 @@ export default function ThinkingBudgetOptimizationPage() {
 
           <p>
             This does not reduce reasoning quality.<br />
-            It reduces <em className="text-white/80">unnecessary expression</em>.
+            It reduces <em className="text-[#2A2A2A]">unnecessary expression</em>.
           </p>
 
-          <p className="text-white/50 italic">
+          <p className="text-[#8C8C8C] italic">
             The model still reasons internally. It simply stops narrating.
           </p>
         </section>
 
         <section className="space-y-6">
-          <h2 className="text-xl font-thin text-white/90 pt-6">Matching Budgets to Task Types</h2>
+          <h2 className="text-xl font-light text-[#1A1A1A] pt-6">Matching Budgets to Task Types</h2>
 
           <p>
             Not all tasks require the same cognitive investment.
           </p>
 
-          <h3 className="text-white/70 font-medium pt-4">Deterministic Tasks</h3>
+          <h3 className="text-[#5A5A5A] font-medium pt-4">Deterministic Tasks</h3>
 
-          <p className="text-white/50 text-sm">Examples: Login flows, form submission, single-page data extraction</p>
+          <p className="text-[#8C8C8C] text-sm">Examples: Login flows, form submission, single-page data extraction</p>
 
           <div className="border border-green-500/20 bg-green-500/5 p-4 rounded my-4">
             <p className="text-green-400/80 text-sm font-medium mb-2">Recommended setup:</p>
-            <ul className="text-white/60 text-sm space-y-1">
+            <ul className="text-[#5A5A5A] text-sm space-y-1">
               <li>• Low initial reasoning</li>
               <li>• Low execution reasoning</li>
               <li>• Re-planning disabled</li>
             </ul>
           </div>
 
-          <p className="text-white/50 text-sm">These tasks are procedural. Overthinking adds little value.</p>
+          <p className="text-[#8C8C8C] text-sm">These tasks are procedural. Overthinking adds little value.</p>
 
-          <h3 className="text-white/70 font-medium pt-6">Stateful or Exploratory Tasks</h3>
+          <h3 className="text-[#5A5A5A] font-medium pt-6">Stateful or Exploratory Tasks</h3>
 
-          <p className="text-white/50 text-sm">Examples: Multi-document retrieval, iterative search, aggregation across pages</p>
+          <p className="text-[#8C8C8C] text-sm">Examples: Multi-document retrieval, iterative search, aggregation across pages</p>
 
           <div className="border border-amber-500/20 bg-amber-500/5 p-4 rounded my-4">
             <p className="text-amber-400/80 text-sm font-medium mb-2">Recommended setup:</p>
-            <ul className="text-white/60 text-sm space-y-1">
+            <ul className="text-[#5A5A5A] text-sm space-y-1">
               <li>• High initial reasoning</li>
               <li>• Medium execution reasoning</li>
               <li>• Limited re-planning allowed</li>
             </ul>
           </div>
 
-          <p className="text-white/50 text-sm">These tasks benefit from tracking progress and adapting strategy.</p>
+          <p className="text-[#8C8C8C] text-sm">These tasks benefit from tracking progress and adapting strategy.</p>
 
-          <p className="text-white/80 mt-4">
+          <p className="text-[#2A2A2A] mt-4">
             The important point is that task classification happens <em>before</em> execution, not dynamically mid-run.
           </p>
         </section>
@@ -600,14 +600,14 @@ export default function ThinkingBudgetOptimizationPage() {
 
       <figure className="w-full max-w-xl mx-auto my-10">
         <TokenComparisonAnimation />
-        <figcaption className="text-white/40 text-xs mt-3 text-center">
+        <figcaption className="text-[#8C8C8C] text-xs mt-3 text-center">
           Flat budget: consistent high token flow · Step-aware: tokens allocated by need
         </figcaption>
       </figure>
 
-      <article className="max-w-3xl space-y-8 text-white/70 leading-relaxed">
+      <article className="max-w-3xl space-y-8 text-[#5A5A5A] leading-relaxed">
         <section className="space-y-6">
-          <h2 className="text-xl font-thin text-white/90 pt-6">Token Efficiency in Practice</h2>
+          <h2 className="text-xl font-light text-[#1A1A1A] pt-6">Token Efficiency in Practice</h2>
 
           <p>
             When applied correctly, step-aware reasoning produces large cost reductions 
@@ -617,21 +617,21 @@ export default function ThinkingBudgetOptimizationPage() {
           <p>Typical outcomes observed across agentic systems:</p>
 
           <div className="overflow-x-auto my-6">
-            <table className="w-full text-sm border border-white/10">
+            <table className="w-full text-sm border border-[#E8E8E6]">
               <thead>
-                <tr className="border-b border-white/10 bg-white/5">
-                  <th className="text-left p-3 text-white/60 font-normal">Configuration</th>
-                  <th className="text-left p-3 text-white/60 font-normal">Avg tokens/step</th>
-                  <th className="text-left p-3 text-white/60 font-normal">Relative cost</th>
+                <tr className="border-b border-[#E8E8E6] bg-[#FFFFFF]">
+                  <th className="text-left p-3 text-[#5A5A5A] font-normal">Configuration</th>
+                  <th className="text-left p-3 text-[#5A5A5A] font-normal">Avg tokens/step</th>
+                  <th className="text-left p-3 text-[#5A5A5A] font-normal">Relative cost</th>
                 </tr>
               </thead>
-              <tbody className="text-white/50">
-                <tr className="border-b border-white/5">
+              <tbody className="text-[#8C8C8C]">
+                <tr className="border-b border-[#E8E8E6]">
                   <td className="p-3">Flat high budget</td>
                   <td className="p-3">~6,000</td>
                   <td className="p-3 text-red-400/80">Baseline</td>
                 </tr>
-                <tr className="border-b border-white/5">
+                <tr className="border-b border-[#E8E8E6]">
                   <td className="p-3">Step-aware (high → low)</td>
                   <td className="p-3">~2,500</td>
                   <td className="p-3 text-amber-400/80">~60% lower</td>
@@ -645,45 +645,45 @@ export default function ThinkingBudgetOptimizationPage() {
             </table>
           </div>
 
-          <p className="text-white/50 text-sm">
+          <p className="text-[#8C8C8C] text-sm">
             The most aggressive settings are not universal, but for deterministic workflows they are transformative.
           </p>
         </section>
 
         <section className="space-y-6">
-          <h2 className="text-xl font-thin text-white/90 pt-6">Common Failure Modes</h2>
+          <h2 className="text-xl font-light text-[#1A1A1A] pt-6">Common Failure Modes</h2>
 
-          <h3 className="text-white/70 font-medium pt-4">Over-Optimizing Early</h3>
+          <h3 className="text-[#5A5A5A] font-medium pt-4">Over-Optimizing Early</h3>
           <p>
             Applying minimal reasoning to tasks that genuinely require exploration leads to brittle behavior.
           </p>
-          <p className="text-white/50 text-sm">
-            <span className="text-white/70">Fix:</span> classify task complexity up front. When uncertain, bias toward more reasoning.
+          <p className="text-[#8C8C8C] text-sm">
+            <span className="text-[#5A5A5A]">Fix:</span> classify task complexity up front. When uncertain, bias toward more reasoning.
           </p>
 
-          <h3 className="text-white/70 font-medium pt-6">Stale Reasoning Artifacts</h3>
+          <h3 className="text-[#5A5A5A] font-medium pt-6">Stale Reasoning Artifacts</h3>
           <p>
             If the model produces no new reasoning on a step, logging repeated or placeholder reasoning pollutes context.
           </p>
-          <p className="text-white/50 text-sm">
-            <span className="text-white/70">Fix:</span> track whether new reasoning occurred. Do not persist reasoning when none was generated.
+          <p className="text-[#8C8C8C] text-sm">
+            <span className="text-[#5A5A5A]">Fix:</span> track whether new reasoning occurred. Do not persist reasoning when none was generated.
           </p>
 
-          <h3 className="text-white/70 font-medium pt-6">Context Accumulation</h3>
+          <h3 className="text-[#5A5A5A] font-medium pt-6">Context Accumulation</h3>
           <p>
             Even optimized reasoning accumulates over long runs.
           </p>
-          <p className="text-white/50 text-sm">
-            <span className="text-white/70">Fix:</span> prune old reasoning blocks from history. Retain actions and results, discard internal deliberation.
+          <p className="text-[#8C8C8C] text-sm">
+            <span className="text-[#5A5A5A]">Fix:</span> prune old reasoning blocks from history. Retain actions and results, discard internal deliberation.
           </p>
         </section>
 
         <section className="space-y-6">
-          <h2 className="text-xl font-thin text-white/90 pt-6">A Simple Mental Model</h2>
+          <h2 className="text-xl font-light text-[#1A1A1A] pt-6">A Simple Mental Model</h2>
 
-          <div className="text-white/50 space-y-1 pl-4 border-l border-white/10 my-6">
+          <div className="text-[#8C8C8C] space-y-1 pl-4 border-l border-[#E8E8E6] my-6">
             <p>Reasoning is not intelligence.</p>
-            <p>It is <em className="text-white/80">work</em>.</p>
+            <p>It is <em className="text-[#2A2A2A]">work</em>.</p>
           </div>
 
           <p>
@@ -691,36 +691,36 @@ export default function ThinkingBudgetOptimizationPage() {
           </p>
 
           <div className="grid grid-cols-2 gap-4 my-6">
-            <div className="border border-white/10 p-3 rounded">
+            <div className="border border-[#E8E8E6] p-3 rounded">
               <p className="text-blue-400/80 text-sm">Planning</p>
-              <p className="text-white/50 text-xs">pay</p>
+              <p className="text-[#8C8C8C] text-xs">pay</p>
             </div>
-            <div className="border border-white/10 p-3 rounded">
+            <div className="border border-[#E8E8E6] p-3 rounded">
               <p className="text-green-400/80 text-sm">Execution</p>
-              <p className="text-white/50 text-xs">constrain</p>
+              <p className="text-[#8C8C8C] text-xs">constrain</p>
             </div>
-            <div className="border border-white/10 p-3 rounded">
+            <div className="border border-[#E8E8E6] p-3 rounded">
               <p className="text-amber-400/80 text-sm">Recovery</p>
-              <p className="text-white/50 text-xs">pay again</p>
+              <p className="text-[#8C8C8C] text-xs">pay again</p>
             </div>
-            <div className="border border-white/10 p-3 rounded">
-              <p className="text-white/60 text-sm">Formatting</p>
-              <p className="text-white/50 text-xs">constrain hard</p>
+            <div className="border border-[#E8E8E6] p-3 rounded">
+              <p className="text-[#5A5A5A] text-sm">Formatting</p>
+              <p className="text-[#8C8C8C] text-xs">constrain hard</p>
             </div>
           </div>
 
-          <p className="text-white/80">
+          <p className="text-[#2A2A2A]">
             Systems that treat reasoning as a controllable resource scale better, cost less, 
             and fail more predictably.
           </p>
         </section>
 
         <section className="space-y-6">
-          <h2 className="text-xl font-thin text-white/90 pt-6">The Bigger Picture</h2>
+          <h2 className="text-xl font-light text-[#1A1A1A] pt-6">The Bigger Picture</h2>
 
           <p>
             Thinking budget optimization is not a model trick.<br />
-            It is an <em className="text-white/80">architectural decision</em>.
+            It is an <em className="text-[#2A2A2A]">architectural decision</em>.
           </p>
 
           <p>
@@ -728,32 +728,32 @@ export default function ThinkingBudgetOptimizationPage() {
             They will be the ones that understand when reasoning matters — and when it doesn&apos;t.
           </p>
 
-          <p className="text-white/50 italic">
+          <p className="text-[#8C8C8C] italic">
             Extended reasoning is powerful.<br />
             But only when used deliberately.
           </p>
         </section>
 
-        <div className="border-l-2 border-white/20 pl-6 my-10 py-4 bg-white/5 rounded-r">
-          <p className="text-white/70 text-sm mb-3">Related reading:</p>
-          <ul className="text-white/60 text-sm space-y-2">
+        <div className="border-l-2 border-[#DADADA] pl-6 my-10 py-4 bg-[#FFFFFF] rounded-r">
+          <p className="text-[#5A5A5A] text-sm mb-3">Related reading:</p>
+          <ul className="text-[#5A5A5A] text-sm space-y-2">
             <li>
-              <a href="/ai-era/determinism-vs-stability" className="text-white/80 underline underline-offset-2 hover:text-white">
+              <a href="/ai-era/determinism-vs-stability" className="text-[#2A2A2A] underline underline-offset-2 hover:text-[#1A1A1A]">
                 Determinism vs Stability
               </a>
-              <span className="text-white/40"> — Why stability matters more than precision in non-deterministic environments</span>
+              <span className="text-[#8C8C8C]"> — Why stability matters more than precision in non-deterministic environments</span>
             </li>
             <li>
-              <a href="/ai-era/model-coupled-vs-decoupled" className="text-white/80 underline underline-offset-2 hover:text-white">
+              <a href="/ai-era/model-coupled-vs-decoupled" className="text-[#2A2A2A] underline underline-offset-2 hover:text-[#1A1A1A]">
                 Model-Coupled vs Model-Decoupled Systems
               </a>
-              <span className="text-white/40"> — Why architecture determines long-term advantage</span>
+              <span className="text-[#8C8C8C]"> — Why architecture determines long-term advantage</span>
             </li>
             <li>
-              <a href="/ai-era/agents-as-operators-not-oracles" className="text-white/80 underline underline-offset-2 hover:text-white">
+              <a href="/ai-era/agents-as-operators-not-oracles" className="text-[#2A2A2A] underline underline-offset-2 hover:text-[#1A1A1A]">
                 Agents as Operators, Not Oracles
               </a>
-              <span className="text-white/40"> — Transformation over reasoning</span>
+              <span className="text-[#8C8C8C]"> — Transformation over reasoning</span>
             </li>
           </ul>
         </div>

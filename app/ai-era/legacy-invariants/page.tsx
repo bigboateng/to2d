@@ -2,16 +2,16 @@ export default function LegacyInvariantsPage() {
   return (
     <div className="space-y-12 max-w-3xl">
       <section>
-        <h1 className="text-3xl font-thin tracking-tight mb-4">
+        <h1 className="text-3xl font-light tracking-tight mb-4">
           Legacy Invariants: One Quiet Reason AI-Driven Automation Breaks Unexpectedly
         </h1>
-        <p className="text-white/50 text-sm mb-8">
+        <p className="text-[#8C8C8C] text-sm mb-8">
           Nov 26, 2025
         </p>
       </section>
 
-      <article className="prose prose-invert max-w-none">
-        <div className="text-white/70 text-sm leading-relaxed space-y-6">
+      <article className="prose max-w-none">
+        <div className="text-[#5A5A5A] text-sm leading-relaxed space-y-6">
           <p>
             When people imagine AI-driven browser automation, they picture something simple:
             an agent sees a page, clicks the right buttons, fills out a form, and everything works.
@@ -37,7 +37,7 @@ export default function LegacyInvariantsPage() {
             It wasn't a prompt issue.
           </p>
           
-          <p className="text-white/80 font-medium">
+          <p className="text-[#2A2A2A] font-medium">
             It was a hidden UI invariant left over from early 2010s web frameworks.
           </p>
           
@@ -45,13 +45,13 @@ export default function LegacyInvariantsPage() {
             And it's a pattern that shows up far more often than people expect.
           </p>
           
-          <h2 className="text-xl font-thin text-white/90 mt-8 mb-4">Legacy systems often depend on invisible assumptions</h2>
+          <h2 className="text-xl font-light text-[#1A1A1A] mt-8 mb-4">Legacy systems often depend on invisible assumptions</h2>
           
           <p>
             Many public-sector and enterprise portals were built more than a decade ago, on stacks like:
           </p>
           
-          <ul className="text-white/60 space-y-2 ml-6 list-disc">
+          <ul className="text-[#5A5A5A] space-y-2 ml-6 list-disc">
             <li>Oracle ADF</li>
             <li>IBM WebSEAL</li>
             <li>JSF / ADF Faces</li>
@@ -67,7 +67,7 @@ export default function LegacyInvariantsPage() {
             Things like:
           </p>
           
-          <ul className="text-white/60 space-y-2 ml-6 list-disc">
+          <ul className="text-[#5A5A5A] space-y-2 ml-6 list-disc">
             <li>a pause after focusing a field</li>
             <li>spacing between dropdown interactions</li>
             <li>blur events firing before validation</li>
@@ -76,7 +76,7 @@ export default function LegacyInvariantsPage() {
             <li>delay before AJAX triggers</li>
           </ul>
           
-          <p className="text-white/80 italic">
+          <p className="text-[#2A2A2A] italic">
             These are not bugs. They're assumptions from another era of web development.
           </p>
           
@@ -84,7 +84,7 @@ export default function LegacyInvariantsPage() {
             And when those assumptions are violated, nothing works — even though the UI looks totally normal.
           </p>
           
-          <h2 className="text-xl font-thin text-white/90 mt-8 mb-4">Timing is one example of an invariant that breaks AI automation</h2>
+          <h2 className="text-xl font-light text-[#1A1A1A] mt-8 mb-4">Timing is one example of an invariant that breaks AI automation</h2>
           
           <p>
             In one of the workflows we automated, a dropdown selection was supposed to trigger a server update and populate the next field.
@@ -102,7 +102,7 @@ export default function LegacyInvariantsPage() {
             After digging deeper, it turned out the system required a human-like 500–1000ms pause between:
           </p>
           
-          <ol className="text-white/60 space-y-1 ml-6 list-decimal text-sm">
+          <ol className="text-[#5A5A5A] space-y-1 ml-6 list-decimal text-sm">
             <li>focusing the dropdown</li>
             <li>selecting the option</li>
             <li>blurring the field</li>
@@ -128,7 +128,7 @@ export default function LegacyInvariantsPage() {
             It's not broken UI.
           </p>
           
-          <p className="text-white/80 italic">
+          <p className="text-[#2A2A2A] italic">
             It's just an old assumption baked into the system.
           </p>
           
@@ -136,13 +136,13 @@ export default function LegacyInvariantsPage() {
             Timing is just one example — but it's a very common one.
           </p>
           
-          <h2 className="text-xl font-thin text-white/90 mt-8 mb-4">AI agents expose these issues more than scripts do</h2>
+          <h2 className="text-xl font-light text-[#1A1A1A] mt-8 mb-4">AI agents expose these issues more than scripts do</h2>
           
           <p>
             Traditional automation scripts often succeed by accident:
           </p>
           
-          <ul className="text-white/60 space-y-2 ml-6 list-disc">
+          <ul className="text-[#5A5A5A] space-y-2 ml-6 list-disc">
             <li>engineers test manually and introduce natural delays</li>
             <li>they use slowMo in local browsers</li>
             <li>their scripts click slower than they realize</li>
@@ -153,7 +153,7 @@ export default function LegacyInvariantsPage() {
             AI agents, on the other hand:
           </p>
           
-          <ul className="text-white/60 space-y-2 ml-6 list-disc">
+          <ul className="text-[#5A5A5A] space-y-2 ml-6 list-disc">
             <li>run at machine speed</li>
             <li>don't accidentally wait</li>
             <li>don't hesitate</li>
@@ -161,7 +161,7 @@ export default function LegacyInvariantsPage() {
             <li>don't trigger blur/focus chains unless instructed</li>
           </ul>
           
-          <p className="text-white/80 font-medium">
+          <p className="text-[#2A2A2A] font-medium">
             AI is too clean.
           </p>
           
@@ -169,7 +169,7 @@ export default function LegacyInvariantsPage() {
             And that reveals invariants that normal RPA never noticed.
           </p>
           
-          <h2 className="text-xl font-thin text-white/90 mt-8 mb-4">Why architecture matters more than scripts</h2>
+          <h2 className="text-xl font-light text-[#1A1A1A] mt-8 mb-4">Why architecture matters more than scripts</h2>
           
           <p>
             Issues like this are exactly why we're building a layered architecture instead of one-off scripts.
@@ -183,7 +183,7 @@ export default function LegacyInvariantsPage() {
             A system that understands:
           </p>
           
-          <ul className="text-white/60 space-y-2 ml-6 list-disc">
+          <ul className="text-[#5A5A5A] space-y-2 ml-6 list-disc">
             <li>domain data</li>
             <li>UI behavior</li>
             <li>diagnostics</li>
@@ -199,7 +199,7 @@ export default function LegacyInvariantsPage() {
             This is the foundation for our 0-Context Architecture:
           </p>
           
-          <p className="text-white/80 italic">
+          <p className="text-[#2A2A2A] italic">
             separate what the agent needs to do from the invisible rules of the environment it runs in.
           </p>
           
@@ -207,13 +207,13 @@ export default function LegacyInvariantsPage() {
             Once those rules are surfaced, everything becomes more stable and more predictable.
           </p>
           
-          <h2 className="text-xl font-thin text-white/90 mt-8 mb-4">Closing Thought</h2>
+          <h2 className="text-xl font-light text-[#1A1A1A] mt-8 mb-4">Closing Thought</h2>
           
           <p>
             Timing alone isn't "the" reason AI automations fail — but it's a perfect illustration of a deeper truth:
           </p>
           
-          <p className="text-white/80 italic">
+          <p className="text-[#2A2A2A] italic">
             Legacy systems contain invisible assumptions that humans satisfy naturally, and AI violates instantly.
           </p>
           
@@ -221,14 +221,14 @@ export default function LegacyInvariantsPage() {
             Understanding and modeling those invariants is what separates real automation engineering from "just running a script."
           </p>
           
-          <p className="text-white/80 font-medium">
+          <p className="text-[#2A2A2A] font-medium">
             This is why modern AI automation needs systems thinking, not just prompting.
           </p>
         </div>
       </article>
 
-      <section className="text-white/40 text-sm border-t border-white/10 pt-6">
-        <a href="/ai-era" className="hover:text-white/60 transition-colors">
+      <section className="text-[#8C8C8C] text-sm border-t border-[#E8E8E6] pt-6">
+        <a href="/ai-era" className="hover:text-[#5A5A5A] transition-colors">
           ← Back to AI Era
         </a>
       </section>
