@@ -34,11 +34,6 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/language-models',
-        destination: '/research/language-models',
-        permanent: true,
-      },
-      {
         source: '/ai-era/zero-context-architecture',
         destination: '/architecture/zero-context-architecture',
         permanent: true,

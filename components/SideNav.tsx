@@ -23,6 +23,16 @@ const navSections = [
     links: [{ href: '/', label: 'Overview', status: 'wip' as Status }],
   },
   {
+    heading: 'Language Models',
+    links: [
+      { href: '/language-models', label: 'Language Models', status: 'stable' as Status },
+      { href: '/language-models/domain-operators', label: 'Domain Operators', status: 'stable' as Status },
+      { href: '/language-models/representation-mapping', label: 'Representation Mapping', status: 'stable' as Status },
+      { href: '/language-models/error-signals', label: 'Error Signals', status: 'stable' as Status },
+      { href: '/language-models/environment-discovery', label: 'Environment Discovery', status: 'stable' as Status },
+    ],
+  },
+  {
     heading: 'Architecture',
     links: [
       { href: '/architecture', label: 'System Models', status: 'wip' as Status },
@@ -73,7 +83,6 @@ const navSections = [
       { href: '/research', label: 'Research', status: 'wip' as Status },
       { href: '/research/control-systems', label: 'Control Systems', status: 'wip' as Status },
       { href: '/research/control-systems-ai', label: 'Control Systems × AI', status: 'wip' as Status },
-      { href: '/research/language-models', label: 'Language Models', status: 'wip' as Status },
     ],
   },
   {

@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Representation Mapping - TO2D">
+  <defs>
+    <pattern id="dotgrid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="12" cy="12" r="0.7" fill="#E8E8E6" />
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="630" fill="#F7F7F5" />
+  <rect width="1200" height="630" fill="url(#dotgrid)" />
+
+  <text x="600" y="80" text-anchor="middle" fill="#1A1A1A" font-family="Georgia, Times New Roman, serif" font-size="48" font-weight="300" letter-spacing="-0.5">Representation Mapping</text>
+
+  <text x="200" y="140" fill="#8C8C8C" font-family="monospace" font-size="12" letter-spacing="1.5">LAYER 1 - OPERATOR VIEW</text>
+
+  <rect x="200" y="160" width="160" height="64" rx="5" fill="#FFFFFF" stroke="#DADADA" stroke-width="1.4" />
+  <text x="280" y="190" text-anchor="middle" fill="#2A2A2A" font-family="monospace" font-size="20">A</text>
+  <text x="280" y="210" text-anchor="middle" fill="#8C8C8C" font-family="monospace" font-size="12">environment</text>
+
+  <line x1="360" y1="192" x2="520" y2="192" stroke="#B5B5B5" stroke-width="1.6" />
+  <polygon points="526,192 516,186 516,198" fill="#B5B5B5" />
+
+  <circle cx="600" cy="192" r="46" fill="#FFFFFF" stroke="#DADADA" stroke-width="1.4" />
+  <circle cx="600" cy="192" r="34" fill="none" stroke="#E8E8E6" stroke-width="0.8" />
+  <text x="600" y="203" text-anchor="middle" fill="#2A2A2A" font-family="monospace" font-size="32">⊙</text>
+
+  <line x1="646" y1="192" x2="832" y2="192" stroke="#B5B5B5" stroke-width="1.6" />
+  <polygon points="838,192 828,186 828,198" fill="#B5B5B5" />
+
+  <rect x="840" y="160" width="160" height="64" rx="5" fill="#FFFFFF" stroke="#DADADA" stroke-width="1.4" />
+  <text x="920" y="190" text-anchor="middle" fill="#2A2A2A" font-family="monospace" font-size="20">B</text>
+  <text x="920" y="210" text-anchor="middle" fill="#8C8C8C" font-family="monospace" font-size="12">system</text>
+
+  <line x1="200" y1="260" x2="1000" y2="260" stroke="#E8E8E6" stroke-width="1" stroke-dasharray="6 4" />
+
+  <text x="200" y="296" fill="#8C8C8C" font-family="monospace" font-size="12" letter-spacing="1.5">LAYER 2 - CONCRETE MAPPING</text>
+
+  <rect x="420" y="314" width="360" height="44" rx="4" fill="#FFFFFF" stroke="#DADADA" stroke-width="1.2" />
+  <text x="600" y="342" text-anchor="middle" fill="#2A2A2A" font-family="monospace" font-size="15">HTML / DOM</text>
+
+  <line x1="600" y1="358" x2="600" y2="380" stroke="#B5B5B5" stroke-width="1.4" />
+  <polygon points="600,386 596,378 604,378" fill="#B5B5B5" />
+
+  <circle cx="600" cy="410" r="22" fill="#FFFFFF" stroke="#DADADA" stroke-width="1.2" />
+  <text x="600" y="416" text-anchor="middle" fill="#2A2A2A" font-family="monospace" font-size="16">⊙</text>
+
+  <line x1="600" y1="432" x2="600" y2="454" stroke="#B5B5B5" stroke-width="1.4" />
+  <polygon points="600,460 596,452 604,452" fill="#B5B5B5" />
+
+  <rect x="420" y="462" width="360" height="44" rx="4" fill="#F2F2F0" stroke="#DADADA" stroke-width="1.2" />
+  <text x="600" y="490" text-anchor="middle" fill="#2A2A2A" font-family="monospace" font-size="15">login_spec.json</text>
+
+  <line x1="200" y1="564" x2="1000" y2="564" stroke="#E8E8E6" stroke-width="1" />
+  <text x="86" y="598" fill="#1A1A1A" font-family="Georgia, Times New Roman, serif" font-size="22">TO2D</text>
+  <text x="600" y="598" text-anchor="middle" fill="#8C8C8C" font-family="monospace" font-size="13" letter-spacing="1.5">REPRESENTATION MAPPING</text>
+</svg>
