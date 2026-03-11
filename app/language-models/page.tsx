@@ -3,6 +3,25 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Language Models',
   description: 'Beyond prompt engineering. Language models as operators inside systems that discover context, transform representations, use error as signal, and help software find usable answers.',
+  openGraph: {
+    title: 'Language Models',
+    description: 'Beyond prompt engineering.',
+    type: 'article',
+    images: [
+      {
+        url: '/images/og/language-models-cover.png',
+        width: 1200,
+        height: 630,
+        alt: 'Language Models - TO2D',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Language Models',
+    description: 'Beyond prompt engineering.',
+    images: ['/images/og/language-models-cover.png'],
+  },
 }
 
 export default function LanguageModelsPage() {
