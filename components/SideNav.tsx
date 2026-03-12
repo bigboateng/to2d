@@ -19,22 +19,25 @@ type NavSection = {
 
 const navSections = [
   {
-    heading: 'Overview',
-    links: [{ href: '/', label: 'Overview', status: 'wip' as Status }],
+    heading: 'Foundations',
+    links: [
+      { href: '/', label: 'Overview', status: 'wip' as Status },
+      { href: '/real-world-dynamics', label: 'Real-World Dynamics', status: 'wip' as Status },
+      { href: '/language-models', label: 'Language Models', status: 'wip' as Status },
+    ],
   },
   {
     heading: 'Language Models',
     links: [
-      { href: '/language-models', label: 'Language Models', status: 'stable' as Status },
-      { href: '/language-models/llms-in-software-systems', label: 'LLMs in Software Systems', status: 'stable' as Status },
-      { href: '/language-models/domain-operators', label: 'Domain Operators', status: 'stable' as Status },
-      { href: '/language-models/representation-mapping', label: 'Representation Mapping', status: 'stable' as Status },
-      { href: '/language-models/error-signals', label: 'Error Signals', status: 'stable' as Status },
-      { href: '/language-models/environment-discovery', label: 'Environment Discovery', status: 'stable' as Status },
+      { href: '/language-models/llms-in-software-systems', label: 'LLMs in Software Systems', status: 'wip' as Status },
+      { href: '/language-models/domain-operators', label: 'Domain Operators', status: 'wip' as Status },
+      { href: '/language-models/representation-mapping', label: 'Representation Mapping', status: 'wip' as Status },
+      { href: '/language-models/error-signals', label: 'Error Signals', status: 'wip' as Status },
+      { href: '/language-models/environment-discovery', label: 'Environment Discovery', status: 'wip' as Status },
     ],
   },
   {
-    heading: 'Architecture',
+    heading: 'System Models',
     links: [
       { href: '/architecture', label: 'System Models', status: 'wip' as Status },
       { href: '/architecture/system-identification', label: 'System Identification', status: 'wip' as Status },
@@ -44,7 +47,7 @@ const navSections = [
     ],
   },
   {
-    heading: 'Systems',
+    heading: 'Applied Architectures',
     links: [
       { href: '/systems', label: 'Applied Architectures', status: 'wip' as Status },
       { href: '/systems/browser-agents', label: 'Browser Agents', status: 'wip' as Status },
@@ -53,7 +56,7 @@ const navSections = [
     ],
   },
   {
-    heading: 'Correctness',
+    heading: 'Reliability Boundaries',
     links: [
       {
         href: '/correctness',
@@ -104,12 +107,12 @@ function StatusDot({ status, active }: { status?: Status; active?: boolean }) {
 
   const symbol =
     status === 'stable' ? '●'
-    : status === 'wip' ? '◌'
+    : status === 'wip' ? '◍'
     : '◦'
 
   return (
     <span
-      className={`text-[9px] leading-none shrink-0 ${active ? 'animate-[statusPulse_3s_ease-in-out_infinite]' : ''}`}
+      className={`text-[10px] font-medium leading-none shrink-0 ${active ? 'animate-[statusPulse_3s_ease-in-out_infinite]' : ''}`}
       style={{ color }}
     >
       {symbol}
@@ -171,15 +174,15 @@ export function SideNav() {
 
         <div className="flex items-center gap-4 mb-6 pb-4 border-b border-[#E8E8E6] text-[8px] font-mono tracking-wider">
           <span className="flex items-center gap-1.5">
-            <span className="text-[9px] leading-none" style={{ color: 'var(--color-stable)' }}>●</span>
+            <span className="text-[10px] font-medium leading-none" style={{ color: 'var(--color-stable)' }}>●</span>
             <span className="text-[#8C8C8C]">stable</span>
           </span>
           <span className="flex items-center gap-1.5">
-            <span className="text-[9px] leading-none" style={{ color: 'var(--color-wip)' }}>◌</span>
+            <span className="text-[10px] font-medium leading-none" style={{ color: 'var(--color-wip)' }}>◍</span>
             <span className="text-[#8C8C8C]">research</span>
           </span>
           <span className="flex items-center gap-1.5">
-            <span className="text-[9px] leading-none" style={{ color: 'var(--color-note)' }}>◦</span>
+            <span className="text-[10px] font-medium leading-none" style={{ color: 'var(--color-note)' }}>◦</span>
             <span className="text-[#8C8C8C]">note</span>
           </span>
         </div>

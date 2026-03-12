@@ -23,7 +23,7 @@
   --color-border-strong: #DADADA;
   --color-line: #B5B5B5;
   --color-stable: #3C7A52;
-  --color-wip: #C89B2C;
+  --color-wip: #9A7411;
   --color-note: #7A7A7A;
   --color-selection-bg: rgba(26, 26, 26, 0.12);
 
@@ -46,7 +46,7 @@
   --color-border-strong: #333333;
   --color-line: #444444;
   --color-stable: #5AAF6E;
-  --color-wip: #E0B040;
+  --color-wip: #F0C75E;
   --color-note: #8A8A8A;
   --color-selection-bg: rgba(255, 255, 255, 0.15);
 }
@@ -100,12 +100,11 @@ h1, h2 {
 
 
 /* ================================================================
-   DARK-CLASS REMAPPING
-   Converts dark-on-dark Tailwind classes to work on the light theme.
-   This layer lets 60+ article pages work without individual edits.
+   LIGHT-MODE REMAPPING
+   Converts dark-on-dark Tailwind classes (text-white/X, etc.)
+   to work on the light theme. Lets old article pages work as-is.
    ================================================================ */
 
-/* --- Text opacity tiers --- */
 [class*="text-white/2"] { color: #8C8C8C !important; }
 [class*="text-white/3"] { color: #8C8C8C !important; }
 [class*="text-white/4"] { color: #5A5A5A !important; }
@@ -116,135 +115,37 @@ h1, h2 {
 [class*="text-white/9"] { color: #1A1A1A !important; }
 .text-white { color: #1A1A1A !important; }
 
-/* --- Hover text --- */
 [class*="hover\:text-white"]:hover { color: #1A1A1A !important; }
 .group:hover [class*="group-hover\:text-white"] { color: #1A1A1A !important; }
 
-/* --- Placeholder --- */
 [class*="placeholder-white"]::placeholder { color: #8C8C8C !important; }
 
-/* --- Border opacity tiers --- */
 [class*="border-white/0"] { border-color: #E8E8E6 !important; }
 [class*="border-white/1"] { border-color: #DADADA !important; }
 [class*="border-white/2"] { border-color: #DADADA !important; }
 [class*="border-white/3"] { border-color: #B5B5B5 !important; }
 [class*="hover\:border-white"]:hover { border-color: #B5B5B5 !important; }
 
-/* --- Background: white-on-dark → subtle fill on light --- */
 [class*="bg-white/5"] { background-color: rgba(0, 0, 0, 0.02) !important; }
 [class*="bg-white/10"] { background-color: rgba(0, 0, 0, 0.03) !important; }
 [class*="hover\:bg-white"]:hover { background-color: rgba(0, 0, 0, 0.025) !important; }
 
-/* --- Background: black variants → light equivalents --- */
 [class*="bg-black/4"] { background-color: rgba(247, 247, 245, 0.7) !important; }
 [class*="bg-black/6"] { background-color: rgba(247, 247, 245, 0.85) !important; }
 [class*="bg-black/7"] { background-color: rgba(247, 247, 245, 0.92) !important; }
 [class*="bg-black/8"] { background-color: rgba(247, 247, 245, 0.95) !important; }
 .bg-black { background-color: #F7F7F5 !important; }
 
-/* --- Focus states --- */
 [class*="focus\:border-white"]:focus { border-color: #B5B5B5 !important; }
 
-/* --- Text decoration --- */
 [class*="decoration-white"] { text-decoration-color: #DADADA !important; }
 [class*="hover\:decoration-white"]:hover { text-decoration-color: #5A5A5A !important; }
 
-/* --- SVG stroke/fill in canvas components --- */
 [stroke="white"] { stroke: #1A1A1A !important; }
 [fill="white"] { fill: #1A1A1A !important; }
 
-
-/* ================================================================
-   DARK MODE: Hardcoded hex overrides
-   Remaps the specific hex values used across all pages so dark mode
-   works without editing individual files.
-   ================================================================ */
-
-/* --- Text colors --- */
-.dark [class*="text-\[\#1A1A1A\]"] { color: #E8E8E6 !important; }
-.dark [class*="text-\[\#111111\]"] { color: #F0F0F0 !important; }
-.dark [class*="text-\[\#2A2A2A\]"] { color: #D0D0D0 !important; }
-.dark [class*="text-\[\#3A3A3A\]"] { color: #B0B0B0 !important; }
-.dark [class*="text-\[\#5A5A5A\]"] { color: #A0A0A0 !important; }
-.dark [class*="text-\[\#8C8C8C\]"] { color: #6A6A6A !important; }
-
-/* --- Hover / group-hover text --- */
-.dark [class*="hover\:text-\[\#1A1A1A\]"]:hover { color: #F0F0F0 !important; }
-.dark [class*="hover\:text-\[\#111111\]"]:hover { color: #F0F0F0 !important; }
-.dark [class*="hover\:text-\[\#5A5A5A\]"]:hover { color: #D0D0D0 !important; }
-.dark .group:hover [class*="group-hover\:text-\[\#111111\]"] { color: #F0F0F0 !important; }
-
-/* --- Background colors --- */
-.dark [class*="bg-\[\#F7F7F5\]"] { background-color: #111111 !important; }
-.dark [class*="bg-\[\#F1F1EE\]"] { background-color: #0D0D0D !important; }
-.dark [class*="bg-\[\#F2F2F0\]"] { background-color: #181818 !important; }
-.dark [class*="bg-\[\#FFFFFF\]"] { background-color: #1A1A1A !important; }
-
-/* --- Border colors --- */
-.dark [class*="border-\[\#E8E8E6\]"] { border-color: #222222 !important; }
-.dark [class*="border-\[\#DADADA\]"] { border-color: #333333 !important; }
-.dark [class*="border-\[\#B5B5B5\]"] { border-color: #444444 !important; }
-.dark [class*="hover\:border-\[\#DADADA\]"]:hover { border-color: #444444 !important; }
-
-/* --- Status indicator colors --- */
-.dark [style*="color: rgb(60, 122, 82)"],
-.dark [style*="color:#3C7A52"] { color: #5AAF6E !important; }
-.dark [style*="color: rgb(200, 155, 44)"],
-.dark [style*="color:#C89B2C"] { color: #E0B040 !important; }
-.dark [style*="color: rgb(122, 122, 122)"],
-.dark [style*="color:#7A7A7A"] { color: #8A8A8A !important; }
-
-/* --- SVG presentation attributes --- */
-.dark [fill="#F7F7F5"] { fill: #111111; }
-.dark [fill="#FFFFFF"] { fill: #1A1A1A; }
-.dark [fill="#F2F2F0"] { fill: #181818; }
-.dark [fill="#2A2A2A"] { fill: #D0D0D0; }
-.dark [fill="#1A1A1A"] { fill: #E8E8E6; }
-.dark [fill="#8C8C8C"] { fill: #6A6A6A; }
-.dark [fill="#5A5A5A"] { fill: #A0A0A0; }
-.dark [fill="#B5B5B5"] { fill: #444444; }
-.dark [fill="#E8E8E6"] { fill: #222222; }
-
-.dark [stroke="#DADADA"] { stroke: #333333; }
-.dark [stroke="#E8E8E6"] { stroke: #222222; }
-.dark [stroke="#B5B5B5"] { stroke: #444444; }
-.dark [stroke="#2A2A2A"] { stroke: #D0D0D0; }
-.dark [stroke="#1A1A1A"] { stroke: #E8E8E6; }
-.dark [stroke="#C89B2C"] { stroke: #E0B040; }
-.dark [stroke="#3C7A52"] { stroke: #5AAF6E; }
-
-.dark [fill="#C89B2C"] { fill: #E0B040; }
-.dark [fill="#3C7A52"] { fill: #5AAF6E; }
-
-/* Dark mode SVG text overrides (via fill on <text> elements) */
-.dark svg text[fill="#2A2A2A"] { fill: #D0D0D0; }
-.dark svg text[fill="#1A1A1A"] { fill: #E8E8E6; }
-.dark svg text[fill="#8C8C8C"] { fill: #6A6A6A; }
-.dark svg text[fill="#5A5A5A"] { fill: #A0A0A0; }
-.dark svg text[fill="#C89B2C"] { fill: #E0B040; }
-.dark svg text[fill="#3C7A52"] { fill: #5AAF6E; }
-
-/* --- White-class remapping under dark mode restores to white --- */
-.dark [class*="text-white/2"] { color: rgba(255,255,255,0.2) !important; }
-.dark [class*="text-white/3"] { color: rgba(255,255,255,0.3) !important; }
-.dark [class*="text-white/4"] { color: rgba(255,255,255,0.4) !important; }
-.dark [class*="text-white/5"] { color: rgba(255,255,255,0.5) !important; }
-.dark [class*="text-white/6"] { color: rgba(255,255,255,0.6) !important; }
-.dark [class*="text-white/7"] { color: rgba(255,255,255,0.7) !important; }
-.dark [class*="text-white/8"] { color: rgba(255,255,255,0.8) !important; }
-.dark [class*="text-white/9"] { color: rgba(255,255,255,0.9) !important; }
-.dark .text-white { color: #FFFFFF !important; }
-.dark [class*="border-white/0"] { border-color: rgba(255,255,255,0.05) !important; }
-.dark [class*="border-white/1"] { border-color: rgba(255,255,255,0.1) !important; }
-.dark [class*="border-white/2"] { border-color: rgba(255,255,255,0.2) !important; }
-.dark [class*="border-white/3"] { border-color: rgba(255,255,255,0.3) !important; }
-.dark [class*="bg-white/5"] { background-color: rgba(255,255,255,0.05) !important; }
-.dark [class*="bg-white/10"] { background-color: rgba(255,255,255,0.1) !important; }
-.dark .bg-black { background-color: #000000 !important; }
-.dark [class*="hover\:text-white"]:hover { color: #FFFFFF !important; }
-.dark .group:hover [class*="group-hover\:text-white"] { color: #FFFFFF !important; }
-.dark [class*="hover\:border-white"]:hover { border-color: rgba(255,255,255,0.3) !important; }
-.dark [class*="hover\:bg-white"]:hover { background-color: rgba(255,255,255,0.05) !important; }
+/* Dark mode overrides for hex classes, SVGs, and white-class restorations
+   are in /public/dark-mode.css (loaded via <link> to bypass PostCSS) */
 
 
 /* ================================================================

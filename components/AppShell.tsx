@@ -30,7 +30,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
             </p>
             <div className="flex items-center gap-4">
               <p className="text-xs text-[#8C8C8C]">
-                Reliable AI Systems
+                Reliable AI Systems in Real-World Environments
               </p>
               <ThemeToggle />
             </div>
