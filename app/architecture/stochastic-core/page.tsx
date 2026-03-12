@@ -24,12 +24,23 @@ export default function StochasticCorePage() {
         <div className="text-white/70 text-sm leading-relaxed space-y-6">
           <h2 className="text-xl font-thin text-white/90 mt-8 mb-4">Thesis</h2>
           <p>
-            Language models are fundamentally stochastic. Temperature, sampling, and latent space geometry
-            mean identical inputs produce different outputs. This isn't a bug — it's the core behavior.
+            Once a system has been identified, its fundamental behavior becomes visible.
           </p>
           <p>
-            Reliability doesn't come from eliminating randomness. It comes from bounding it.
-            Distributions, not determinism. Envelopes, not exact trajectories.
+            For language models, the central property is stochasticity.
+          </p>
+          <p>
+            Language models do not produce deterministic outputs. Sampling, temperature, and latent structure
+            introduce variance even when inputs remain identical.
+          </p>
+          <p>
+            This randomness is not an implementation detail.
+          </p>
+          <p>
+            It is the defining characteristic of the system.
+          </p>
+          <p>
+            Reliable architectures therefore treat language models as stochastic cores surrounded by deterministic infrastructure.
           </p>
 
           <h2 className="text-xl font-thin text-white/90 mt-10 mb-4">Formal Definition</h2>
