@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 
 export default function BrowserAgentsPage() {
   const references = [
-    { href: '/systems', label: 'Operator Systems' },
+    { href: '/operator-systems', label: 'Operator Systems' },
     { href: '/systems/browser-state', label: 'Browser State' },
     { href: '/systems/structured-output-systems', label: 'Structured Output Systems' },
   ]

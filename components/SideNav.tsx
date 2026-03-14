@@ -50,7 +50,7 @@ const navSections = [
   {
     heading: 'Applications',
     links: [
-      { href: '/systems', label: 'Operator Systems', status: 'stable' as Status },
+      { href: '/operator-systems', label: 'Operator Systems', status: 'stable' as Status },
       { href: '/systems/browser-agents', label: 'Browser Agents', status: 'wip' as Status },
       { href: '/systems/browser-state', label: 'Browser State', status: 'wip' as Status },
       { href: '/systems/structured-output-systems', label: 'Structured Output Systems', status: 'wip' as Status },

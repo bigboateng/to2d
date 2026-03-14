@@ -60,7 +60,7 @@ const nextConfig = {
       },
       {
         source: '/ai-era',
-        destination: '/systems',
+        destination: '/operator-systems',
         permanent: true,
       },
       {

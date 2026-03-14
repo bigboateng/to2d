@@ -12,7 +12,7 @@
     Browser Automation Is an Operator System
   </text>
   <text x="600" y="128" text-anchor="middle" fill="#5A5A5A" font-family="Georgia, Times New Roman, serif" font-size="20" font-style="italic">
-    Operator intent × dynamic environments × model behavior
+    Operator intent, dynamic environments, and model behavior
   </text>
 
   <rect x="470" y="178" width="260" height="64" rx="5" fill="#FFFFFF" stroke="#DADADA" stroke-width="1.4" />
@@ -25,7 +25,7 @@
   <rect x="410" y="294" width="380" height="94" rx="5" fill="#FFFFFF" stroke="#DADADA" stroke-width="1.4" />
   <text x="600" y="328" text-anchor="middle" fill="#1A1A1A" font-family="Georgia, Times New Roman, serif" font-size="24" font-weight="300">Automation System</text>
   <text x="600" y="349" text-anchor="middle" fill="#8C8C8C" font-family="monospace" font-size="12">(LLM / Agent)</text>
-  <text x="600" y="372" text-anchor="middle" fill="#2A2A2A" font-family="monospace" font-size="18">observe ’ reason ’ act</text>
+  <text x="600" y="372" text-anchor="middle" fill="#2A2A2A" font-family="monospace" font-size="18">observe / reason / act</text>
 
   <line x1="600" y1="388" x2="600" y2="424" stroke="#B5B5B5" stroke-width="1.6" />
   <polygon points="600,430 594,420 606,420" fill="#B5B5B5" />

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 
 export default function BrowserStatePage() {
   const references = [
-    { href: '/systems', label: 'Operator Systems' },
+    { href: '/operator-systems', label: 'Operator Systems' },
     { href: '/systems/browser-agents', label: 'Browser Agents' },
     { href: '/correctness/deterministic-boundaries', label: 'Deterministic Boundaries' },
   ]

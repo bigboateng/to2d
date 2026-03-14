@@ -40,8 +40,8 @@ const frameworkRows: { label: string; core?: boolean; cards: FrameworkCard[] }[]
     label: 'Implementations',
     cards: [
       {
-        href: '/systems',
-        title: 'Systems',
+        href: '/operator-systems',
+        title: 'Operator Systems',
         description: 'Applied architectures for AI-driven software.',
       },
       {

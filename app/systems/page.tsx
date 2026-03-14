@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description: 'Why computer-use models make sense for browser automation and why reliable systems must represent both the operator and the environment clearly.',
   openGraph: {
     title: 'Browser Automation Is an Operator System',
-    description: 'Operator intent × dynamic environments × model behavior.',
+    description: 'Operator intent, dynamic environments, and model behavior.',
     type: 'article',
     images: [
       {
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Browser Automation Is an Operator System',
-    description: 'Operator intent × dynamic environments × model behavior.',
+    description: 'Operator intent, dynamic environments, and model behavior.',
     images: ['/images/og/operator-systems-cover.png'],
   },
 }
