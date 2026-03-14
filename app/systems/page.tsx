@@ -3,6 +3,25 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Operator Systems',
   description: 'Why computer-use models make sense for browser automation and why reliable systems must represent both the operator and the environment clearly.',
+  openGraph: {
+    title: 'Browser Automation Is an Operator System',
+    description: 'Operator intent × dynamic environments × model behavior.',
+    type: 'article',
+    images: [
+      {
+        url: '/images/og/operator-systems-cover.png',
+        width: 1200,
+        height: 630,
+        alt: 'Browser Automation Is an Operator System - TO2D',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Browser Automation Is an Operator System',
+    description: 'Operator intent × dynamic environments × model behavior.',
+    images: ['/images/og/operator-systems-cover.png'],
+  },
 }
 
 export default function SystemsPage() {
@@ -21,6 +40,55 @@ export default function SystemsPage() {
           Operator Systems
         </h1>
       </header>
+
+      <section className="space-y-5">
+        <div className="border border-[#E8E8E6] bg-[#FBFBF8] p-4 md:p-6 overflow-x-auto">
+          <svg viewBox="0 0 640 520" className="w-full min-w-[320px]" role="img" aria-label="Operator system architecture for browser automation">
+            <defs>
+              <pattern id="operator-system-grid" width="24" height="24" patternUnits="userSpaceOnUse">
+                <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#EFEFEA" strokeWidth="1" />
+              </pattern>
+            </defs>
+            <rect x="0" y="0" width="640" height="520" fill="url(#operator-system-grid)" />
+
+            <rect x="240" y="24" width="160" height="52" rx="4" fill="#FFFFFF" stroke="#DADADA" />
+            <text x="320" y="47" textAnchor="middle" fill="#1A1A1A" fontSize="15" fontFamily="ui-serif, Georgia, serif">Operator</text>
+            <text x="320" y="63" textAnchor="middle" fill="#8C8C8C" fontSize="10" fontFamily="ui-monospace, monospace">defines goal</text>
+
+            <line x1="320" y1="76" x2="320" y2="104" stroke="#B5B5B5" strokeWidth="1.5" />
+            <polygon points="320,111 315,102 325,102" fill="#B5B5B5" />
+
+            <rect x="160" y="118" width="320" height="110" rx="4" fill="#FFFFFF" stroke="#DADADA" />
+            <text x="320" y="145" textAnchor="middle" fill="#1A1A1A" fontSize="16" fontFamily="ui-serif, Georgia, serif">Automation System</text>
+            <text x="320" y="162" textAnchor="middle" fill="#8C8C8C" fontSize="10" fontFamily="ui-monospace, monospace">computer-use model loop</text>
+            <text x="320" y="196" textAnchor="middle" fill="#2A2A2A" fontSize="14" fontFamily="ui-monospace, monospace">observe → reason → act</text>
+            <line x1="210" y1="210" x2="430" y2="210" stroke="#E2E2DC" strokeWidth="1" />
+
+            <line x1="320" y1="228" x2="320" y2="260" stroke="#B5B5B5" strokeWidth="1.5" />
+            <polygon points="320,267 315,258 325,258" fill="#B5B5B5" />
+
+            <rect x="150" y="274" width="340" height="118" rx="58" fill="#F7F7F3" stroke="#DADADA" />
+            <text x="320" y="305" textAnchor="middle" fill="#1A1A1A" fontSize="16" fontFamily="ui-serif, Georgia, serif">Website Environment</text>
+            <text x="320" y="322" textAnchor="middle" fill="#8C8C8C" fontSize="10" fontFamily="ui-monospace, monospace">dynamic / changing</text>
+            <text x="320" y="350" textAnchor="middle" fill="#5A5A5A" fontSize="11" fontFamily="ui-monospace, monospace">layout changes · navigation shifts · branching flows</text>
+            <text x="320" y="367" textAnchor="middle" fill="#5A5A5A" fontSize="11" fontFamily="ui-monospace, monospace">elements move · data appears in new places</text>
+
+            <line x1="320" y1="392" x2="320" y2="422" stroke="#B5B5B5" strokeWidth="1.5" />
+            <polygon points="320,429 315,420 325,420" fill="#B5B5B5" />
+
+            <rect x="200" y="440" width="240" height="48" rx="4" fill="#FFFFFF" stroke="#DADADA" />
+            <text x="320" y="459" textAnchor="middle" fill="#1A1A1A" fontSize="14" fontFamily="ui-serif, Georgia, serif">Deterministic Boundary</text>
+            <text x="320" y="476" textAnchor="middle" fill="#8C8C8C" fontSize="10" fontFamily="ui-monospace, monospace">validation / invariants / structured outputs</text>
+
+            <line x1="440" y1="464" x2="520" y2="464" stroke="#B5B5B5" strokeWidth="1.5" />
+            <polygon points="527,464 518,459 518,469" fill="#B5B5B5" />
+            <text x="578" y="459" textAnchor="middle" fill="#1A1A1A" fontSize="14" fontFamily="ui-serif, Georgia, serif">System Output</text>
+          </svg>
+        </div>
+        <p className="text-xs leading-relaxed text-[#8C8C8C]">
+          Browser automation is an operator system interacting with a dynamic environment. Computer-use models allow the system to observe, reason, and act within that environment while deterministic constraints ensure reliable outputs.
+        </p>
+      </section>
 
       <section className="space-y-5">
         <p className="text-sm leading-relaxed text-[#5A5A5A]">
@@ -285,34 +353,44 @@ software executes solution`}
       <section className="space-y-5">
         <h2 className="text-xl font-light text-[#1A1A1A]">Turning Websites Into Navigable Systems</h2>
         <p className="text-sm leading-relaxed text-[#5A5A5A]">
-          Websites already contain large amounts of structure:
+          Once the operator and the environment are separated, browser automation changes shape.
         </p>
-        <ul className="space-y-2 text-sm text-[#5A5A5A] list-disc ml-6">
+        <p className="text-sm leading-relaxed text-[#5A5A5A]">
+          A computer-use model no longer has to solve the task only by replaying local actions on the current page. It can operate over a growing representation of the environment.
+        </p>
+        <p className="text-sm leading-relaxed text-[#5A5A5A]">
+          Websites already expose useful structure:
+        </p>
+        <ul className="space-y-3 text-sm text-[#5A5A5A] list-disc ml-6">
           <li>URL hierarchies</li>
           <li>navigation paths</li>
           <li>relationships between pages</li>
-          <li>semantic organization of data</li>
+          <li>semantic organization of information</li>
         </ul>
         <p className="text-sm leading-relaxed text-[#5A5A5A]">
-          Automation becomes significantly more reliable when systems begin to use that structure directly.
+          Once that structure is captured, it can be fed back into the system as environment state rather than rediscovered through repeated interaction.
         </p>
         <p className="text-sm leading-relaxed text-[#5A5A5A]">
-          Instead of blindly replaying clicks, the system can feed discovered URLs, relationships, and extracted signals back into the reasoning loop.
+          This creates options.
         </p>
         <p className="text-sm leading-relaxed text-[#5A5A5A]">
-          The automation then shifts from replaying actions to understanding the environment it is navigating.
+          Instead of relying only on step-by-step computer use, the system can:
         </p>
-        <p className="text-sm leading-relaxed text-[#5A5A5A]">
-          At that point navigation often becomes surprisingly deterministic.
-        </p>
-        <p className="text-sm leading-relaxed text-[#5A5A5A]">
-          The system can:
-        </p>
-        <ul className="space-y-2 text-sm text-[#5A5A5A] list-disc ml-6">
-          <li>observe discovered links and data</li>
-          <li>reason about which paths contain relevant information</li>
-          <li>navigate directly to pages that satisfy the goal</li>
+        <ul className="space-y-3 text-sm text-[#5A5A5A] list-disc ml-6">
+          <li>discover URLs and page relationships once</li>
+          <li>reason over those discovered paths</li>
+          <li>navigate directly to relevant pages</li>
+          <li>switch between direct navigation and interactive control depending on the task</li>
         </ul>
+        <p className="text-sm leading-relaxed text-[#5A5A5A]">
+          That is the important shift.
+        </p>
+        <p className="text-sm leading-relaxed text-[#5A5A5A]">
+          The model remains the operator, but the environment is no longer treated as an opaque surface. It becomes a structured system the operator can act over.
+        </p>
+        <p className="text-sm leading-relaxed text-[#5A5A5A]">
+          When that happens, many automations become faster and more deterministic, not because the model changed, but because the environment was separated, represented, and reused.
+        </p>
       </section>
 
       <section className="space-y-5">
