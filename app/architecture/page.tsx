@@ -22,6 +22,11 @@ export default function ArchitecturePage() {
       title: 'Zero-Context Architecture',
       description: 'Domain isolation, minimal representations, and reproducible agent behavior.',
     },
+    {
+      href: '/architecture/fuzzy-systems',
+      title: 'Fuzzy Systems',
+      description: 'Modeling decision systems under uncertainty through membership activation, rule inference, and output control.',
+    },
   ]
 
   return (

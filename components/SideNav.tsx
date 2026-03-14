@@ -27,7 +27,7 @@ const navSections = [
     ],
   },
   {
-    heading: 'Language Models',
+    heading: 'Operators',
     links: [
       { href: '/language-models/llms-in-software-systems', label: 'LLMs in Software Systems', status: 'wip' as Status },
       { href: '/language-models/domain-operators', label: 'Domain Operators', status: 'wip' as Status },
@@ -44,19 +44,20 @@ const navSections = [
       { href: '/architecture/stochastic-core', label: 'Stochastic Core', status: 'wip' as Status },
       { href: '/architecture/invariant-boundary', label: 'Invariant Boundary', status: 'wip' as Status },
       { href: '/architecture/zero-context-architecture', label: 'Zero-Context Architecture', status: 'wip' as Status },
+      { href: '/architecture/fuzzy-systems', label: 'Fuzzy Systems', status: 'wip' as Status },
     ],
   },
   {
-    heading: 'Applied Architectures',
+    heading: 'Applications',
     links: [
-      { href: '/systems', label: 'Applied Architectures', status: 'wip' as Status },
-      { href: '/systems/browser-agents', label: 'Browser Agents', status: 'wip' as Status },
+      { href: '/systems', label: 'Operator Systems', status: 'wip' as Status },
+      { href: '/systems/browser-agents', label: 'Browser Agents', status: 'stable' as Status },
       { href: '/systems/browser-state', label: 'Browser State', status: 'wip' as Status },
       { href: '/systems/structured-output-systems', label: 'Structured Output Systems', status: 'wip' as Status },
     ],
   },
   {
-    heading: 'Reliability Boundaries',
+    heading: 'Architecture',
     links: [
       {
         href: '/correctness',
@@ -72,9 +73,9 @@ const navSections = [
     ],
   },
   {
-    heading: 'Building Blocks',
+    heading: 'Primitives',
     links: [
-      { href: '/primitives', label: 'Building Blocks', status: 'wip' as Status },
+      { href: '/primitives', label: 'Primitives', status: 'wip' as Status },
       { href: '/primitives/contracts', label: 'Contracts', status: 'wip' as Status },
       { href: '/primitives/invariants', label: 'Invariants', status: 'wip' as Status },
       { href: '/primitives/projection', label: 'Projection', status: 'wip' as Status },
@@ -91,7 +92,7 @@ const navSections = [
   },
   {
     heading: 'Open Source',
-    links: [{ href: '/open-source', label: 'Open Source', status: 'wip' as Status }],
+    links: [{ href: '/open-source', label: 'TO2D', status: 'wip' as Status }],
   },
 ] satisfies NavSection[]
 
