@@ -39,6 +39,11 @@ export default function SystemsPage() {
         <h1 className="text-3xl md:text-4xl font-light tracking-tight leading-tight text-[#1A1A1A]">
           Operator Systems
         </h1>
+        <div className="space-y-1 pt-1">
+          <p className="text-[10px] uppercase tracking-[0.2em] text-[#8C8C8C] font-mono">TO2D System Model</p>
+          <p className="text-sm text-[#5A5A5A]">Revision 0.3 — Research Draft</p>
+          <p className="text-xs text-[#8C8C8C] font-mono">March 2026</p>
+        </div>
       </header>
 
       <section className="space-y-5">
