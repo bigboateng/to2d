@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     type: 'article',
     images: [
       {
-        url: '/images/og/operator-systems-cover.png',
+        url: '/images/og/operator-systems-cover-v3.png',
         width: 1200,
         height: 630,
         alt: 'Browser Automation Is an Operator System - TO2D',
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Browser Automation Is an Operator System',
     description: 'Operator intent, dynamic environments, and model behavior.',
-    images: ['/images/og/operator-systems-cover.png'],
+    images: ['/images/og/operator-systems-cover-v3.png'],
   },
 }
 

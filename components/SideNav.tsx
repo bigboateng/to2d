@@ -50,7 +50,18 @@ const navSections = [
   {
     heading: 'Applications',
     links: [
-      { href: '/operator-systems', label: 'Operator Systems', status: 'stable' as Status },
+      {
+        href: '/operator-systems',
+        label: 'Operator Systems',
+        status: 'stable' as Status,
+        children: [
+          { href: '/operator-systems/architecture', label: 'Architecture', status: 'note' as Status },
+          { href: '/operator-systems/control-loop', label: 'Control Loop', status: 'note' as Status },
+          { href: '/operator-systems/deterministic-boundaries', label: 'Deterministic Boundaries', status: 'note' as Status },
+          { href: '/operator-systems/environment-interaction', label: 'Environment Interaction', status: 'note' as Status },
+          { href: '/operator-systems/failure-modes', label: 'Failure Modes', status: 'note' as Status },
+        ],
+      },
       { href: '/systems/browser-agents', label: 'Browser Agents', status: 'wip' as Status },
       { href: '/systems/browser-state', label: 'Browser State', status: 'wip' as Status },
       { href: '/systems/structured-output-systems', label: 'Structured Output Systems', status: 'wip' as Status },
@@ -125,8 +136,20 @@ export function SideNav() {
   const pathname = usePathname()
   const [mobileOpen, setMobileOpen] = useState(false)
 
-  const isActive = (href: string) =>
-    pathname === href || pathname.startsWith(href + '/')
+  const normalizePath = (path: string) => {
+    if (path === '/systems') {
+      return '/operator-systems'
+    }
+
+    return path
+  }
+
+  const isActive = (href: string) => {
+    const normalizedPathname = normalizePath(pathname)
+    const normalizedHref = normalizePath(href)
+
+    return normalizedPathname === normalizedHref || normalizedPathname.startsWith(normalizedHref + '/')
+  }
 
   const hasActiveChild = (link: NavLink): boolean => {
     if (!link.children) {
