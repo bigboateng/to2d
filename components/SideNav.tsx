@@ -32,7 +32,8 @@ const navSections = [
       { href: '/language-models/llms-in-software-systems', label: 'LLMs in Software Systems', status: 'wip' as Status },
       { href: '/language-models/domain-operators', label: 'Domain Operators', status: 'wip' as Status },
       { href: '/language-models/representation-mapping', label: 'Representation Mapping', status: 'wip' as Status },
-      { href: '/language-models/error-signals', label: 'Error Signals', status: 'wip' as Status },
+      { href: '/language-models/error-signals', label: 'Signals', status: 'wip' as Status },
+      { href: '/operators/observability', label: 'Observability', status: 'wip' as Status },
       { href: '/language-models/environment-discovery', label: 'Environment Discovery', status: 'wip' as Status },
     ],
   },
@@ -144,9 +145,15 @@ export function SideNav() {
     return path
   }
 
+  const exactMatchOnly = new Set(['/', '/language-models'])
+
   const isActive = (href: string) => {
     const normalizedPathname = normalizePath(pathname)
     const normalizedHref = normalizePath(href)
+
+    if (exactMatchOnly.has(normalizedHref)) {
+      return normalizedPathname === normalizedHref
+    }
 
     return normalizedPathname === normalizedHref || normalizedPathname.startsWith(normalizedHref + '/')
   }

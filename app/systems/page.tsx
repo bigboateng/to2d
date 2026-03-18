@@ -351,7 +351,7 @@ software executes solution`}
           This allows automation systems to continue operating even as websites evolve.
         </p>
         <p className="text-sm leading-relaxed text-[#5A5A5A]">
-          Without the ability to interpret and absorb environmental change, browser automation eventually reaches a limit.
+          Without rthe ability to interpret and absorb environmental change, browser automation eventually reaches a limit.
         </p>
       </section>
 

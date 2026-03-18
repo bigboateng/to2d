@@ -35,8 +35,8 @@ export function AppShell({ children }: { children: React.ReactNode }) {
               TO2D
             </a>
             <div className="flex items-center gap-3">
-              <LinkedInLink />
               <ThemeToggle />
+              <LinkedInLink />
               <p className="text-[10px] font-mono uppercase tracking-[0.2em] text-[#8C8C8C]">
                 Architecture Lab
               </p>
