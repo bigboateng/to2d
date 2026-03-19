@@ -24,6 +24,54 @@ export const metadata: Metadata = {
   },
 }
 
+import { ApplyConcept, type PromptSpec } from '@/components/ApplyConcept'
+
+const promptSpec: PromptSpec = {
+  problem: {
+    title: 'Apply to a problem',
+    template: `Apply Deterministic Boundaries analysis to the following system or problem.
+
+Follow this process:
+1. Separate the goal (what the system should do) from the guarantees (what must always hold)
+2. Identify the probabilistic layer (where the model operates)
+3. Define deterministic boundaries (schema validation, invariants, format rules)
+4. Map where boundaries should intercept model output
+5. Define what happens when a boundary is violated (error signal, retry, fallback)
+
+Problem:
+{{input}}
+
+Return:
+- Goal vs guarantees separation
+- Probabilistic layer (where uncertainty exists)
+- Deterministic boundaries (what constraints must hold)
+- Boundary placement (where verification happens)
+- Violation handling (what happens on failure)
+- Expected reliability improvement`,
+  },
+  codebase: {
+    title: 'Apply in a codebase',
+    template: `Use Deterministic Boundaries analysis to evaluate a codebase.
+
+Problem:
+{{input}}
+
+Instructions:
+- Find where probabilistic output (LLM, model, external API) enters deterministic code
+- Identify what validation exists at those boundaries
+- Identify what validation is MISSING
+- Determine if failures are caught or propagate silently
+
+Return:
+- Probabilistic entry points (where model output enters the system)
+- Existing boundaries (schema checks, type validation, invariant checks)
+- Missing boundaries (unvalidated model output)
+- Silent failure paths (where bad output propagates uncaught)
+- Boundary recommendations (what to add and where)
+- Error signal design (what each boundary should report on failure)`,
+  },
+}
+
 export default function DeterminismPage() {
   return (
     <div className="max-w-3xl space-y-14">
@@ -32,6 +80,7 @@ export default function DeterminismPage() {
         <h1 className="text-3xl md:text-4xl font-light tracking-tight leading-tight text-[#1A1A1A]">
           Deterministic Boundaries for Probabilistic Systems
         </h1>
+        <ApplyConcept promptSpec={promptSpec} />
 
         <div className="overflow-x-auto -mx-4 px-4 md:mx-0 md:px-0 pt-4">
           <svg viewBox="0 0 520 290" className="w-full" style={{ minWidth: '360px' }}>

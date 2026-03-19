@@ -1,9 +1,75 @@
 import type { Metadata } from 'next'
 import { PiModelToggle } from '@/components/PiModelToggle'
+import { ApplyConcept, type PromptSpec } from '@/components/ApplyConcept'
 
 export const metadata: Metadata = {
   title: 'Observability',
   description: 'Progress requires observability. Systems cannot improve what they cannot see. Agents, like engineers, depend on signals the environment exposes.',
+  openGraph: {
+    title: 'Agents act on observations, not reality.',
+    description: 'Progress requires observability. Systems cannot improve what they cannot see.',
+    type: 'article',
+    images: [
+      {
+        url: '/images/og/observability-cover.svg',
+        width: 1200,
+        height: 630,
+        alt: 'Progress Requires Observability - TO2D',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Agents act on observations, not reality.',
+    description: 'Progress requires observability. Systems cannot improve what they cannot see.',
+    images: ['/images/og/observability-cover.svg'],
+  },
+}
+
+const promptSpec: PromptSpec = {
+  problem: {
+    title: 'Apply to a problem',
+    template: `Apply observability analysis to the following system or problem.
+
+Follow this process:
+1. Identify what signals the system currently exposes
+2. Identify what internal state is hidden from the operator (human or agent)
+3. Map failure modes to missing signals
+4. Determine whether failures are reasoning failures or observability failures
+5. Propose instrumentation changes that would make the system observable
+
+Problem:
+{{input}}
+
+Return:
+- Current observable signals (what the operator can see)
+- Hidden state (what the operator cannot see)
+- Failure modes caused by missing signals
+- Diagnosis: reasoning failure vs observability failure
+- Proposed instrumentation (what signals to add)
+- Expected reliability improvement`,
+  },
+  codebase: {
+    title: 'Apply in a codebase',
+    template: `Use observability analysis to evaluate a codebase or system.
+
+Problem:
+{{input}}
+
+Instructions:
+- Identify the observation function g(x): what state is exposed to the controller
+- Identify hidden state: what internal state is NOT exposed
+- Find cases where two different states produce the same observation
+- Determine if failures are bounded by the observation function or the policy
+
+Return:
+- State variables the system tracks
+- State variables the system does NOT expose
+- Observation function: what signals reach the agent/controller
+- Hidden state examples: cases where g(x₁) = g(x₂) but correct action differs
+- Reliability bound: is the bottleneck g (observation) or π (policy)?
+- Instrumentation recommendations`,
+  },
 }
 
 export default function ObservabilityPage() {
@@ -14,6 +80,7 @@ export default function ObservabilityPage() {
         <h1 className="text-3xl md:text-4xl font-light tracking-tight leading-tight text-[#1A1A1A]">
           Progress Requires Observability
         </h1>
+        <ApplyConcept promptSpec={promptSpec} />
       </header>
 
       <section className="space-y-5">

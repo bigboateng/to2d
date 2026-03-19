@@ -1,3 +1,52 @@
+import { ApplyConcept, type PromptSpec } from '@/components/ApplyConcept'
+
+const promptSpec: PromptSpec = {
+  problem: {
+    title: 'Apply to a problem',
+    template: `Apply Zero-Context Architecture to the following problem.
+
+Follow this process:
+1. Project — reduce to minimal slice
+2. Canonicalize — one domain, one goal, one operator
+3. Identify constraints — known, unknown, ignorable
+4. Ask questions to reduce uncertainty
+5. Propose minimal next step
+
+Problem:
+{{input}}
+
+Return:
+- Projected slice
+- Canonical form
+- Constraints (known, unknown, non-critical)
+- Questions to reduce uncertainty
+- Minimal next step`,
+  },
+  codebase: {
+    title: 'Apply in a codebase',
+    template: `Use Zero-Context Architecture to analyze a codebase.
+
+Problem:
+{{input}}
+
+Instructions:
+- Do NOT scan the whole repo
+- Find the minimal components required
+- Isolate the domain completely
+- Remove all history, collapse ambiguity
+- Present only the minimal solvable representation
+
+Return:
+- Entry points
+- Core data structures
+- Decision functions
+- Validation mechanisms
+- External dependencies
+- Unknown constraints
+- Smallest next files to inspect`,
+  },
+}
+
 export default function ZeroContextArchitecturePage() {
   return (
     <div className="space-y-12 max-w-3xl">
@@ -8,6 +57,7 @@ export default function ZeroContextArchitecturePage() {
         <p className="text-[#8C8C8C] text-sm mb-8">
           The simplest path to reliable agents
         </p>
+        <ApplyConcept promptSpec={promptSpec} />
       </section>
 
       <article className="prose max-w-none">
