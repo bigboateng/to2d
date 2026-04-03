@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation'
+import Link from 'next/link'
 
 type Status = 'stable' | 'wip' | 'note'
 
@@ -196,12 +197,12 @@ export function SideNav() {
           md:translate-x-0
         `}
       >
-        <a
+        <Link
           href="/"
           className="text-lg font-light tracking-tight text-[#1A1A1A] mb-5 transition-colors hover:text-[#111111]"
         >
           TO2D
-        </a>
+        </Link>
 
         <div className="flex items-center gap-4 mb-6 pb-4 border-b border-[#E8E8E6] text-[8px] font-mono tracking-wider">
           <span className="flex items-center gap-1.5">
@@ -232,7 +233,7 @@ export function SideNav() {
                   const isLinkActive = isActive(link.href) || hasActiveChild(link)
                   return (
                   <li key={link.href}>
-                    <a
+                    <Link
                       href={link.href}
                       onClick={() => { setMobileOpen(false) }}
                       className={`
@@ -246,12 +247,12 @@ export function SideNav() {
                     >
                       <span>{link.label}</span>
                       <StatusDot status={link.status} active={isLinkActive} />
-                    </a>
+                    </Link>
                     {link.children && (
                       <ul className="mt-2 ml-3 space-y-1.5 border-l border-[#E8E8E6] pl-3">
                         {link.children.map((childLink) => (
                           <li key={childLink.href}>
-                            <a
+                            <Link
                               href={childLink.href}
                               onClick={() => { setMobileOpen(false) }}
                               className={`
@@ -265,7 +266,7 @@ export function SideNav() {
                             >
                               <span>{childLink.label}</span>
                               <StatusDot status={childLink.status} active={isActive(childLink.href)} />
-                            </a>
+                            </Link>
                           </li>
                         ))}
                       </ul>
